@@ -51,37 +51,37 @@ const Footer = () => {
         <div>
           <p className="text-[26px] font-bold mb-[20px]">Company</p>
           <ul className="text-[16px]">
-            <li className="mb-[14px] text-white hover:text-[#FFC631]">
+            <li className="mb-[14px] text-white hover:text-[#81a32b]">
               <Link passHref={true} href={"/"} className="flex gap-2">
                 <Image src={'/rightFooter.svg'} alt={"footerIcon"} height={30} width={6} /> <p>Ana Səhifə</p> 
               </Link>
             </li>
-            <li className="mb-[14px] text-white hover:text-[#FFC631]">
+            <li className="mb-[14px] text-white hover:text-[#81a32b]">
               <Link  href={"/About"} className="flex gap-2">
               <Image src={'/rightFooter.svg'} alt={"footerIcon"} height={30} width={6} /> <p>Haqqımızda</p> 
               </Link>
             </li>
-            <li className="mb-[14px] text-white hover:text-[#FFC631]  ">
+            <li className="mb-[14px] text-white hover:text-[#81a32b]  ">
               <Link href={"/Experience"} className="flex gap-2">
               <Image src={'/rightFooter.svg'} alt={"footerIcon"} height={30} width={6} /> <p>Təcrübə Sahələri</p> 
               </Link>
             </li>
-            <li className="mb-[14px] text-white hover:text-[#FFC631] ">
+            <li className="mb-[14px] text-white hover:text-[#81a32b] ">
               <Link  href={"/Projects"} className="flex gap-2">
               <Image src={'/rightFooter.svg'} alt={"footerIcon"} height={30} width={6} /> <p>Layihələr</p> 
               </Link>
             </li>
-            <li className="mb-[14px] text-white hover:text-[#FFC631] ">
+            <li className="mb-[14px] text-white hover:text-[#81a32b] ">
               <Link  href={"/Employees"} className="flex gap-2">
               <Image src={'/rightFooter.svg'} alt={"footerIcon"} height={30} width={6} /> <p>Əməkdaş Şirkətlər</p> 
               </Link>
             </li>
-            <li className="mb-[14px] text-white hover:text-[#FFC631] ">
+            <li className="mb-[14px] text-white hover:text-[#81a32b] ">
               <Link  href={"/Vakansiya"} className="flex gap-2">
               <Image src={'/rightFooter.svg'} alt={"footerIcon"} height={30} width={6} /> <p>Vakansiya</p> 
               </Link>
             </li>
-            <li className="mb-[14px] text-white hover:text-[#FFC631] ">
+            <li className="mb-[14px] text-white hover:text-[#81a32b] ">
               <Link  href={"/Contacts"} className="flex gap-2">
               <Image src={'/rightFooter.svg'} alt={"footerIcon"} height={30} width={6} /> <p>Ünvan və əlaqə</p> 
               </Link>
@@ -98,7 +98,7 @@ const Footer = () => {
         <div className="flex justify-between font-bold gap-2">
           <a href="https://www.facebook.com/" target="blank">
             <Image
-              className="bg-[#FFC631] p-2 rounded-full"
+              className="bg-[#81a32b] p-2 rounded-full"
               src={"/instaIcon.svg"}
               alt={""}
               width={30}
@@ -107,7 +107,7 @@ const Footer = () => {
           </a>
           <a href="https://www.instagram.com/" target="blank">
             <Image
-              className="bg-[#FFC631] p-2 rounded-full"
+              className="bg-[#81a32b] p-2 rounded-full"
               src={"/instaIcon.svg"}
               alt={""}
               width={30}
@@ -116,7 +116,7 @@ const Footer = () => {
           </a>
           <a href="https://www.twitter.com/" target="blank">
             <Image
-              className="bg-[#FFC631] p-2 rounded-full"
+              className="bg-[#81a32b] p-2 rounded-full"
               src={"/twitterIcon.svg"}
               alt={""}
               width={30}
@@ -125,7 +125,7 @@ const Footer = () => {
           </a>
           <a href="https://web.whatsapp.com/" target="blank">
             <Image
-              className="bg-[#FFC631] p-2 rounded-full"
+              className="bg-[#81a32b] p-2 rounded-full"
               src={"/whatsappIcon.svg"}
               alt={""}
               width={30}

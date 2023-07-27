@@ -22,7 +22,7 @@ const ProjectCard = ({ image, caption, location }: ProjectCardProps) => {
             {location}
           </span>
         </p>
-        <p className="text-[18px] font-semibold text-[#FFC631] flex gap-2 items-center">
+        <p className="text-[18px] font-semibold text-[#81a32b] flex gap-2 items-center">
           <p>DETAILS</p>
           <Image src={"/yellowArrow.svg"} alt="Logo" width={18} height={16} />
         </p>

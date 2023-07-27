@@ -29,25 +29,25 @@ export default function Example() {
           </button>
         </div>
         <Popover.Group className="hidden lg:flex lg:gap-x-8">
-          <Link passHref={true} href={"/"} className="leading-6 hover:text-[#FFC631]">
+          <Link passHref={true} href={"/"} className="leading-6 hover:text-[#81a32b]">
             Ana Səhifə
           </Link>
-          <Link href={"/About"} className="leading-6 hover:text-[#FFC631]">
+          <Link href={"/About"} className="leading-6 hover:text-[#81a32b]">
             Haqqımızda
           </Link>
-          <Link  href={"/Experience"} className="leading-6 hover:text-[#FFC631]">
+          <Link  href={"/Experience"} className="leading-6 hover:text-[#81a32b]">
             Təcrübə Sahələri
           </Link>
-          <Link href={"/Projects"} className="leading-6 hover:text-[#FFC631]">
+          <Link href={"/Projects"} className="leading-6 hover:text-[#81a32b]">
             Layihələr
           </Link>
-          <Link  href={"/Employees"} className="leading-6 hover:text-[#FFC631]">
+          <Link  href={"/Employees"} className="leading-6 hover:text-[#81a32b]">
             Əməkdaş Şirkətlər
           </Link>
-          <Link href={"/Vakansiya"} className="leading-6 hover:text-[#FFC631]">
+          <Link href={"/Vakansiya"} className="leading-6 hover:text-[#81a32b]">
           Vakansiya
           </Link>
-          <Link href={"/Contacts"} className="leading-6 hover:text-[#FFC631]">
+          <Link href={"/Contacts"} className="leading-6 hover:text-[#81a32b]">
           Ünvan və əlaqə
           </Link>
         </Popover.Group>
