@@ -15,7 +15,7 @@ const ProjectsSection = () => {
           />
           WHAT WE DO
         </p>
-        <p className='text-[#ffffff] text-[45px] font-bold mb-8'>Our <span className='text-[#0DA574] text-[48px] font-bold'>Projects</span></p>
+        <p className='text-[#ffffff] text-[45px] font-bold mb-8'>Our <span className='text-[#81a32b] text-[48px] font-bold'>Projects</span></p>
         <div className='grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 gap-12'>
             <ProjectCard image={"projectImg.svg"} caption={"Lorem Ipsum"} location={"Lorem Ipsum, Minnesota(MN)"} />
             <ProjectCard image={"projectImg.svg"} caption={"Lorem Ipsum"} location={"Lorem Ipsum Juana"} />

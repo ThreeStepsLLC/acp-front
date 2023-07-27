@@ -6,7 +6,7 @@ const WhatWeDoSection = () => {
   return (
     <div className='container mx-auto px-16 py-20'>
         <p className='text-[#000000] text-[18px] font-semibold flex gap-4'><Image src={'yellowLine.svg'} alt={'whatwedo'} height={1} width={40} /> WHAT WE DO</p>
-        <p className='text-[#000000] text-[45px] font-bold mb-8'><span className='text-[#0DA574] text-[45px] font-bold'>Our Project</span> in the World </p>
+        <p className='text-[#000000] text-[45px] font-bold mb-8'><span className='text-[#81a32b] text-[45px] font-bold'>Our Project</span> in the World </p>
         <div className='grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-8'>
             <Card number={'01'} caption={'Lorem Ipsum'} content={'Senectus et netus et malesuada. Nunc pulvinar sapien et ligula ullamcorper malesuada proin'} />
             <Card number={'02'} caption={'Lorem Ipsum'} content={'Donec adipiscing tristique risus nec feugiat in. Porttitor massa id neque aliquam vestibulum morbi '} />

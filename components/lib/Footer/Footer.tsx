@@ -57,32 +57,32 @@ const Footer = () => {
               </Link>
             </li>
             <li className="mb-[14px] text-white hover:text-[#81a32b]">
-              <Link  href={"/About"} className="flex gap-2">
+              <Link  href={"/about"} className="flex gap-2">
               <Image src={'/rightFooter.svg'} alt={"footerIcon"} height={30} width={6} /> <p>Haqqımızda</p> 
               </Link>
             </li>
             <li className="mb-[14px] text-white hover:text-[#81a32b]  ">
-              <Link href={"/Experience"} className="flex gap-2">
+              <Link href={"/experience"} className="flex gap-2">
               <Image src={'/rightFooter.svg'} alt={"footerIcon"} height={30} width={6} /> <p>Təcrübə Sahələri</p> 
               </Link>
             </li>
             <li className="mb-[14px] text-white hover:text-[#81a32b] ">
-              <Link  href={"/Projects"} className="flex gap-2">
+              <Link  href={"/projects"} className="flex gap-2">
               <Image src={'/rightFooter.svg'} alt={"footerIcon"} height={30} width={6} /> <p>Layihələr</p> 
               </Link>
             </li>
             <li className="mb-[14px] text-white hover:text-[#81a32b] ">
-              <Link  href={"/Employees"} className="flex gap-2">
+              <Link  href={"/employees"} className="flex gap-2">
               <Image src={'/rightFooter.svg'} alt={"footerIcon"} height={30} width={6} /> <p>Əməkdaş Şirkətlər</p> 
               </Link>
             </li>
             <li className="mb-[14px] text-white hover:text-[#81a32b] ">
-              <Link  href={"/Vakansiya"} className="flex gap-2">
+              <Link  href={"/vakansiya"} className="flex gap-2">
               <Image src={'/rightFooter.svg'} alt={"footerIcon"} height={30} width={6} /> <p>Vakansiya</p> 
               </Link>
             </li>
             <li className="mb-[14px] text-white hover:text-[#81a32b] ">
-              <Link  href={"/Contacts"} className="flex gap-2">
+              <Link  href={"/contacts"} className="flex gap-2">
               <Image src={'/rightFooter.svg'} alt={"footerIcon"} height={30} width={6} /> <p>Ünvan və əlaqə</p> 
               </Link>
             </li>
