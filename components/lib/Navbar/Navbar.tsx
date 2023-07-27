@@ -32,22 +32,22 @@ export default function Example() {
           <Link passHref={true} href={"/"} className="leading-6 hover:text-[#81a32b]">
             Ana Səhifə
           </Link>
-          <Link href={"/About"} className="leading-6 hover:text-[#81a32b]">
+          <Link href={"/about"} className="leading-6 hover:text-[#81a32b]">
             Haqqımızda
           </Link>
-          <Link  href={"/Experience"} className="leading-6 hover:text-[#81a32b]">
+          <Link  href={"/experience"} className="leading-6 hover:text-[#81a32b]">
             Təcrübə Sahələri
           </Link>
-          <Link href={"/Projects"} className="leading-6 hover:text-[#81a32b]">
+          <Link href={"/projects"} className="leading-6 hover:text-[#81a32b]">
             Layihələr
           </Link>
-          <Link  href={"/Employees"} className="leading-6 hover:text-[#81a32b]">
+          <Link  href={"/employees"} className="leading-6 hover:text-[#81a32b]">
             Əməkdaş Şirkətlər
           </Link>
-          <Link href={"/Vakansiya"} className="leading-6 hover:text-[#81a32b]">
+          <Link href={"/vakansiya"} className="leading-6 hover:text-[#81a32b]">
           Vakansiya
           </Link>
-          <Link href={"/Contacts"} className="leading-6 hover:text-[#81a32b]">
+          <Link href={"/contacts"} className="leading-6 hover:text-[#81a32b]">
           Ünvan və əlaqə
           </Link>
         </Popover.Group>
@@ -87,22 +87,22 @@ export default function Example() {
                 <Link passHref={true} href={"/"} className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 text-[14px]">
             Ana Səhifə
           </Link>
-          <Link passHref={true} href={"/About"} className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 text-[14px]">
+          <Link passHref={true} href={"/about"} className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 text-[14px]">
             Haqqımızda
           </Link>
-          <Link passHref={true} href={"/Experience"} className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 text-[14px]">
+          <Link passHref={true} href={"/experience"} className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 text-[14px]">
             Təcrübə Sahələri
           </Link>
-          <Link passHref={true} href={"/Projects"} className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 text-[14px]">
+          <Link passHref={true} href={"/projects"} className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 text-[14px]">
             Layihələr
           </Link>
-          <Link passHref={true} href={"/Employees"} className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 text-[14px]">
+          <Link passHref={true} href={"/employees"} className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 text-[14px]">
             Əməkdaş Şirkətlər
           </Link>
-          <Link passHref={true} href={"/Vakansiya"} className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 text-[14px]">
+          <Link passHref={true} href={"/vakansiya"} className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 text-[14px]">
           Vakansiya
           </Link>
-          <Link passHref={true} href={"/Contacts"} className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 text-[14px]">
+          <Link passHref={true} href={"/contacts"} className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 text-[14px]">
           Ünvan və əlaqə
           </Link>
 
