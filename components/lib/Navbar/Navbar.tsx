@@ -52,7 +52,6 @@ export default function Example() {
           </Link>
         </Popover.Group>
       </nav>
-      <hr />
 
       <Dialog
         as="div"
