@@ -5,7 +5,7 @@ import React from "react";
 const Footer = () => {
   return (
     <div
-      className="bg-[#001F3F] text-white px-10 lg:px-40 py-10 2xl:px-60"
+      className="bg-[#00517b] text-white px-10 lg:px-40 py-10 2xl:px-60"
       style={{
         width: "100%",
         height: "100%",

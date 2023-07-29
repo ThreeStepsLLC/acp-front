@@ -3,10 +3,17 @@ import Image from "next/image";
 
 const WelcomeSection = () => {
   return (
-    <div className="bg-[#001F3F]">
+    <div className="bg-[#00517b]">
       <div className="container mx-auto px-16 grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 pb-20">
         <div className="lg:py-20 lg:pt-20 sm:py-20 sm:pt-20 py-20 pt-20">
-          <p className="text-[18px] font-semibold text-[#81a32b]">Professional. Innovative. Reliable.</p>
+        <p className="text-[#ffffff] text-[18px] font-semibold flex gap-4">
+          <Image
+            src={"yellowLine.svg"}
+            alt={"whatwedo"}
+            height={1}
+            width={40}
+          />
+Professional. Innovative. Reliable.        </p>
           <p className="lg:text-[58px] text-[38px] font-extrabold text-[#ffffff]" >Exceptional <br /> Service Exceeding Expectations</p>
           <p className="text-[19px] font-normal text-[#ffffff]">Lorem ipsum dolor sit amet consectetur adipisicing <br /> elit. Sapiente velit, tenetur consequuntur accusamus voluptatum, <br /> ut itaque sunt quo ab debitis ad? Itaque voluptatem quae culpa. <br /></p>
         </div>

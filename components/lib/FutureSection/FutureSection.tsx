@@ -4,7 +4,7 @@ import Card from '../Card'
 
 const FutureSection = () => {
   return (
-    <div className='bg-[#001F3F]'>
+    <div className='bg-[#00517b]'>
         <div className="container mx-auto px-16 py-20">
         <div className='grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-8'>
             <div className="grid gap-4">
