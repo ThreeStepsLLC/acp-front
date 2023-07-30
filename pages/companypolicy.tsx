@@ -7,7 +7,7 @@ const companypolicy = () => {
   return (
     <Layout title="Haqqımızda">
       <PageHeader title={"Şirkət siyasəti"} subTitle={"Siyasətimiz"} />
-      <div className="container mx-auto">
+      <div className="container mx-auto px-16 py-20">
         <div className="grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 my-14 gap-6">
           <div>
             <p className="text-[#000000] text-[28px] font-semibold flex gap-4 items-center">
