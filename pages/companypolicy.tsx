@@ -6,7 +6,7 @@ import Image from "next/image";
 const companypolicy = () => {
   return (
     <Layout title="Haqqımızda">
-      <PageHeader title={"Şirkət siyasəti"} subTitle={"Lorem Ipsum"} />
+      <PageHeader title={"Şirkət siyasəti"} subTitle={"Siyasətimiz"} />
       <div className="container mx-auto">
         <div className="grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 my-14 gap-6">
           <div>

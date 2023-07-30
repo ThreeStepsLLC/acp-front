@@ -6,7 +6,7 @@ import Image from "next/image";
 const about = () => {
   return (
     <Layout title="Haqqımızda">
-      <PageHeader title={"Haqqımızda"} subTitle={"Lorem Ipsum"} />
+      <PageHeader title={"Şirkət haqqında"} subTitle={"Haqqımızda"} />
       <div className="container mx-auto">
         <div className="grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 my-14 gap-6">
           <div>
