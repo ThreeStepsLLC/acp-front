@@ -16,7 +16,7 @@ export default function Example() {
         <div className="flex lg:flex-1">
           <Link href="/" className="-m-1.5 p-1.5">
             <Image
-              src={"/logoAcp.png"}
+              src={"/acp-logo.png"}
               alt="Logo"
               width={88.08}
               height={41.41}
@@ -59,7 +59,7 @@ export default function Example() {
                   <Link href="/about" className="block text-gray-800 hover:text-[#81a32b]">
                     Şirkət haqqında
                   </Link>
-                  <Link href="/aboutCs" className="block text-gray-800 hover:text-[#81a32b]">
+                  <Link href="/companypolicy" className="block text-gray-800 hover:text-[#81a32b]">
                     Şirkət siyasəti
                   </Link>
                   {/* Add other dropdown items here */}
