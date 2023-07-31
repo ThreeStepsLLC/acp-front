@@ -16,7 +16,7 @@ export default function Example() {
         <div className="flex lg:flex-1">
           <Link href="/" className="-m-1.5 p-1.5">
             <Image
-              src={"/acp-logo.png"}
+              src={"/logo.png"}
               alt="Logo"
               width={88.08}
               height={41.41}
