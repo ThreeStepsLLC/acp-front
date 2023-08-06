@@ -1,0 +1,16 @@
+version: '3.1'
+
+services:
+  app:
+    build: .
+    image: acp-front-image
+    container_name: acp-front
+    restart: always
+    ports:
+      - "3006:80"
+    networks:
+      - proxynet
+
+networks:
+  proxynet:
+    external: true
