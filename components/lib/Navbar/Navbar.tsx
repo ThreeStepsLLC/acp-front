@@ -10,7 +10,7 @@ export default function Example() {
   return (
     <header>
       <nav
-        className="mx-auto flex items-center justify-between p-6 px-16 container mx-auto text-white text-[14px]"
+        className="mx-auto flex items-center justify-between p-4 px-16 container mx-auto text-[#00517b] text-[14px]"
         aria-label="Global"
       >
         <div className="flex lg:flex-1">
@@ -18,7 +18,7 @@ export default function Example() {
             <Image
               src={"/logo.png"}
               alt="Logo"
-              width={88.08}
+              width={68.08}
               height={41.41}
             />
           </Link>
@@ -46,7 +46,7 @@ export default function Example() {
               <>
                 <Popover.Button
                   className={`${
-                    open ? "text-[#81a32b]" : "text-white"
+                    open ? "text-[#81a32b]" : "text-[#00517b]"
                   } leading-6 hover:text-[#81a32b]`}
                 >
                   Haqqımızda

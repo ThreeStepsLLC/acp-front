@@ -52,7 +52,6 @@ const WhyChooseUseSection = () => {
                 />{" "}
                 Lorem Completed Progects
               </p>
-              <Button text={"CONSULT NOW"} />
             </div>
           </div>
         </div>
