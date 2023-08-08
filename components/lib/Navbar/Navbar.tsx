@@ -10,12 +10,17 @@ export default function Example() {
   return (
     <header>
       <nav
-        className="mx-auto flex items-center justify-between p-6 px-16 container mx-auto text-white text-[14px]"
+        className="mx-auto flex items-center justify-between p-4 px-16 container mx-auto text-[#00517b] text-[14px]"
         aria-label="Global"
       >
         <div className="flex lg:flex-1">
           <Link href="/" className="-m-1.5 p-1.5">
-            <Image src={"/logoAcp.png"} alt="Logo" width={88.08} height={41.41} />
+            <Image
+              src={"/logo.png"}
+              alt="Logo"
+              width={68.08}
+              height={41.41}
+            />
           </Link>
         </div>
         <div className="flex lg:hidden">
@@ -29,26 +34,53 @@ export default function Example() {
           </button>
         </div>
         <Popover.Group className="hidden lg:flex lg:gap-x-8">
-          <Link passHref={true} href={"/"} className="leading-6 hover:text-[#81a32b]">
+          <Link
+            passHref={true}
+            href={"/"}
+            className="leading-6 hover:text-[#81a32b]"
+          >
             Ana Səhifə
           </Link>
-          <Link href={"/about"} className="leading-6 hover:text-[#81a32b]">
-            Haqqımızda
-          </Link>
-          <Link  href={"/experience"} className="leading-6 hover:text-[#81a32b]">
+          <Popover>
+            {({ open }) => (
+              <>
+                <Popover.Button
+                  className={`${
+                    open ? "text-[#81a32b]" : "text-[#00517b]"
+                  } leading-6 hover:text-[#81a32b]`}
+                >
+                  Haqqımızda
+                </Popover.Button>
+                <Popover.Panel
+                  className={`${
+                    open ? "block" : "hidden"
+                  } bg-slate-200 py-3 px-4 shadow-lg absolute z-10 grid gap-2 mt-2 border-none`}
+                >
+                  <Link href="/about" className="block text-gray-800 hover:text-[#81a32b]">
+                    Şirkət haqqında
+                  </Link>
+                  <Link href="/companypolicy" className="block text-gray-800 hover:text-[#81a32b]">
+                    Şirkət siyasəti
+                  </Link>
+                  {/* Add other dropdown items here */}
+                </Popover.Panel>
+              </>
+            )}
+          </Popover>
+          <Link href={"/experience"} className="leading-6 hover:text-[#81a32b]">
             Təcrübə Sahələri
           </Link>
           <Link href={"/projects"} className="leading-6 hover:text-[#81a32b]">
             Layihələr
           </Link>
-          <Link  href={"/employees"} className="leading-6 hover:text-[#81a32b]">
+          <Link href={"/employees"} className="leading-6 hover:text-[#81a32b]">
             Əməkdaş Şirkətlər
           </Link>
           <Link href={"/vakansiya"} className="leading-6 hover:text-[#81a32b]">
-          Vakansiya
+            Vakansiya
           </Link>
           <Link href={"/contacts"} className="leading-6 hover:text-[#81a32b]">
-          Ünvan və əlaqə
+            Ünvan və əlaqə
           </Link>
         </Popover.Group>
       </nav>
@@ -83,28 +115,63 @@ export default function Example() {
           <div className="mt-6 flow-root">
             <div className="-my-6 divide-y divide-gray-500/10">
               <div className="space-y-2 py-6">
-                <Link passHref={true} href={"/"} className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 text-[14px]">
-            Ana Səhifə
-          </Link>
-          <Link passHref={true} href={"/about"} className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 text-[14px]">
-            Haqqımızda
-          </Link>
-          <Link passHref={true} href={"/experience"} className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 text-[14px]">
-            Təcrübə Sahələri
-          </Link>
-          <Link passHref={true} href={"/projects"} className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 text-[14px]">
-            Layihələr
-          </Link>
-          <Link passHref={true} href={"/employees"} className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 text-[14px]">
-            Əməkdaş Şirkətlər
-          </Link>
-          <Link passHref={true} href={"/vakansiya"} className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 text-[14px]">
-          Vakansiya
-          </Link>
-          <Link passHref={true} href={"/contacts"} className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 text-[14px]">
-          Ünvan və əlaqə
-          </Link>
+                <Link
+                  passHref={true}
+                  href={"/"}
+                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 text-[14px]"
+                >
+                  Ana Səhifə
+                </Link>
+                <Link
+                  passHref={true}
+                  href={"/about"}
+                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 text-[14px]"
+                >
+                  Şirkət haqqında
+                </Link>
+                <Link
+                  passHref={true}
+                  href={"/companypolicy"}
+                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 text-[14px]"
+                >
+                  Şirkət siyasəti
+                </Link>
 
+                <Link
+                  passHref={true}
+                  href={"/experience"}
+                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 text-[14px]"
+                >
+                  Təcrübə Sahələri
+                </Link>
+                <Link
+                  passHref={true}
+                  href={"/projects"}
+                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 text-[14px]"
+                >
+                  Layihələr
+                </Link>
+                <Link
+                  passHref={true}
+                  href={"/employees"}
+                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 text-[14px]"
+                >
+                  Əməkdaş Şirkətlər
+                </Link>
+                <Link
+                  passHref={true}
+                  href={"/vakansiya"}
+                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 text-[14px]"
+                >
+                  Vakansiya
+                </Link>
+                <Link
+                  passHref={true}
+                  href={"/contacts"}
+                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 text-[14px]"
+                >
+                  Ünvan və əlaqə
+                </Link>
               </div>
             </div>
           </div>

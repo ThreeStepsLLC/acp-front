@@ -6,6 +6,7 @@ import ProjectsSection from "@/components/lib/ProjectsSection";
 import WelcomeSection from "@/components/lib/WelcomeSection";
 import WhatWeDoSection from "@/components/lib/WhatWeDoSection";
 import WhereWeWorkSection from "@/components/lib/WhereWeWorkSection";
+import WhyChooseUseSection from "@/components/lib/WhyChooseUseSection";
 
 export default function Home() {
 
@@ -17,6 +18,7 @@ export default function Home() {
       <WhereWeWorkSection />
       <FutureSection />
       <OurTeamSection />
+      <WhyChooseUseSection />
       <ContactSection />
     </Layout>
   );
