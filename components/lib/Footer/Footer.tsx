@@ -15,8 +15,7 @@ const Footer = () => {
         <div>
           <Image src={"/logo.png"} alt="Logo" width={88.08} height={41.41} />
           <p className="text-[16px] mt-[20px]">
-            Libero volutpat sed cras ornare arcu dui vivamus. Ac tortor
-            dignissim convallis aenean et tortor at risus viverra
+          Our team of over 150 dedicated civil engineers and professionals is committed to delivering excellence in every project we undertake.
           </p>
         </div>
         <div>
@@ -58,32 +57,32 @@ const Footer = () => {
             </li>
             <li className="mb-[14px] text-[#00517b] hover:text-[#81a32b]">
               <Link  href={"/about"} className="flex gap-2">
-              <Image src={'/rightFooter.svg'} alt={"footerIcon"} height={30} width={6} /> <p>Haqqımızda</p> 
+              <Image src={'/rightFooter.svg'} alt={"footerIcon"} height={30} width={6} /> <p>About us</p> 
               </Link>
             </li>
             <li className="mb-[14px] text-[#00517b] hover:text-[#81a32b]  ">
               <Link href={"/experience"} className="flex gap-2">
-              <Image src={'/rightFooter.svg'} alt={"footerIcon"} height={30} width={6} /> <p>Təcrübə Sahələri</p> 
+              <Image src={'/rightFooter.svg'} alt={"footerIcon"} height={30} width={6} /> <p>Experience Fields</p> 
               </Link>
             </li>
             <li className="mb-[14px] text-[#00517b] hover:text-[#81a32b] ">
               <Link  href={"/projects"} className="flex gap-2">
-              <Image src={'/rightFooter.svg'} alt={"footerIcon"} height={30} width={6} /> <p>Layihələr</p> 
+              <Image src={'/rightFooter.svg'} alt={"footerIcon"} height={30} width={6} /> <p>Projects</p> 
               </Link>
             </li>
             <li className="mb-[14px] text-[#00517b] hover:text-[#81a32b] ">
               <Link  href={"/employees"} className="flex gap-2">
-              <Image src={'/rightFooter.svg'} alt={"footerIcon"} height={30} width={6} /> <p>Əməkdaş Şirkətlər</p> 
+              <Image src={'/rightFooter.svg'} alt={"footerIcon"} height={30} width={6} /> <p>Licences</p> 
               </Link>
             </li>
             <li className="mb-[14px] text-[#00517b] hover:text-[#81a32b] ">
-              <Link  href={"/vakansiya"} className="flex gap-2">
-              <Image src={'/rightFooter.svg'} alt={"footerIcon"} height={30} width={6} /> <p>Vakansiya</p> 
+              <Link  href={"/vacancies"} className="flex gap-2">
+              <Image src={'/rightFooter.svg'} alt={"footerIcon"} height={30} width={6} /> <p>Vacancies</p> 
               </Link>
             </li>
             <li className="mb-[14px] text-[#00517b] hover:text-[#81a32b] ">
-              <Link  href={"/contacts"} className="flex gap-2">
-              <Image src={'/rightFooter.svg'} alt={"footerIcon"} height={30} width={6} /> <p>Ünvan və əlaqə</p> 
+              <Link  href={"/contact"} className="flex gap-2">
+              <Image src={'/rightFooter.svg'} alt={"footerIcon"} height={30} width={6} /> <p>Contact us</p> 
               </Link>
             </li>
 

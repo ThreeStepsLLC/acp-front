@@ -13,15 +13,17 @@ const WelcomeSection = () => {
               height={1}
               width={40}
             />
-            Professional. Innovative. Reliable.{" "}
+            Professional. Innovative. Reliable.
           </p>
-          <p className="lg:text-[58px] text-[38px] font-extrabold text-[#00517b]">
-            Exceptional <br /> Service Exceeding Expectations
+          <p className="lg:text-[40px] text-[28px] font-extrabold text-[#00517b]">
+            The power of engineering, at your service
           </p>
           <p className="text-[19px] font-normal text-[#00517b]">
-            Lorem ipsum dolor sit amet consectetur adipisicing <br /> elit.
-            Sapiente velit, tenetur consequuntur accusamus voluptatum, <br /> ut
-            itaque sunt quo ab debitis ad? Itaque voluptatem quae culpa. <br />
+            Welcome to ACP Engineering, your trusted and reliable inspection
+            company offering a wide range of professional consulting services.
+            Our team of over 150 dedicated civil engineers and professionals is
+            committed to delivering excellence in every project we undertake.{" "}
+            <br />
           </p>
         </div>
         <div className="lg:pt-20 sm:pt-10 pt-10 gap-12">

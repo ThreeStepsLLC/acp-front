@@ -13,7 +13,6 @@ export default function Home() {
   return (
     <Layout title="Home">
       <WelcomeSection />
-      <WhatWeDoSection />
       <ProjectsSection />
       <WhereWeWorkSection />
       <FutureSection />
