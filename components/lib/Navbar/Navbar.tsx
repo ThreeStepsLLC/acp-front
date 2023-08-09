@@ -15,12 +15,7 @@ export default function Example() {
       >
         <div className="flex lg:flex-1">
           <Link href="/" className="-m-1.5 p-1.5">
-            <Image
-              src={"/logo.png"}
-              alt="Logo"
-              width={68.08}
-              height={41.41}
-            />
+            <Image src={"/logo.png"} alt="Logo" width={68.08} height={41.41} />
           </Link>
         </div>
         <div className="flex lg:hidden">
@@ -56,10 +51,16 @@ export default function Example() {
                     open ? "block" : "hidden"
                   } bg-slate-200 py-3 px-4 shadow-lg absolute z-10 grid gap-2 mt-2 border-none`}
                 >
-                  <Link href="/about" className="block text-gray-800 hover:text-[#81a32b]">
+                  <Link
+                    href="/about"
+                    className="block text-gray-800 hover:text-[#81a32b]"
+                  >
                     About company
                   </Link>
-                  <Link href="/policies" className="block text-gray-800 hover:text-[#81a32b]">
+                  <Link
+                    href="/policies"
+                    className="block text-gray-800 hover:text-[#81a32b]"
+                  >
                     Our Policies
                   </Link>
                   {/* Add other dropdown items here */}
@@ -97,7 +98,7 @@ export default function Example() {
             <a href="#" className="-m-1.5 p-1.5">
               <span className="sr-only">Your Company</span>
               <Image
-                src={"/next.svg"}
+                src={"/logo.png"}
                 alt="Logo"
                 width={88.08}
                 height={41.41}
