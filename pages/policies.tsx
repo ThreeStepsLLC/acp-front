@@ -54,24 +54,24 @@ const policies = () => {
               Our mission:
             </p>
             <p className="mt-2">
-              "ACP Engineering" LLC is capable of competing not only within our
-              country but also with international companies, able to work in the
-              most challenging regions of the world, strictly adhere to
-              international norms and principles while doing this, and intends
-              to inspire and guide other new companies through the success we
-              have opened in the future. At the same time, the company is
-              dynamically expanding its range of services. As a result of
-              cooperation with international certification bodies, which are
-              pioneers in this field, the company's management quality is
-              brought to the highest level. After the successful
+              &quot;ACP Engineering&quot; LLC is capable of competing not only
+              within our country but also with international companies, able to
+              work in the most challenging regions of the world, strictly adhere
+              to international norms and principles while doing this, and
+              intends to inspire and guide other new companies through the
+              success we have opened in the future. At the same time, the
+              company is dynamically expanding its range of services. As a
+              result of cooperation with international certification bodies,
+              which are pioneers in this field, the company&apos;s management
+              quality is brought to the highest level. After the successful
               counter-offensive operation of the Azerbaijani army in 2020, ACP
               Engineering was one of the first companies to go to the region to
               revive the liberated parts of the homeland and participated in the
-              construction of the "Victory Road" dedicated to our victory. This
-              shows that difficult conditions and shortcomings do not constitute
-              a significant obstacle for us; on the contrary, employees' full
-              attention to this work positively signals the company about the
-              future.
+              construction of the &quot;Victory Road&quot; dedicated to our
+              victory. This shows that difficult conditions and shortcomings do
+              not constitute a significant obstacle for us; on the contrary,
+              employees&apos; full attention to this work positively signals the
+              company about the future.
             </p>
           </div>
         </div>
