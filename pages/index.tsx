@@ -1,5 +1,6 @@
 import Layout from "@/components/layout/Layout";
 import ContactSection from "@/components/lib/ContactSection";
+import CoreValuesSection from "@/components/lib/CoreValuesSection";
 import FutureSection from "@/components/lib/FutureSection/FutureSection";
 import OurTeamSection from "@/components/lib/OurTeamSection";
 import ProjectsSection from "@/components/lib/ProjectsSection";
@@ -14,11 +15,10 @@ export default function Home() {
     <Layout title="Home">
       <WelcomeSection />
       <ProjectsSection />
-      <WhereWeWorkSection />
-      <FutureSection />
-      <OurTeamSection />
       <WhyChooseUseSection />
+      <FutureSection />
       <ContactSection />
+      <CoreValuesSection />
     </Layout>
   );
 }

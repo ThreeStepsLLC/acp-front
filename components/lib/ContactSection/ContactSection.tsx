@@ -7,7 +7,7 @@ interface ContactSectionProps {
 
 const ContactSection = ({ detailPage }: ContactSectionProps) => {
   return (
-    <div className="container mx-auto px-16 py-20">
+    <div className="container mx-auto px-16 py-16">
       {!detailPage && (
         <p className="text-[#000000] text-[18px] font-semibold flex gap-4">
           <Image

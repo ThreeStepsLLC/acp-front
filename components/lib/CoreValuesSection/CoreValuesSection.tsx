@@ -1,0 +1,31 @@
+import React from "react";
+import Image from "next/image";
+
+const CoreValuesSection = () => {
+  return (
+    <div className="bg-[#00517b]">
+      <div className="container mx-auto px-16 py-16">
+        <p className="text-[#ffffff] text-[18px] font-semibold flex gap-4">
+          <Image
+            src={"yellowLine.svg"}
+            alt={"whatwedo"}
+            height={1}
+            width={40}
+          />
+          CORE VALUES
+        </p>
+        <p className="text-[#ffffff] text-[45px] font-bold mb-8">
+        What are our{" "}
+        <span className="text-[#81a32b] text-[45px] font-bold">core values?</span>
+      </p>
+        <p className="text-[#ffffff] text-[22px] font-normal">
+          Our core values are based on honesty and responsibility towards our
+          partners. We focus on innovation, environmental responsibilty,
+          confidentiality. We stick to morals and ethics at all stages of work.
+        </p>
+      </div>
+    </div>
+  );
+};
+
+export default CoreValuesSection;

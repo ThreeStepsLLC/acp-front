@@ -5,7 +5,7 @@ const WelcomeSection = () => {
   return (
     <div>
       <div className="container mx-auto px-16 grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 pb-10">
-        <div className="lg:py-10 lg:pt-20 sm:py-20 sm:pt-20 py-10 pt-20">
+        <div className="lg:py-10 lg:pt-16 sm:py-16 sm:pt-16 py-10 pt-16">
           <p className="text-[#00517b] text-[18px] font-semibold flex gap-4">
             <Image
               src={"yellowLine.svg"}
@@ -41,7 +41,7 @@ const WelcomeSection = () => {
           </div>
         </div>
         <div></div>
-        <div className="card bg-[#F5F5F5] py-10 px-12 grid gap-8 lg:w-3/5 sm:w-5/5 w-5/5 mx-auto mr-0 mt-8 lg:mt-0 sm:mt-0">
+        {/* <div className="card bg-[#F5F5F5] py-10 px-12 grid gap-8 lg:w-3/5 sm:w-5/5 w-5/5 mx-auto mr-0 mt-8 lg:mt-0 sm:mt-0">
           <p className="text-[26px] font-bold text-[#000000]">
             Residential House
           </p>
@@ -60,7 +60,7 @@ const WelcomeSection = () => {
               height={14}
             />
           </p>
-        </div>
+        </div> */}
       </div>
     </div>
   );
