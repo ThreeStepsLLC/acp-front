@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const policies = () => {
   return (
-    <Layout title="About us">
+    <Layout title="Policies">
       <PageHeader title={"Company Policy"} subTitle={"Our Policies"} />
       <div className="container mx-auto px-16 py-0">
         <div className="grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 my-14 gap-6">

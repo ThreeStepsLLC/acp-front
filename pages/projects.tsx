@@ -6,7 +6,7 @@ import ProjectCard from '@/components/lib/ProjectCard';
 
 const projects = () => {
   return (
-    <Layout title="About us">
+    <Layout title="Projects">
       <PageHeader title={"Our Projects"} subTitle={"WHAT WE DO"} />
         <div>
       <div className="container mx-auto px-16 py-20">
@@ -18,7 +18,6 @@ const projects = () => {
         </div>
       </div>
     </div>
-
     </Layout>
   )
 }
