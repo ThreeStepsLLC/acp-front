@@ -7,10 +7,6 @@
   font-family: 'Archivo', sans-serif;
 }
 
-header {
-  background-color: white;
-}
-
 .react-slideshow-wrapper.slide {
   padding: 0 20px;
   margin: 0px auto;

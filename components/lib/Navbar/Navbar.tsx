@@ -1,4 +1,4 @@
-import { Fragment, useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Dialog, Popover } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
@@ -6,9 +6,25 @@ import Link from "next/link";
 
 export default function Example() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isNavbarSticky, setIsNavbarSticky] = useState(false);
+
+  const handleScroll = () => {
+    if (window.scrollY >= 750) {
+      setIsNavbarSticky(true);
+    } else {
+      setIsNavbarSticky(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
-    <header>
+    <header style={isNavbarSticky ? {backgroundColor: 'white', width: '100%', position: 'fixed'} : {backgroundColor: 'white'}}>
       <nav
         className="mx-auto flex items-center justify-between p-4 px-16 container mx-auto text-[#00517b] text-[14px]"
         aria-label="Global"
