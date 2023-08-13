@@ -24,30 +24,30 @@ const ContactSection = ({ detailPage }: ContactSectionProps) => {
         <span className="text-[#81a32b] text-[45px] font-bold">Project?</span>
       </p>
       <div className="grid lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-1 gap-8">
-        <div className="grid gap-2">
+        <div>
           <p className="text-[#A9A9A9] text-[14px] font-medium uppercase">
             Address
           </p>
           <p className="text-[#000000] text-[18px] font-semibold">
-            2047 Cyrus Viaduct East <br /> Jadynchester
+          Heydar Aliyev Avenue 115, Building 187 Caspian Sport Plaza, Block B, 10th Floor, Room 1003, Baku, Azerbaijan
           </p>
         </div>
 
-        <div className="grid gap-2">
+        <div>
           <p className="text-[#A9A9A9] text-[14px] font-medium uppercase">
             Email
           </p>
           <p className="text-[#000000] text-[18px] font-semibold">
-            info@construct.com <br /> support@construct.com
+            info@acp.com.az
           </p>
         </div>
 
-        <div className="grid gap-2">
+        <div>
           <p className="text-[#A9A9A9] text-[14px] font-medium uppercase">
             Phone
           </p>
           <p className="text-[#000000] text-[18px] font-semibold">
-            1 - 313 - 645 - 3395 <br /> 1 - 469 - 970 - 2609
+            +994 50 887 22 92
           </p>
         </div>
       </div>

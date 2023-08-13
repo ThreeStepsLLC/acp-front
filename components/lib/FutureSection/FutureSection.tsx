@@ -12,16 +12,16 @@ const FutureSection = () => {
         </div>
 
         <div className='grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-8'>
-            <Card details={false} icon={'share-icon.svg'} caption={'Lorem Ipsum'} content={'Purus in massa tempor nec feugiat. Euismod lacinia at quis risus sed vulputate odio'} />
-            <Card details={false} icon={'share-icon.svg'} caption={'Lorem Ipsum'} content={'Purus in massa tempor nec feugiat. Euismod lacinia at quis risus sed vulputate odio'} />
-            <Card details={false} icon={'share-icon.svg'} caption={'Lorem Ipsum'} content={'Purus in massa tempor nec feugiat. Euismod lacinia at quis risus sed vulputate odio'} />
-            <Card details={false} icon={'share-icon.svg'} caption={'Lorem Ipsum'} content={'Purus in massa tempor nec feugiat. Euismod lacinia at quis risus sed vulputate odio'} />
-            <Card details={false} icon={'share-icon.svg'} caption={'Lorem Ipsum'} content={'Purus in massa tempor nec feugiat. Euismod lacinia at quis risus sed vulputate odio'} />
-            <Card details={false} icon={'layer-icon.svg'} caption={'Lorem Ipsum'} content={'Senectus et netus et malesuada. Nunc pulvinar sapien et ligula ullamcorper malesuada proin'} />
-            <Card details={false} icon={'settings-icon.svg'} caption={'Lorem Ipsum'} content={'Magnis dis partuient montes nascetur ridiculus mus mauris vitae ultricies'} />
-            <Card details={false} icon={'analytic-icon.svg'} caption={'Lorem Ipsum'} content={'Viverra nibh cras pulvinar mattis nunc sed blandit libero volutpat. Enim diam vulputate ut pharetra'} />
-            <Card details={false} icon={'lamp-icon.svg'} caption={'Lorem Ipsum'} content={'Consectetur adipiscing elit pellentesque habitant. Arcu felis bibendum ut tristique '} />
-            <Card details={false} icon={'share-icon.svg'} caption={'Lorem Ipsum'} content={'Purus in massa tempor nec feugiat. Euismod lacinia at quis risus sed vulputate odio'} />
+            <Card details={false} icon={'share-icon.svg'} content={`Evaluate the Contractors performance`} />
+            <Card details={false} icon={'layer-icon.svg'} content={'Supervise the Contractor to ensure they are following project requirements'} />
+            <Card details={false} icon={'settings-icon.svg'} content={'Monitor the quality of site activities performed by the Contractor'} />
+            <Card details={false} icon={'analytic-icon.svg'} content={'Secure the local and international staff training, equipment, and services'} />
+            <Card details={false} icon={'lamp-icon.svg'} content={'Resolve the issues among the Contractor, Client, Government, and locals'} />
+            <Card details={false} icon={'layer-icon.svg'} content={'Monitoring the Contractor to perform under FIDIC standards'} />
+            <Card details={false} icon={'settings-icon.svg'} content={'Reporting and record-keeping of relevant project details'} />
+            <Card details={false} icon={'analytic-icon.svg'} content={'Technical support'} />
+            <Card details={false} icon={'lamp-icon.svg'} content={'Laboratory tests'} />
+            <Card details={false} icon={'share-icon.svg'} content={'Land surveying'} />
         </div>
         </div>
     </div>

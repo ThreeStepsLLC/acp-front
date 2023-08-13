@@ -21,7 +21,7 @@ const Footer = () => {
         <div>
           <p className="text-[26px] font-bold mb-[20px]">Contacts</p>
           <div className="grid gap-8">
-            <div className="flex gap-2">
+            <div className="flex gap-3">
               <Image
                 className=""
                 src={"/phone.svg"}
@@ -30,10 +30,10 @@ const Footer = () => {
                 height={30}
               />
               <p className="text-[16px] text-[#00517b]">
-                1 - 313 - 645 - 3395 <br />1 - 469 - 970 - 2609
+              +994 50 887 22 92
               </p>
             </div>
-            <div className="flex gap-2">
+            <div className="flex gap-3">
               <Image
                 className=""
                 src={"/location.svg"}
@@ -42,7 +42,7 @@ const Footer = () => {
                 height={18}
               />
               <p className="text-[16px] text-[#00517b]">
-                2047 Cyrus Viaduct <br /> East Jadynchester
+              Heydar Aliyev Avenue 115, Building 187 Caspian Sport Plaza, Block B, 10th Floor, Room 1003, Baku, Azerbaijan
               </p>
             </div>
           </div>
@@ -95,15 +95,6 @@ const Footer = () => {
       <div className="lg:flex sm:grid lg:justify-between sm:justify-center text-center text-[14px] gap-2">
         <p className="opacity-100">© 2023 ACP. All rights reserved.</p>
         <div className="flex justify-between font-bold gap-2">
-          <a href="https://www.facebook.com/" target="blank">
-            <Image
-              className="bg-[#81a32b] p-2 rounded-full"
-              src={"/instaIcon.svg"}
-              alt={""}
-              width={30}
-              height={30}
-            />
-          </a>
           <a href="https://www.instagram.com/" target="blank">
             <Image
               className="bg-[#81a32b] p-2 rounded-full"
