@@ -1,8 +1,12 @@
 import React from "react";
 import Image from "next/image";
 import ProjectCard from "../ProjectCard";
+import Button from "../Button";
+import { useRouter } from "next/router";
 
 const ProjectsSection = () => {
+  const router = useRouter()
+
   return (
     <div className="bg-[#00517b]">
       <div className="container mx-auto px-16 py-16">
@@ -15,12 +19,34 @@ const ProjectsSection = () => {
           />
           WHAT WE DO
         </p>
-        <p className='text-[#ffffff] text-[45px] font-bold mb-8'>Our <span className='text-[#81a32b] text-[40px] font-bold'>Projects</span></p>
-        <div className='grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 gap-12'>
-            <ProjectCard image={"projectImg.svg"} caption={"Lorem Ipsum"} location={"Lorem Ipsum, Minnesota(MN)"} />
-            <ProjectCard image={"projectImg.svg"} caption={"Lorem Ipsum"} location={"Lorem Ipsum Juana"} />
-            <ProjectCard image={"projectImg.svg"} caption={"Lorem Ipsum"} location={"Lorem Ipsum Hermannberg"} />
-            <ProjectCard image={"projectImg.svg"} caption={"Lorem Ipsum"} location={"Lorem Ipsum Underpass Blockbury"} />
+        <p className="text-[#ffffff] text-[45px] font-bold mb-8">
+          Our{" "}
+          <span className="text-[#81a32b] text-[40px] font-bold">Projects</span>
+        </p>
+        <div className="grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 gap-12 mb-10">
+          <ProjectCard
+            image={"projectImg.svg"}
+            caption={"Lorem Ipsum"}
+            location={"Lorem Ipsum, Minnesota(MN)"}
+          />
+          <ProjectCard
+            image={"projectImg.svg"}
+            caption={"Lorem Ipsum"}
+            location={"Lorem Ipsum Juana"}
+          />
+          <ProjectCard
+            image={"projectImg.svg"}
+            caption={"Lorem Ipsum"}
+            location={"Lorem Ipsum Hermannberg"}
+          />
+          <ProjectCard
+            image={"projectImg.svg"}
+            caption={"Lorem Ipsum"}
+            location={"Lorem Ipsum Underpass Blockbury"}
+          />
+        </div>
+        <div className="items-center flex justify-center">
+          <Button text={"See all projects"} onClick={() => router.push('/projects')} />
         </div>
       </div>
     </div>
