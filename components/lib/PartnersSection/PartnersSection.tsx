@@ -13,7 +13,7 @@ const PartnersSection = () => {
         <span className="text-[#81a32b] text-[45px] font-bold"> partner</span>{" "}
         with us
       </p>
-      <div className="grid lg:grid-cols-5 md:grid-cols-3 sm:grid-cols-1 gap-8">
+      <div className="grid lg:grid-cols-5 md:grid-cols-3 grid-cols-2 gap-12">
         <Image src={"/next.svg"} alt="Logo" width={98.08} height={51.41} />
         <Image src={"/next.svg"} alt="Logo" width={98.08} height={51.41} />
         <Image src={"/next.svg"} alt="Logo" width={98.08} height={51.41} />

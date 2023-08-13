@@ -2,9 +2,21 @@ import React from "react";
 import Image from "next/image";
 
 const WelcomeSection = () => {
+  const styling = {
+    backgroundImage: `url('/welcomeImg.JPG')`,
+    backgroundSize: 'cover',
+    width:"100%",
+    height:"100vh",
+    display: 'grid',
+    alignContent: 'center',
+    opacity: '0.6',
+    position: 'absolute'
+}
+
   return (
-    <div>
-      <div className="container mx-auto px-16 grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 pb-10">
+    <div className="relative overflow-hidden" style={{height: '100vh', display: 'grid', alignContent: 'center'}}>
+      <div style={styling}></div>
+      <div className="container mx-auto px-16 grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 pb-10 relative" >
         <div className="lg:py-10 lg:pt-16 sm:py-16 sm:pt-16 py-10 pt-16">
           <p className="text-[#00517b] text-[18px] font-semibold flex gap-4">
             <Image
@@ -26,7 +38,7 @@ const WelcomeSection = () => {
             <br />
           </p>
         </div>
-        <div className="lg:pt-20 sm:pt-10 pt-10 gap-12">
+        <div className="lg:pt-20 sm:pt-10 pt-10 gap-12 grid lg:grid-cols-1 md:grid-cols-1 grid-cols-2">
           <div className="grid text-end mb-20">
             <p className="text-[40px] font-bold text-[#81a32b]">128 +</p>
             <p className="text-[19px] font-bold text-[#00517b]">
@@ -40,7 +52,6 @@ const WelcomeSection = () => {
             </p>
           </div>
         </div>
-        <div></div>
         {/* <div className="card bg-[#F5F5F5] py-10 px-12 grid gap-8 lg:w-3/5 sm:w-5/5 w-5/5 mx-auto mr-0 mt-8 lg:mt-0 sm:mt-0">
           <p className="text-[26px] font-bold text-[#000000]">
             Residential House

@@ -71,7 +71,7 @@ const Footer = () => {
               </Link>
             </li>
             <li className="mb-[14px] text-[#00517b] hover:text-[#81a32b] ">
-              <Link  href={"/employees"} className="flex gap-2">
+              <Link  href={"/licences"} className="flex gap-2">
               <Image src={'/rightFooter.svg'} alt={"footerIcon"} height={30} width={6} /> <p>Licences</p> 
               </Link>
             </li>

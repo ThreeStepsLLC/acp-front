@@ -19,7 +19,7 @@ const PageHeader = ({title, subTitle}: PageHeaderProps) => {
             />
             {subTitle}
           </p>
-          <p className="text-[#ffffff] text-[58px] font-bold">
+          <p className="text-[#ffffff] text-[50px] font-bold">
             {title}
           </p>
         </div>
