@@ -7,7 +7,7 @@ import ContactSection from '@/components/lib/ContactSection';
 const policies = () => {
   return (
     <Layout title="About us">
-      <PageHeader title={"CONTACT US"} subTitle={"Contact Information"} />
+      <PageHeader title={"Contact Information"} subTitle={"Contact Us"} />
       <ContactSection detailPage={true} />
     </Layout>
   )

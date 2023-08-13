@@ -81,7 +81,7 @@ export default function Example() {
             Vacancies
           </Link>
           <Link href={"/contact"} className="leading-6 hover:text-[#81a32b]">
-            Contact us
+            Contact Us
           </Link>
         </Popover.Group>
       </nav>
@@ -171,7 +171,7 @@ export default function Example() {
                   href={"/contact"}
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 text-[14px]"
                 >
-                  Contact us
+                  Contact Us
                 </Link>
               </div>
             </div>

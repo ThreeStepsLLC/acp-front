@@ -52,12 +52,12 @@ const Footer = () => {
           <ul className="text-[16px]">
             <li className="mb-[14px] text-[#00517b] hover:text-[#81a32b]">
               <Link passHref={true} href={"/"} className="flex gap-2">
-                <Image src={'/rightFooter.svg'} alt={"footerIcon"} height={30} width={6} /> <p>Ana Səhifə</p> 
+                <Image src={'/rightFooter.svg'} alt={"footerIcon"} height={30} width={6} /> <p>Home Page</p> 
               </Link>
             </li>
             <li className="mb-[14px] text-[#00517b] hover:text-[#81a32b]">
               <Link  href={"/about"} className="flex gap-2">
-              <Image src={'/rightFooter.svg'} alt={"footerIcon"} height={30} width={6} /> <p>About us</p> 
+              <Image src={'/rightFooter.svg'} alt={"footerIcon"} height={30} width={6} /> <p>About Us</p> 
               </Link>
             </li>
             <li className="mb-[14px] text-[#00517b] hover:text-[#81a32b]  ">
@@ -82,7 +82,7 @@ const Footer = () => {
             </li>
             <li className="mb-[14px] text-[#00517b] hover:text-[#81a32b] ">
               <Link  href={"/contact"} className="flex gap-2">
-              <Image src={'/rightFooter.svg'} alt={"footerIcon"} height={30} width={6} /> <p>Contact us</p> 
+              <Image src={'/rightFooter.svg'} alt={"footerIcon"} height={30} width={6} /> <p>Contact Us</p> 
               </Link>
             </li>
 

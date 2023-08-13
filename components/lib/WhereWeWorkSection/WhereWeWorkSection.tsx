@@ -10,8 +10,8 @@ const WhereWeWorkSection = () => {
       </p>
       <div className="grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 gap-8">
         <div className="grid gap-6">
-          <p className="text-[#000000] text-[48px] font-bold">
-            <span className="text-[#81a32b] text-[48px] font-bold">
+          <p className="text-[#000000] text-[40px] font-bold">
+            <span className="text-[#81a32b] text-[40px] font-bold">
               Multi-Our Project
             </span>{" "}
             in the World
@@ -27,14 +27,14 @@ const WhereWeWorkSection = () => {
             consequat semper viverra nam libero. Convallis aenean et tortor at
           </p>
           <div className="grid">
-            <p className="text-[80px] text-[#81a32b] font-extrabold">200+</p>
+            <p className="text-[70px] text-[#81a32b] font-extrabold">200+</p>
             <p className="text-[#000000] text-[19px] font-bold">
               Lorem Ipsum do <br />
               Livic Todos
             </p>
           </div>
           <div className="grid">
-            <p className="text-[80px] text-[#81a32b] font-extrabold">99%</p>
+            <p className="text-[70px] text-[#81a32b] font-extrabold">99%</p>
             <p className="text-[#000000] text-[19px] font-bold">
             Lorem Ipsum do <br />
               Livic Todos

@@ -18,9 +18,9 @@ export default function Home() {
       <ProjectsSection />
       <WhyChooseUseSection />
       <FutureSection />
-      <ContactSection />
-      <CoreValuesSection />
       <PartnersSection />
+      <CoreValuesSection />
+      <ContactSection />
     </Layout>
   );
 }

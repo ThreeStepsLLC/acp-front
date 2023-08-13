@@ -7,7 +7,7 @@ import ProjectCard from '@/components/lib/ProjectCard';
 const projects = () => {
   return (
     <Layout title="Projects">
-      <PageHeader title={"Our Projects"} subTitle={"WHAT WE DO"} />
+      <PageHeader title={"Our Projects"} subTitle={"Projects"} />
         <div>
       <div className="container mx-auto px-16 py-20">
         <div className='grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 gap-12'>
