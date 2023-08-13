@@ -2,20 +2,18 @@ import React from "react";
 import Image from "next/image";
 
 const WelcomeSection = () => {
-  const styling = {
-    backgroundImage: `url('/welcomeImg.JPG')`,
-    backgroundSize: 'cover',
-    width:"100%",
-    height:"100vh",
-    display: 'grid',
-    alignContent: 'center',
-    opacity: '0.6',
-    position: 'absolute'
-}
-
   return (
     <div className="relative overflow-hidden" style={{height: '100vh', display: 'grid', alignContent: 'center'}}>
-      <div style={styling}></div>
+      <div style={{
+         backgroundImage: `url('/welcomeImg.JPG')`,
+         backgroundSize: 'cover',
+         width:"100%",
+         height:"100vh",
+         display: 'grid',
+         alignContent: 'center',
+         opacity: '0.6',
+         position: 'absolute'
+      }}></div>
       <div className="container mx-auto px-16 grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 pb-10 relative" >
         <div className="lg:py-10 lg:pt-16 sm:py-16 sm:pt-16 py-10 pt-16">
           <p className="text-[#00517b] text-[18px] font-semibold flex gap-4">
