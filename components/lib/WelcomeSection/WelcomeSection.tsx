@@ -58,7 +58,7 @@ const WelcomeSection = () => {
           </p>
         </div>
         <div className="lg:pt-0 sm:pt-10 pt-10 gap-0 grid lg:grid-cols-1 md:grid-cols-1 grid-cols-1">
-          <div className="grid text-end mb-20">
+          <div className="grid text-end mb-10">
             <p className="text-[40px] font-bold text-[#81a32b]">8+</p>
             <p className="text-[19px] font-bold text-[#00517b]">Projects</p>
           </div>
