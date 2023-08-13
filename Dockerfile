@@ -1,15 +1,19 @@
-FROM node:16.20.1 AS build
+# Build Stage
+FROM node:16-alpine AS BUILD_IMAGE
 WORKDIR /app
-COPY package.json /app/
-
-RUN npm install --force
-COPY ./ /app/
+COPY package*.json ./
+RUN npm ci
+COPY . .
 RUN npm run build
 
-FROM nginx:1.23.3-alpine
 
-COPY nginx.conf /etc/nginx/conf.d/default.conf
-
-COPY --from=build /app/.next /usr/share/nginx/html
-
-CMD ["nginx", "-g","daemon off;"]
+# Production Stage
+FROM node:16-alpine AS PRODUCTION_STAGE
+WORKDIR /app
+COPY --from=BUILD_IMAGE /app/package*.json ./
+COPY --from=BUILD_IMAGE /app/.next ./.next
+COPY --from=BUILD_IMAGE /app/public ./public
+COPY --from=BUILD_IMAGE /app/node_modules ./node_modules
+ENV NODE_ENV=production
+EXPOSE 3000
+CMD ["npm", "start"]
