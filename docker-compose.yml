@@ -7,7 +7,7 @@ services:
     container_name: acp-front
     restart: always
     ports:
-      - "3006:80"
+      - "3006:3000"
     networks:
       - proxynet
 
