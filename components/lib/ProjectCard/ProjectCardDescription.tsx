@@ -15,8 +15,8 @@ export const ProjectCardDescription = ({
   description,
 }: ProjectCardProps) => {
   return (
-    <div className="grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 lg:gap-2 md:gap-4 gap-2 mb-10">
-      <Image src={image} alt={"project"} width={544} height={200} />
+    <div className="grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 lg:gap-2 md:gap-4 gap-6 mb-10">
+      <Image src={image} alt={"project"} width={644} height={200} />
       <div className="grid content-start lg:gap-7 md:gap-7 gap-4 lg:py-10 md:py-10 py-2">
         <p className="flex gap-6 items-center">
           <Image src={"location.svg"} alt={"location"} width={28} height={18} />

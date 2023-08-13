@@ -25,27 +25,28 @@ const ProjectsSection = () => {
         </p>
         <div className="grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 gap-12 mb-10">
           <ProjectCard
-            image={"Aghdam.jpeg"}
+            image={"/Aghdam.jpeg"}
             caption={"Construction of Aghdam - Fuzuli Highway 0-32"}
             location={"Aghdam - Fuzuli"}
             darkText={true}
           />
           <ProjectCard
-            image={"Horadiz.jpeg"}
-            caption={"Construction project of Ahmadbayli - Horadiz - Minjivan - Agband highway"}
-            location={"Horadiz - Minjivan - Agband"}
-            darkText={true}
-
-          />
-          <ProjectCard
-            image={"Shusha.JPG"}
+            image={"/Shusha.JPG"}
             caption={"The construction of the Ahmadbayli - Fuzuli - Shusha highway 51+000-81+700 km"}
             location={"Fuzuli - Shusha"}
             darkText={true}
 
           />
           <ProjectCard
-            image={"Gubadli.jpeg"}
+            image={"/Horadiz.jpeg"}
+            caption={"Construction project of Ahmadbayli - Horadiz - Minjivan - Agband highway"}
+            location={"Horadiz - Minjivan - Agband"}
+            darkText={true}
+
+          />
+          
+          <ProjectCard
+            image={"/Gubadli.jpeg"}
             caption={"Construction of Khudafarin - Gubadli - Lachin highway"}
             location={"Gubadli - Lachin"}
             darkText={true}
