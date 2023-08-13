@@ -16,11 +16,9 @@ export default function Home() {
     <Layout title="Home">
       <WelcomeSection />
       <ProjectsSection />
-      <WhyChooseUseSection />
       <FutureSection />
       <PartnersSection />
       <CoreValuesSection />
-      <ContactSection />
     </Layout>
   );
 }

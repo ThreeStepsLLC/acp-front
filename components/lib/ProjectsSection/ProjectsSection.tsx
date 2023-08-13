@@ -8,9 +8,9 @@ const ProjectsSection = () => {
   const router = useRouter()
 
   return (
-    <div className="bg-[#00517b]">
+    <div>
       <div className="container mx-auto px-16 py-16">
-        <p className="text-[#ffffff] text-[18px] font-semibold flex gap-4">
+        <p className="text-[#000000] text-[18px] font-semibold flex gap-4">
           <Image
             src={"yellowLine.svg"}
             alt={"whatwedo"}
@@ -19,7 +19,7 @@ const ProjectsSection = () => {
           />
           WHAT WE DO
         </p>
-        <p className="text-[#ffffff] text-[45px] font-bold mb-8">
+        <p className="text-[#000000] text-[45px] font-bold mb-8">
           Our{" "}
           <span className="text-[#81a32b] text-[40px] font-bold">Projects</span>
         </p>
@@ -28,21 +28,28 @@ const ProjectsSection = () => {
             image={"projectImg.svg"}
             caption={"Lorem Ipsum"}
             location={"Lorem Ipsum, Minnesota(MN)"}
+            darkText={true}
           />
           <ProjectCard
             image={"projectImg.svg"}
             caption={"Lorem Ipsum"}
             location={"Lorem Ipsum Juana"}
+            darkText={true}
+
           />
           <ProjectCard
             image={"projectImg.svg"}
             caption={"Lorem Ipsum"}
             location={"Lorem Ipsum Hermannberg"}
+            darkText={true}
+
           />
           <ProjectCard
             image={"projectImg.svg"}
             caption={"Lorem Ipsum"}
             location={"Lorem Ipsum Underpass Blockbury"}
+            darkText={true}
+
           />
         </div>
         <div className="items-center flex justify-center">

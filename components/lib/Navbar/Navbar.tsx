@@ -49,7 +49,7 @@ export default function Example() {
                 <Popover.Panel
                   className={`${
                     open ? "block" : "hidden"
-                  } bg-slate-200 py-3 px-4 shadow-lg absolute z-10 grid gap-2 mt-2 border-none`}
+                  } bg-[#edf2f7] py-3 px-4 shadow-lg absolute z-10 grid gap-2 mt-2 border-none`}
                 >
                   <Link
                     href="/about"
