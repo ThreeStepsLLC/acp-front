@@ -36,7 +36,7 @@ const WelcomeSection = () => {
         }}
       ></div>
       <div className="container mx-auto px-16 grid lg:grid-cols-1 md:grid-cols-1 sm:grid-cols-1 pb-10 relative">
-        <div className="lg:py-10 lg:pt-16 pt-40 py-10">
+        <div className="lg:py-10 lg:pt-16 pt-40 py-0">
           <p className="text-[#00517b] text-[18px] font-semibold flex gap-4">
             <Image
               src={"yellowLine.svg"}
@@ -57,13 +57,13 @@ const WelcomeSection = () => {
             <br />
           </p>
         </div>
-        <div className="lg:pt-0 sm:pt-10 pt-10 gap-0 grid lg:grid-cols-1 md:grid-cols-1 grid-cols-1">
-          <div className="grid text-end mb-10">
+        <div className="lg:pt-0 md:pt-10 pt-0 gap-0 grid lg:grid-cols-1 md:grid-cols-1 grid-cols-2">
+          <div className="grid lg:text-end md:text-end text-center mb-10">
             <p className="text-[40px] font-bold text-[#81a32b]">8+</p>
             <p className="text-[19px] font-bold text-[#00517b]">Projects</p>
           </div>
-          <div className="grid text-end">
-            <p className="text-[40px] font-bold text-[#81a32b]">4.253</p>
+          <div className="grid lg:text-end md:text-end text-center mb-10">
+            <p className="text-[40px] font-bold text-[#81a32b]">125</p>
             <p className="text-[19px] font-bold text-[#00517b]">Total km</p>
           </div>
         </div>
