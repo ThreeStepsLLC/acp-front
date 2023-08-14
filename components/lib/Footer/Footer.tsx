@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { IconContext } from "react-icons";
+import { AiOutlineMail } from "react-icons/ai";
 
 const Footer = () => {
   return (
@@ -15,7 +17,8 @@ const Footer = () => {
         <div>
           <Image src={"/logo.png"} alt="Logo" width={88.08} height={41.41} />
           <p className="text-[16px] mt-[20px]">
-          Our team of over 150 dedicated civil engineers and professionals is committed to delivering excellence in every project we undertake.
+            Our team of over 150 dedicated civil engineers and professionals is
+            committed to delivering excellence in every project we undertake.
           </p>
         </div>
         <div>
@@ -29,20 +32,28 @@ const Footer = () => {
                 width={18}
                 height={30}
               />
-              <p className="text-[16px] text-[#00517b]">
-              +994 50 887 22 92
-              </p>
+              <p className="text-[16px] text-[#00517b]">+994 50 887 22 92</p>
+            </div>
+            <div className="flex gap-3 items-center">
+              <IconContext.Provider
+                value={{ color: "rgb(129 163 43/var(--tw-text-opacity))", className: "global-class-name" }}
+              >
+                <div>
+                  <AiOutlineMail style={{fontSize: '20px'}} />
+                </div>
+              </IconContext.Provider>
+              <p className="text-[16px] text-[#00517b]">info@acp.com.az</p>
             </div>
             <div className="flex gap-3">
               <Image
-                className=""
                 src={"/location.svg"}
                 alt={"location"}
                 width={14}
                 height={18}
               />
               <p className="text-[16px] text-[#00517b]">
-              Heydar Aliyev Avenue 115, Building 187 Caspian Sport Plaza, Block B, 10th Floor, Room 1003, Baku, Azerbaijan
+                Heydar Aliyev Avenue 115, Building 187 Caspian Sport Plaza,
+                Block B, 10th Floor, Room 1003, Baku, Azerbaijan
               </p>
             </div>
           </div>
@@ -52,40 +63,81 @@ const Footer = () => {
           <ul className="text-[16px]">
             <li className="mb-[14px] text-[#00517b] hover:text-[#81a32b]">
               <Link passHref={true} href={"/"} className="flex gap-2">
-                <Image src={'/rightFooter.svg'} alt={"footerIcon"} height={30} width={6} /> <p>Home Page</p> 
+                <Image
+                  src={"/rightFooter.svg"}
+                  alt={"footerIcon"}
+                  height={30}
+                  width={6}
+                />{" "}
+                <p>Home Page</p>
               </Link>
             </li>
             <li className="mb-[14px] text-[#00517b] hover:text-[#81a32b]">
-              <Link  href={"/about"} className="flex gap-2">
-              <Image src={'/rightFooter.svg'} alt={"footerIcon"} height={30} width={6} /> <p>About Us</p> 
+              <Link href={"/about"} className="flex gap-2">
+                <Image
+                  src={"/rightFooter.svg"}
+                  alt={"footerIcon"}
+                  height={30}
+                  width={6}
+                />{" "}
+                <p>About Us</p>
               </Link>
             </li>
             <li className="mb-[14px] text-[#00517b] hover:text-[#81a32b]  ">
               <Link href={"/experience"} className="flex gap-2">
-              <Image src={'/rightFooter.svg'} alt={"footerIcon"} height={30} width={6} /> <p>Experience Fields</p> 
+                <Image
+                  src={"/rightFooter.svg"}
+                  alt={"footerIcon"}
+                  height={30}
+                  width={6}
+                />{" "}
+                <p>Experience Fields</p>
               </Link>
             </li>
             <li className="mb-[14px] text-[#00517b] hover:text-[#81a32b] ">
-              <Link  href={"/projects"} className="flex gap-2">
-              <Image src={'/rightFooter.svg'} alt={"footerIcon"} height={30} width={6} /> <p>Projects</p> 
+              <Link href={"/projects"} className="flex gap-2">
+                <Image
+                  src={"/rightFooter.svg"}
+                  alt={"footerIcon"}
+                  height={30}
+                  width={6}
+                />{" "}
+                <p>Projects</p>
               </Link>
             </li>
             <li className="mb-[14px] text-[#00517b] hover:text-[#81a32b] ">
-              <Link  href={"/licences"} className="flex gap-2">
-              <Image src={'/rightFooter.svg'} alt={"footerIcon"} height={30} width={6} /> <p>Licences</p> 
+              <Link href={"/licences"} className="flex gap-2">
+                <Image
+                  src={"/rightFooter.svg"}
+                  alt={"footerIcon"}
+                  height={30}
+                  width={6}
+                />{" "}
+                <p>Licences</p>
               </Link>
             </li>
             <li className="mb-[14px] text-[#00517b] hover:text-[#81a32b] ">
-              <Link  href={"/vacancies"} className="flex gap-2">
-              <Image src={'/rightFooter.svg'} alt={"footerIcon"} height={30} width={6} /> <p>Vacancies</p> 
+              <Link href={"/vacancies"} className="flex gap-2">
+                <Image
+                  src={"/rightFooter.svg"}
+                  alt={"footerIcon"}
+                  height={30}
+                  width={6}
+                />{" "}
+                <p>Vacancies</p>
               </Link>
             </li>
             <li className="mb-[14px] text-[#00517b] hover:text-[#81a32b] ">
-              <Link  href={"/contact"} className="flex gap-2">
-              <Image src={'/rightFooter.svg'} alt={"footerIcon"} height={30} width={6} /> <p>Contact Us</p> 
+              <Link href={"/contact"} className="flex gap-2">
+                <Image
+                  src={"/rightFooter.svg"}
+                  alt={"footerIcon"}
+                  height={30}
+                  width={6}
+                />{" "}
+                <p>Contact Us</p>
               </Link>
             </li>
-
           </ul>
         </div>
       </div>
