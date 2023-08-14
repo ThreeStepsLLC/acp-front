@@ -46,7 +46,7 @@ const WelcomeSection = () => {
             />
             Professional. Innovative. Reliable.
           </p>
-          <p className="lg:text-[40px] text-[28px] font-extrabold text-[#00517b]">
+          <p className="lg:text-[40px] text-[28px] font-extrabold text-[#00517b] mb-4">
             The power of engineering, at your service
           </p>
           <p className="text-[19px] font-normal text-[#00517b]">
