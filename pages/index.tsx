@@ -2,6 +2,7 @@ import Layout from "@/components/layout/Layout";
 import ContactSection from "@/components/lib/ContactSection";
 import CoreValuesSection from "@/components/lib/CoreValuesSection";
 import FutureSection from "@/components/lib/FutureSection/FutureSection";
+import LicencesSection from "@/components/lib/LicencesSection";
 import OurTeamSection from "@/components/lib/OurTeamSection";
 import PartnersSection from "@/components/lib/PartnersSection";
 import ProjectsSection from "@/components/lib/ProjectsSection";
@@ -19,6 +20,7 @@ export default function Home() {
       <FutureSection />
       <PartnersSection />
       <CoreValuesSection />
+      <LicencesSection />
     </Layout>
   );
 }
