@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 const WhatWeDoSection = () => {
   return (
-    <div className='container mx-auto px-16 py-20'>
+    <div className='container mx-auto px-12 py-20'>
         <p className='text-[#000000] text-[18px] font-semibold flex gap-4'><Image src={'yellowLine.svg'} alt={'whatwedo'} height={1} width={40} /> WHAT WE DO</p>
         <p className='text-[#000000] text-[45px] font-bold mb-8'><span className='text-[#81a32b] text-[45px] font-bold'>Our Project</span> in the World </p>
         <div className='grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-8'>

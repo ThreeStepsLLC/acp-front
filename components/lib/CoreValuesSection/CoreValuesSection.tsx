@@ -4,7 +4,7 @@ import Image from "next/image";
 const CoreValuesSection = () => {
   return (
     <div className="bg-[#00517b]">
-      <div className="container mx-auto px-16 py-16">
+      <div className="container mx-auto px-12 py-16">
         <div  style={{
         backgroundImage: 'url(/Icon_Settings.svg)',
         backgroundRepeat: 'no-repeat',

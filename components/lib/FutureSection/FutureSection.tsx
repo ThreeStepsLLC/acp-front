@@ -5,7 +5,7 @@ import Card from '../Card'
 const FutureSection = () => {
   return (
     <div className='bg-[#00517b]'>
-        <div className="container mx-auto px-16 py-16">
+        <div className="container mx-auto px-12 py-16">
         <div className="grid gap-2">
             <p className='text-[#ffffff] text-[18px] font-semibold flex gap-4 items-center'><Image src={'yellowLine.svg'} alt={'whatwedo'} height={1} width={40} /> WHY CHOOSE US</p>
             <p className='text-[#ffffff] text-[45px] font-bold mb-8'>Our <span className='text-[#81a32b] text-[45px] font-bold'>Services</span></p>

@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const WhereWeWorkSection = () => {
   return (
-    <div className="container mx-auto px-16 py-20">
+    <div className="container mx-auto px-12 py-20">
       <p className="text-[#000000] text-[18px] font-semibold flex gap-4">
         <Image src={"yellowLine.svg"} alt={"whatwedo"} height={1} width={40} />{" "}
         WHERE WE WORK

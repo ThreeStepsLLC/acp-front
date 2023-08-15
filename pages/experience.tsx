@@ -7,7 +7,7 @@ const experience = () => {
     <Layout title="Projects">
       <PageHeader title={"Our Experiences"} subTitle={"Experience Fields"} />
       <div>
-        <div className="container mx-auto px-16 py-20">
+        <div className="container mx-auto px-12 py-20">
           <p className="font-semibold text-[20px] text-[#000000]">
             ACP offers engineering consultancy services in constructing
             highways, bridges, retaining walls, tunnels, pedestrian under and
