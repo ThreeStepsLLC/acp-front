@@ -24,7 +24,7 @@ const ProjectCard = ({ image, caption, location, darkText }: ProjectCardProps) =
             {location}
           </span>
         </p>
-        <Button text={'See Projects'} onClick={() => console.log('salam')} />
+        <Button text={'See project'} onClick={() => console.log('salam')} />
       </div>
     </div>
   );
