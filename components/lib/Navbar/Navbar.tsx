@@ -26,12 +26,12 @@ export default function Example() {
   return (
     <header style={isNavbarSticky ? {backgroundColor: 'white', width: '100%', position: 'fixed'} : {backgroundColor: 'white'}}>
       <nav
-        className="mx-auto flex items-center justify-between p-4 px-16 container mx-auto text-[#00517b] text-[14px]"
+        className="mx-auto flex items-center justify-between p-6 px-16 container mx-auto text-[#00517b] text-[16px] font-semibold"
         aria-label="Global"
       >
         <div className="flex lg:flex-1">
           <Link href="/" className="-m-1.5 p-1.5">
-            <Image src={"/logo.png"} alt="Logo" width={68.08} height={41.41} />
+            <Image src={"/logo.png"} alt="Logo" width={78.08} height={41.41} />
           </Link>
         </div>
         <div className="flex lg:hidden">

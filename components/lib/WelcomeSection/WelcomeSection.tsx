@@ -25,13 +25,12 @@ const WelcomeSection = () => {
     >
       <div
         style={{
-          backgroundImage: `url('${images[currentImageIndex]}')`,
+          backgroundImage: `linear-gradient(to bottom, transparent 0%, black 250%), url('${images[currentImageIndex]}')`,
           backgroundSize: "cover",
           width: "100%",
           height: "100vh",
           display: "grid",
           alignContent: "center",
-          opacity: "0.6",
           position: "absolute",
         }}
       ></div>
@@ -49,17 +48,23 @@ const WelcomeSection = () => {
           <p className="lg:text-[40px] text-[28px] font-extrabold text-[#00517b] mb-4">
             The power of engineering, at your service
           </p>
-          <p className="text-[19px] font-normal text-[#00517b]">
-            Welcome to ACP Engineering, your trusted and reliable inspection
-            company offering a wide range of professional consulting services.
-            Our team of over 150 dedicated civil engineers and professionals is
-            committed to delivering excellence in every project we undertake.{" "}
+          <p className="text-[20px] font-semibold text-[#00517b]">
+            Welcome to our ACP Engineering website! We are pleased to introduce
+            you our company with 5 (five) years of experience, which is one of
+            the leading consulting construction companies in Azerbaijan. We
+            specialize in the development and implementation of projects for the
+            construction and reconstruction of facilities that will be able to
+            implement your project at the highest level. We guarantee you high
+            quality of work, compliance with the deadlines and budget of the
+            project, as well as an individual approach to each client. Our team
+            of more than 150 dedicated civil engineers and professionals,
+            strives to ensure excellence in every project we undertake.
             <br />
           </p>
         </div>
         <div className="lg:pt-0 md:pt-10 pt-0 gap-0 grid lg:grid-cols-1 md:grid-cols-1 grid-cols-2">
           <div className="grid lg:text-end md:text-end text-center mb-10">
-            <p className="text-[40px] font-bold text-[#81a32b]">8+</p>
+            <p className="text-[40px] font-bold text-[#81a32b]">8</p>
             <p className="text-[19px] font-bold text-[#00517b]">Projects</p>
           </div>
           <div className="grid lg:text-end md:text-end text-center mb-10">
