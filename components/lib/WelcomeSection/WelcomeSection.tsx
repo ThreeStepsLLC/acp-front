@@ -15,7 +15,7 @@ const WelcomeSection = () => {
       setCurrentImageIndex(
         (prevIndex: number) => (prevIndex + 1) % images.length
       );
-    }, 3000);
+    }, 4000);
   }, []);
 
   return (
@@ -25,7 +25,7 @@ const WelcomeSection = () => {
     >
       <div
         style={{
-          backgroundImage: `linear-gradient(to bottom, transparent 0%, black 250%), url('${images[currentImageIndex]}')`,
+          backgroundImage: `linear-gradient(transparent 0%, black 150%), url('${images[currentImageIndex]}')`,
           backgroundSize: "cover",
           width: "100%",
           height: "100vh",
@@ -48,7 +48,7 @@ const WelcomeSection = () => {
           <p className="lg:text-[40px] text-[28px] font-extrabold text-[#00517b] mb-4">
             The power of engineering, at your service
           </p>
-          <p className="text-[20px] font-semibold text-[#00517b]">
+          <p className="text-[20px] font-semibold text-[#ffffff]">
             Welcome to our ACP Engineering website! We are pleased to introduce
             you our company with 5 (five) years of experience, which is one of
             the leading consulting construction companies in Azerbaijan. We
