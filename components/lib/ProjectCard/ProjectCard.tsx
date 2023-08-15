@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Button from "../Button";
 
 interface ProjectCardProps {
   image: string;
@@ -23,7 +24,7 @@ const ProjectCard = ({ image, caption, location, darkText }: ProjectCardProps) =
             {location}
           </span>
         </p>
-        
+        <Button text={'See Projects'} onClick={() => console.log('salam')} />
       </div>
     </div>
   );
