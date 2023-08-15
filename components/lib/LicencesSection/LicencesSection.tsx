@@ -20,13 +20,13 @@ const LicencesSection = () => {
 
       <div className="lg:flex md:flex lg:justify-start md:justify-start justify-center grid gap-10">
       <Image
-        src={"/ACP Engineering 9001 2023-1.jpg"}
+        src={"/ISOCER1.png"}
         alt={"iso"}
         width={200}
         height={200}
       />
       <Image
-        src={"/ACP Engineering 14001 2023-2.jpg"}
+        src={"/ISOCER2.png"}
         alt={"iso"}
         width={200}
         height={200}
