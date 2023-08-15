@@ -19,13 +19,9 @@ const ContactSection = ({ detailPage }: ContactSectionProps) => {
           CONTACT US
         </p>
       )}
-      <p className="text-[#000000] text-[45px] font-bold mb-8">
-        Are You Going to Implement{" "}
-        <span className="text-[#81a32b] text-[45px] font-bold">Project?</span>
-      </p>
       <div className="grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-2 gap-8">
         <div>
-          <div className="py-6">
+          <div>
             <p className="text-[#A9A9A9] text-[14px] font-medium uppercase">
               Address
             </p>
