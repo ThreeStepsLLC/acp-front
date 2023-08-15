@@ -68,7 +68,7 @@ const WelcomeSection = () => {
           </div>
           <div className="grid lg:text-start md:text-start text-center mb-10">
             <p className="lg:text-[40px] md:text-[40px] text-[20px] font-bold text-[#81a32b]">
-              600+km
+              600km+
             </p>
             <p className="lg:text-[19px] md:text-[19px] text-[16px] font-bold text-[#00517b]">
               Total Road
