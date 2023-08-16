@@ -54,6 +54,8 @@ const ProjectDetail = () => {
               height={500}
               onClick={() => openModal("/M1.jpeg")}
               className="clickable-image"
+              style={{cursor: 'pointer'}}
+
             />
           </div>
           <div className="grid lg:grid-cols-6 md:grid-cols-6 sm:grid-cols-2 gap-4 mt-10">
@@ -67,6 +69,8 @@ const ProjectDetail = () => {
                 height={500}
                 onClick={() => openModal("/M1.jpeg")}
                 className="clickable-image"
+                style={{cursor: 'pointer'}}
+
               />
             ))}
           </div>
