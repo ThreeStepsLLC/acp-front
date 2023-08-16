@@ -17,7 +17,7 @@ const ProjectCard = ({ image, caption, location, darkText }: ProjectCardProps) =
         {caption}
       </p>
       <hr className="color-[#A9A9A9] text-[#A9A9A9]" />
-      <div className="flex justify-between">
+      <div className="flex justify-between items-center">
         <p className="flex gap-6 items-center">
           <Image src={"location.svg"} alt={"location"} width={28} height={18} />
           <span className={darkText ? "text-[19px] text-[#00517b] font-normal" : "text-[19px] text-[#ffffff] font-normal"}>
