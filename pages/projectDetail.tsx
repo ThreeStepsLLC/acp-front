@@ -89,7 +89,6 @@ const ProjectDetail = () => {
             border: '0px'
           },
         }}
-        onClick={closeModal}
       >
         {selectedImage && (
           <Image src={selectedImage} alt="project" width={800} height={800} />

@@ -54,7 +54,6 @@ const Licences = () => {
             border: '0px'
           }
         }}
-        onClick={closeModal}
       >
         {selectedImage && (
           <Image src={selectedImage} alt="iso" width={800} height={800} />
