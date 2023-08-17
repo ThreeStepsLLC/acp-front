@@ -7,7 +7,7 @@ interface ButtonProps {
 
 const Button = ({text, onClick}: ButtonProps) => {
   return (
-    <div className='bg-[#81a32b] hover:bg-[#739126] w-48 text-[18px] text-center py-2 px-4 cursor-pointer font-semibold h-fit' onClick={onClick}>{text}</div>
+    <div className='bg-[#81a32b] hover:bg-[#739126] w-40 text-[15px] text-center py-2 px-2 cursor-pointer font-semibold h-fit' onClick={onClick}>{text}</div>
   )
 }
 
