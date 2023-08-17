@@ -35,7 +35,7 @@ const ProjectsSection = () => {
             <ProjectCard
               image={"/M1.jpeg"}
               caption={
-                "M-1 BAKU-GUBA-THE STATE BOARDER OF THE RUSSIAN FEDERATION NEW MOTOR ROAD CONSTRUCTION CLIENT: STATE AGENCY OF AZERBAIJAN AUTOMOBILE ROADS "
+                "M-1 BAKU-GUBA-THE STATE BOARDER OF THE RUSSIAN FEDERATION NEW MOTOR ROAD CONSTRUCTION CLIENT"
               }
               location={"Baku - Guba"}
               darkText={true}
