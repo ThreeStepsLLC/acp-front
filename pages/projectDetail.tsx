@@ -113,7 +113,7 @@ const ProjectDetail = () => {
             <div className="grid grid-cols-2 gap-4">
               <a
                 data-fancybox="gallery"
-                href="https://lipsum.app/id/60/1600x1200"
+                href="/M1.jpeg"
               >
                 <Image
                   src={"/M1.jpeg"}
@@ -127,7 +127,7 @@ const ProjectDetail = () => {
               </a>
               <a
                 data-fancybox="gallery"
-                href="https://lipsum.app/id/60/1600x1200"
+                href="/M1.jpeg"
               >
                 <Image
                   src={"/M1.jpeg"}
@@ -141,7 +141,7 @@ const ProjectDetail = () => {
               </a>
               <a
                 data-fancybox="gallery"
-                href="https://lipsum.app/id/60/1600x1200"
+                href="/M1.jpeg"
               >
                 <Image
                   src={"/M1.jpeg"}
@@ -155,7 +155,7 @@ const ProjectDetail = () => {
               </a>
               <a
                 data-fancybox="gallery"
-                href="https://lipsum.app/id/60/1600x1200"
+                href="/M1.jpeg"
               >
                 <Image
                   src={"/M1.jpeg"}
