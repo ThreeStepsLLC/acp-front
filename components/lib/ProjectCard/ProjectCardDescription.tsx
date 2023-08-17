@@ -19,7 +19,7 @@ export const ProjectCardDescription = ({
   const router = useRouter()
 
   return (
-    <div className="grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 lg:gap-6 md:gap-4 gap-6 mb-10">
+    <div className="grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 lg:gap-0 md:gap-0 gap-2 mb-10">
       <Image src={image} alt={"project"} width={644} height={200} />
       <div className="grid content-start lg:gap-2 md:gap-7 gap-4 py-2">
         <p className="flex gap-3 items-center">
@@ -30,7 +30,7 @@ export const ProjectCardDescription = ({
         </p>
         <p className="text-[#000810] font-bold text-[16px]">{caption}</p>
         <p className="text-[#000810] font-normal text-[15px]">{description}</p>
-        <Button text={'See project'} onClick={() => router.push('/projectDetail')} />
+        {/* <Button text={'See project'} onClick={() => router.push('/projectDetail')} /> */}
       </div>
     </div>
   );
