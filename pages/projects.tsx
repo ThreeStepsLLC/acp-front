@@ -55,11 +55,22 @@ const projects = () => {
 
             />
             <ProjectCard
+              image={"/welcomeImg4.png"}
+              caption={"Construction of Toganali-Kalbajar-Istisu road & Murovdag tunnel underway"}
+              location={"Toganali - Kalbajar"}
+              darkText={true}
+            />
+            <ProjectCard
+              image={"/LACI╠çN.png"}
+              caption={"The construction of the Kalbacar-Lachin highway"}
+              location={"Kalbacar - Lachin"}
+              darkText={true}
+            />
+            <ProjectCard
               image={"/Aghdam.jpeg"}
               caption={"Construction of Aghdam - Fuzuli Highway 0-32"}
               location={"Aghdam - Fuzuli"}
               darkText={true}
-
             />
           </div>
         </div>
