@@ -51,7 +51,7 @@ const ProjectsSection = () => {
 
             />
             <ProjectCard
-              image={"/SHUSHA.JPG"}
+              image={"/shusha.jpg"}
               caption={
                 "The construction of the Ahmadbayli - Fuzuli - Shusha highway 51+000-81+700 km"
               }
