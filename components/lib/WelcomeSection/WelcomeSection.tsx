@@ -76,7 +76,7 @@ const WelcomeSection = () => {
           </div>
           <div className="grid lg:text-start md:text-start text-center mb-10">
             <p className="lg:text-[40px] md:text-[40px] text-[20px] font-bold text-[#81a32b]">
-             66424 m
+             66424m
             </p>
             <p className="lg:text-[19px] md:text-[19px] text-[16px] font-bold text-[#ffffff]">
               Total Tunnels
