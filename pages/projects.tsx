@@ -7,7 +7,7 @@ import { ProjectCardDescription } from "@/components/lib/ProjectCard/ProjectCard
 import { useRouter } from "next/router";
 import { getProjects } from "@/services/services";
 
-const projects = () => {
+const Projects = () => {
   const [projects, setProjects] = useState([]);
 
   const getProjectsAll = () => {
@@ -103,4 +103,4 @@ const projects = () => {
   );
 };
 
-export default projects;
+export default Projects;

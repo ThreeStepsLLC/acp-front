@@ -1,11 +1,15 @@
 import Layout from "@/components/layout";
 import Button from "@/components/lib/Button";
 import PageHeader from "@/components/lib/PageHeader/PageHeader";
-import { getPositions } from "@/services/services";
+import { getPositions, postVacancies } from "@/services/services";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { useForm, Controller } from "react-hook-form";
+import Select from "react-select"; // Import react-select
 
-const vacancies = () => {
+const Vacancies = () => {
   const [positions, setPositions] = useState<any>([]);
 
   const getPositionsAll = () => {
@@ -14,12 +18,62 @@ const vacancies = () => {
     });
   };
 
+  const { handleSubmit, control, getValues, formState } = useForm();
+
+  const onSubmit = (data: any) => {
+    const formData = new FormData();
+    console.log(data.position, "data.position");
+    const values = getValues();
+
+    const positionObj = {
+      id: data.position.label,
+    };
+
+    for (const key in values) {
+      if (key === "cvFilePath") {
+        formData.append(key, values[key]);
+      } else if (key === "position") {
+        formData.append(key, JSON.stringify(positionObj));
+      } else {
+        formData.append(key, values[key]);
+      }
+    }
+
+    postVacancies(formData)
+      .then(() => {
+        toast.success("Müraciət uğurla göndərildi!", {
+          // ... (Toast ayarları)
+        });
+      })
+      .catch(() => {
+        toast.error("Xəta baş verdi!", {
+          // ... (Toast ayarları)
+        });
+      });
+  };
+
   useEffect(() => {
     getPositionsAll();
   }, []);
 
+  const customStyles = {
+    control: (provided: any, state: any) => ({
+      ...provided,
+      border: state.isFocused ? "1px solid #739126" : "1px solid #00517b",
+      borderRadius: "0px",
+      backgroundColor: state.isFocused ? "white" : "whitesmoke",
+      height: "45px",
+    }),
+    option: (provided: any, state: any) => ({
+      ...provided,
+      backgroundColor: state.isSelected ? "#739126" : "white",
+      color: state.isSelected ? "white" : "black",
+    }),
+  };
+
   return (
     <Layout title="Vacancies">
+      <ToastContainer />
       <PageHeader title={"Work with us"} subTitle={"Vacancies"} />
       <div className="container mx-auto px-12 py-0">
         <div className="grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 my-14 gap-6">
@@ -114,28 +168,61 @@ const vacancies = () => {
               padding: "25px",
               borderRadius: "5px",
             }}
+            onSubmit={handleSubmit((data) => onSubmit(data))}
           >
+            <h1
+              style={{
+                textTransform: "uppercase",
+                textAlign: "center",
+                marginBottom: "20px",
+                fontWeight: "bold",
+                fontSize: "20px",
+                color: "#00517b",
+              }}
+            >
+              send us your cv
+            </h1>
             <div className="flex flex-wrap -mx-3 mb-6">
               <div className="w-full md:w-1/2 px-3">
                 <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
                   Full name
                 </label>
-                <input
-                  className="appearance-none block w-full bg-[#F5F5F5] text-gray-700 border border-[#00517b] py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-[#739126]"
-                  id="grid-last-name"
-                  type="text"
-                  placeholder="Full name"
+                <Controller
+                  control={control}
+                  name="fullName"
+                  rules={{ required: true }}
+                  render={({ field: { onChange, onBlur, value } }) => (
+                    <input
+                      className="appearance-none block w-full bg-[#F5F5F5] text-gray-700 border border-[#00517b] py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-[#739126]"
+                      id="grid-last-name"
+                      type="text"
+                      placeholder="Full name"
+                      onChange={onChange}
+                      onBlur={onBlur}
+                      value={value}
+                    />
+                  )}
                 />
               </div>
               <div className="w-full md:w-1/2 px-3">
                 <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
                   Email
                 </label>
-                <input
-                  className="appearance-none block w-full bg-[#F5F5F5] text-gray-700 border border-[#00517b] py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-[#739126]"
-                  id="grid-last-name"
-                  type="mail"
-                  placeholder="Email"
+                <Controller
+                  control={control}
+                  name="mail"
+                  rules={{ required: true }}
+                  render={({ field: { onChange, onBlur, value } }) => (
+                    <input
+                      className="appearance-none block w-full bg-[#F5F5F5] text-gray-700 border border-[#00517b] py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-[#739126]"
+                      id="grid-last-name"
+                      type="mail"
+                      placeholder="Email"
+                      onChange={onChange}
+                      onBlur={onBlur}
+                      value={value}
+                    />
+                  )}
                 />
               </div>
             </div>
@@ -144,22 +231,42 @@ const vacancies = () => {
                 <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
                   City
                 </label>
-                <input
-                  className="appearance-none block w-full bg-[#F5F5F5] text-gray-700 border border-[#00517b] py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-[#739126]"
-                  id="grid-last-name"
-                  type="text"
-                  placeholder="City"
+                <Controller
+                  control={control}
+                  rules={{ required: true }}
+                  name="city"
+                  render={({ field: { onChange, onBlur, value } }) => (
+                    <input
+                      className="appearance-none block w-full bg-[#F5F5F5] text-gray-700 border border-[#00517b] py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-[#739126]"
+                      id="grid-last-name"
+                      type="text"
+                      placeholder="City"
+                      onChange={onChange}
+                      onBlur={onBlur}
+                      value={value}
+                    />
+                  )}
                 />
               </div>
               <div className="w-full md:w-1/2 px-3">
                 <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
                   Phone number
                 </label>
-                <input
-                  className="appearance-none block w-full bg-[#F5F5F5] text-gray-700 border border-[#00517b] py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-[#739126]"
-                  id="grid-last-name"
-                  type="text"
-                  placeholder="Phone number"
+                <Controller
+                  control={control}
+                  name="phone"
+                  rules={{ required: true }}
+                  render={({ field: { onChange, onBlur, value } }) => (
+                    <input
+                      className="appearance-none block w-full bg-[#F5F5F5] text-gray-700 border border-[#00517b] py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-[#739126]"
+                      id="grid-last-name"
+                      type="text"
+                      placeholder="Phone number"
+                      onChange={onChange}
+                      onBlur={onBlur}
+                      value={value}
+                    />
+                  )}
                 />
               </div>
             </div>
@@ -168,46 +275,57 @@ const vacancies = () => {
                 <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
                   Vacancy
                 </label>
-                <div className="relative">
-                  <select
-                    className="block appearance-none w-full bg-[#F5F5F5] border border-[#00517b] text-gray-700 py-3 px-4 pr-8 leading-tight focus:outline-none focus:bg-white focus:border-[#739126]"
-                    id="grid-state"
-                  >
-                    {positions.map((item: any, index: number) => (
-                      <option key={index} value={item.id}>
-                        {item.title}
-                      </option>
-                    ))}
-                  </select>
-                  <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
-                    <svg
-                      className="fill-current h-4 w-4"
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 20 20"
-                    >
-                      <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
-                    </svg>
-                  </div>
-                </div>
+                <Controller
+                  control={control}
+                  name="position"
+                  rules={{ required: true }}
+                  render={({ field: { onChange, onBlur, value } }) => (
+                    <Select
+                      styles={customStyles} // Apply custom styles here
+                      options={positions.map((item: any) => ({
+                        value: item.id,
+                        label: item.title,
+                      }))}
+                      onChange={onChange}
+                      onBlur={onBlur}
+                      value={value}
+                    />
+                  )}
+                />
               </div>
               <div className="w-full md:w-1/2 px-3">
                 <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
                   CV
                 </label>
-                <input
-                  className="appearance-none block w-full bg-[#F5F5F5] text-gray-700 border border-[#00517b] px-4 leading-tight focus:outline-none focus:bg-white focus:border-[#739126]"
-                  id="grid-last-name"
-                  type="file"
-                  placeholder="Phone number"
-                  style={{
-                    paddingTop: "0.6rem",
-                    paddingBottom: "0.5rem",
-                  }}
+                <Controller
+                  control={control}
+                  name="cvFilePath"
+                  rules={{ required: true }}
+                  render={({ field: { onChange, onBlur, value } }) => (
+                    <input
+                      className="appearance-none block w-full bg-[#F5F5F5] text-gray-700 border border-[#00517b] px-4 leading-tight focus:outline-none focus:bg-white focus:border-[#739126]"
+                      id="grid-last-name"
+                      type="file"
+                      placeholder="Phone number"
+                      style={{
+                        paddingTop: "0.6rem",
+                        paddingBottom: "0.5rem",
+                      }}
+                      onChange={(e) => onChange(e?.target?.files?.[0])} // Dosya nesnesini ekliyoruz
+                      onBlur={onBlur}
+                    />
+                  )}
                 />
               </div>
 
               <div className="w-full md:w-1/1 px-3 mt-5 flex justify-center">
-                <Button text={"Submit"} onClick={() => console.log("salam")} />
+                <button
+                  type="submit"
+                  disabled={!formState.isValid} 
+                  className="bg-[#81a32b] hover:bg-[#739126] w-40 text-[15px] text-center py-2 px-2 cursor-pointer font-semibold h-fit"
+                >
+                  Submit
+                </button>
               </div>
             </div>
           </form>
@@ -217,4 +335,4 @@ const vacancies = () => {
   );
 };
 
-export default vacancies;
+export default Vacancies;

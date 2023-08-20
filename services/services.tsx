@@ -27,8 +27,12 @@ export const getPositions = () => {
   return api.get("/positions").then((res: AxiosResponse) => res.data);
 };
 
-export const postVacancies = () => {
-  return api.post("/vacancies").then((res: AxiosResponse) => res.data);
+export const postVacancies = (data: any) => {
+  return api.post("/vacancies", data).then((res: AxiosResponse) => res.data);
+};
+
+export const postContacts = (data: any) => {
+  return api.post("/contacts", data).then((res: AxiosResponse) => res.data);
 };
 
 export const getConstants = (id: string) => {

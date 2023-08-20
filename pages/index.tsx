@@ -1,15 +1,12 @@
 import Layout from "@/components/layout/Layout";
-import ContactSection from "@/components/lib/ContactSection";
 import CoreValuesSection from "@/components/lib/CoreValuesSection";
 import FutureSection from "@/components/lib/FutureSection/FutureSection";
 import LicencesSection from "@/components/lib/LicencesSection";
-import OurTeamSection from "@/components/lib/OurTeamSection";
 import PartnersSection from "@/components/lib/PartnersSection";
 import ProjectsSection from "@/components/lib/ProjectsSection";
 import WelcomeSection from "@/components/lib/WelcomeSection";
-import WhatWeDoSection from "@/components/lib/WhatWeDoSection";
-import WhereWeWorkSection from "@/components/lib/WhereWeWorkSection";
-import WhyChooseUseSection from "@/components/lib/WhyChooseUseSection";
+import { ToastContainer } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 export default function Home() {
 
@@ -21,6 +18,7 @@ export default function Home() {
       <PartnersSection />
       <CoreValuesSection />
       <LicencesSection />
+
     </Layout>
   );
 }
