@@ -28,12 +28,7 @@ const WelcomeSection = () => {
     getApisAll();
   }, []);
 
-  const images = [
-    "/welcomeImg1.jpg",
-    "/welcomeImg2.jpg",
-    "/welcomeImg3.jpg",
-    "/welcomeImg4.png",
-  ]; // Add your image URLs here
+  const images = sliderImages; // Add your image URLs here
 
   useEffect(() => {
     const interval = setInterval(() => {
