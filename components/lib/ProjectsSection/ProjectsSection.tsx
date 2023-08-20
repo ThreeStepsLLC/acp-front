@@ -1,11 +1,29 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import ProjectCard from "../ProjectCard";
 import Button from "../Button";
 import { useRouter } from "next/router";
+import { getProjects } from "@/services/services";
 
 const ProjectsSection = () => {
+  const [projects, setProjects] = useState([]);
   const router = useRouter();
+
+  const getProjectsAll = () => {
+    const params = {
+      count: 6,
+    };
+
+    getProjects(params).then((res) => {
+      setProjects(res.data);
+    });
+  };
+
+  console.log(projects, "projects");
+
+  useEffect(() => {
+    getProjectsAll();
+  }, []);
 
   return (
     <div>
@@ -24,54 +42,15 @@ const ProjectsSection = () => {
           <span className="text-[#81a32b] text-[40px] font-bold">Projects</span>
         </p>
         <div className="grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 gap-12 mb-10">
-        <ProjectCard
-              image={"/ZEFER.jpg"}
-              caption={
-                "Ahmadbayli-Fuzuli–Shusha highway, also called “Zafar Yolu” (Victory Road) 51-101.5 km"
-              }
-              location={"Ahmadbayli - Fuzuli – Shusha"}
-              darkText={true}
-            />
+          {projects.map((item: any, index: number) => (
             <ProjectCard
-              image={"/M1.jpeg"}
-              caption={
-                "M-1 BAKU-GUBA-THE STATE BOARDER OF THE RUSSIAN FEDERATION NEW MOTOR ROAD CONSTRUCTION CLIENT"
-              }
-              location={"Baku - Guba"}
-              darkText={true}
-
-            />
-            <ProjectCard
-              image={"/Horadiz.jpeg"}
-              caption={
-                "Construction project of Ahmadbayli - Horadiz - Minjivan - Agband highway"
-              }
-              location={"Horadiz - Minjivan - Agband"}
-              darkText={true}
-
-            />
-            <ProjectCard
-              image={"/shusha.png"}
-              caption={
-                "The construction of the Ahmadbayli - Fuzuli - Shusha highway 51+000-81+700 km"
-              }
-              location={"Fuzuli - Shusha"}
-              darkText={true}
-
-            />
-            <ProjectCard
-              image={"/Gubadli.jpeg"}
-              caption={"Construction of Khudafarin - Gubadli - Lachin highway"}
-              location={"Gubadli - Lachin"}
-              darkText={true}
-
-            />
-            <ProjectCard
-              image={"/welcomeImg4.png"}
-              caption={"Construction of Toganali-Kalbajar-Istisu road & Murovdag tunnel underway"}
-              location={"Toganali - Kalbajar"}
+              key={index}
+              image={item.imageUrl}
+              caption={item.title}
+              location={item.address}
               darkText={true}
             />
+          ))}
         </div>
         <div className="items-center flex justify-center">
           <Button

@@ -1,10 +1,30 @@
+import { getConstants, getSettings } from "@/services/services";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { IconContext } from "react-icons";
 import { AiOutlineMail } from "react-icons/ai";
 
 const Footer = () => {
+  const [data, setData] = useState<any>({});
+  const [values, setValues] = useState<any>({})
+
+  const getFooterValues = () => {
+    getSettings().then((res) => {
+      setData(res.data);
+    });
+
+    getConstants('footer-value').then((res) => {
+      setValues(res.data)
+    })
+  }
+
+  useEffect(() => {
+    getFooterValues()
+  }, [])
+
+  console.log(data, 'data')
+
   return (
     <div
       className="bg-[#F5F5F5] text-[#00517b] px-10 lg:px-40 py-10 2xl:px-60"
@@ -17,8 +37,7 @@ const Footer = () => {
         <div>
           <Image src={"/logo.png"} alt="Logo" width={88.08} height={41.41} />
           <p className="text-[16px] mt-[20px]">
-            Our team of over 150 dedicated civil engineers and professionals is
-            committed to delivering excellence in every project we undertake.
+            {values.description}
           </p>
         </div>
         <div>
@@ -32,7 +51,7 @@ const Footer = () => {
                 width={18}
                 height={30}
               />
-              <p className="text-[16px] text-[#00517b]">+994 50 887 22 92</p>
+              <p className="text-[16px] text-[#00517b]">{data.phone}</p>
             </div>
             <div className="flex gap-3 items-center">
               <IconContext.Provider
@@ -42,7 +61,7 @@ const Footer = () => {
                   <AiOutlineMail style={{fontSize: '20px'}} />
                 </div>
               </IconContext.Provider>
-              <p className="text-[16px] text-[#00517b]">info@acp.com.az</p>
+              <p className="text-[16px] text-[#00517b]">{data.mailAddressForContact}</p>
             </div>
             <div className="flex gap-3">
               <Image
@@ -52,8 +71,7 @@ const Footer = () => {
                 height={18}
               />
               <p className="text-[16px] text-[#00517b]">
-                Heydar Aliyev Avenue 115, Building 187 Caspian Sport Plaza,
-                Block B, 10th Floor, Room 1003, Baku, Azerbaijan
+                {data.officeAddress}
               </p>
             </div>
           </div>
@@ -158,7 +176,7 @@ const Footer = () => {
       <div className="lg:flex sm:grid lg:justify-between sm:justify-center text-center text-[14px] gap-2">
         <p className="opacity-100">© 2023 ACP. All rights reserved.</p>
         <div className="flex justify-between font-bold gap-2">
-          <a href="https://www.instagram.com/" target="blank">
+          <a href={data.instagram} target="blank">
             <Image
               className="bg-[#81a32b] p-2 rounded-full"
               src={"/instaIcon.svg"}
@@ -167,7 +185,7 @@ const Footer = () => {
               height={30}
             />
           </a>
-          <a href="https://www.twitter.com/" target="blank">
+          <a href={data.twitter} target="blank">
             <Image
               className="bg-[#81a32b] p-2 rounded-full"
               src={"/twitterIcon.svg"}
@@ -176,7 +194,7 @@ const Footer = () => {
               height={30}
             />
           </a>
-          <a href="https://web.whatsapp.com/" target="blank">
+          <a href={data.whatsapp} target="blank">
             <Image
               className="bg-[#81a32b] p-2 rounded-full"
               src={"/whatsappIcon.svg"}

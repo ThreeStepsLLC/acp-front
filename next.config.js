@@ -4,5 +4,8 @@ module.exports = {
     reactStrictMode: true,
     experimental: {
         appDir: true
-    }
+    },
+    images: {
+        domains: ['cdn.acp.com.az'],
+    },
 }

@@ -1,10 +1,23 @@
 import Layout from "@/components/layout";
 import Button from "@/components/lib/Button";
 import PageHeader from "@/components/lib/PageHeader/PageHeader";
+import { getPositions } from "@/services/services";
 import Image from "next/image";
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 const vacancies = () => {
+  const [positions, setPositions] = useState<any>([]);
+
+  const getPositionsAll = () => {
+    getPositions().then((res) => {
+      setPositions(res.data);
+    });
+  };
+
+  useEffect(() => {
+    getPositionsAll();
+  }, []);
+
   return (
     <Layout title="Vacancies">
       <PageHeader title={"Work with us"} subTitle={"Vacancies"} />
@@ -84,24 +97,11 @@ const vacancies = () => {
               Our vacancies:
             </p>
             <ul className="text-[#000000] py-5 text-[18px]">
-              <li className="flex gap-2">
-                <p className="text-[#81a32b]">•</p> Yol mühəndisləri
-              </li>
-              <li className="flex gap-2">
-                <p className="text-[#81a32b]">•</p> İnşaat mühəndisləri
-              </li>
-              <li className="flex gap-2">
-                <p className="text-[#81a32b]">•</p> Layihə mühəndisləri
-              </li>
-              <li className="flex gap-2">
-                <p className="text-[#81a32b]">•</p> Geodezistlər
-              </li>
-              <li className="flex gap-2">
-                <p className="text-[#81a32b]">•</p> Memarlar
-              </li>
-              <li className="flex gap-2">
-                <p className="text-[#81a32b]">•</p> Digər
-              </li>
+              {positions.map((item: any, index: number) => (
+                <li key={index} className="flex gap-2">
+                  <p className="text-[#81a32b]">•</p> {item.title}
+                </li>
+              ))}
             </ul>
           </div>
         </div>
@@ -173,9 +173,11 @@ const vacancies = () => {
                     className="block appearance-none w-full bg-[#F5F5F5] border border-[#00517b] text-gray-700 py-3 px-4 pr-8 leading-tight focus:outline-none focus:bg-white focus:border-[#739126]"
                     id="grid-state"
                   >
-                    <option>New Mexico</option>
-                    <option>Missouri</option>
-                    <option>Texas</option>
+                    {positions.map((item: any, index: number) => (
+                      <option key={index} value={item.id}>
+                        {item.title}
+                      </option>
+                    ))}
                   </select>
                   <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
                     <svg
@@ -198,12 +200,12 @@ const vacancies = () => {
                   type="file"
                   placeholder="Phone number"
                   style={{
-                    paddingTop: '0.6rem',
-                    paddingBottom: '0.5rem'
+                    paddingTop: "0.6rem",
+                    paddingBottom: "0.5rem",
                   }}
                 />
               </div>
-              
+
               <div className="w-full md:w-1/1 px-3 mt-5 flex justify-center">
                 <Button text={"Submit"} onClick={() => console.log("salam")} />
               </div>

@@ -1,11 +1,26 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
+import { getSettings } from "@/services/services";
 
 interface ContactSectionProps {
   detailPage?: boolean;
 }
 
 const ContactSection = ({ detailPage }: ContactSectionProps) => {
+  const [data, setData] = useState<any>({});
+
+  const getFooterValues = () => {
+    getSettings().then((res) => {
+      setData(res.data);
+    });
+  };
+
+  useEffect(() => {
+    getFooterValues();
+  }, []);
+
+  console.log(data, 'data')
+
   return (
     <div className="container mx-auto px-12 py-16">
       {!detailPage && (
@@ -26,8 +41,7 @@ const ContactSection = ({ detailPage }: ContactSectionProps) => {
               Address
             </p>
             <p className="text-[#000000] text-[18px] font-semibold">
-              Heydar Aliyev Avenue 115, Building 187 Caspian Sport Plaza, Block
-              B, 10th Floor, Room 1003, Baku, Azerbaijan
+              {data.officeAddress}
             </p>
           </div>
 
@@ -36,7 +50,7 @@ const ContactSection = ({ detailPage }: ContactSectionProps) => {
               Email
             </p>
             <p className="text-[#000000] text-[18px] font-semibold">
-              info@acp.com.az
+            {data.mailAddressForContact}
             </p>
           </div>
 
@@ -45,7 +59,7 @@ const ContactSection = ({ detailPage }: ContactSectionProps) => {
               Phone
             </p>
             <p className="text-[#000000] text-[18px] font-semibold">
-              +994 50 887 22 92
+            {data.phone}
             </p>
           </div>
         </div>

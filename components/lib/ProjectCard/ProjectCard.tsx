@@ -44,10 +44,10 @@ const ProjectCard = ({
             {location}
           </span>
         </p>
-        {/* <Button
+        <Button
           text={"See project"}
           onClick={() => router.push("/projectDetail")}
-        /> */}
+        />
       </div>
       <hr className="color-[#A9A9A9] text-[#A9A9A9]" />
     </div>

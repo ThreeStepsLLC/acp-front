@@ -1,7 +1,22 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
+import { getConstants } from "@/services/services";
 
 const CoreValuesSection = () => {
+  const [coreValues, setCoreValues] = useState<any>({})
+
+  const getCoreValues = () => {
+    getConstants("core-values").then((res) => {
+      setCoreValues(res.data);
+    });
+  }
+
+  useEffect(() => {
+    getCoreValues()
+  }, [])
+
+  console.log(coreValues, 'coreValues')
+
   return (
     <div className="bg-[#00517b]">
       <div className="container mx-auto px-12 py-16">
@@ -29,9 +44,7 @@ const CoreValuesSection = () => {
         </p>
 
         <p className="text-[#ffffff] text-[22px] font-normal">
-          Our core values are based on honesty and responsibility towards our
-          partners. We focus on innovation, environmental responsibilty,
-          confidentiality. We stick to morals and ethics at all stages of work.
+          {coreValues.description}
         </p>
       </div>
     </div>

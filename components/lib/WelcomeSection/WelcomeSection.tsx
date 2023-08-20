@@ -1,8 +1,33 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
+import { getConstants, getSettings, getSliderImages } from "@/services/services";
 
 const WelcomeSection = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [data, setData] = useState<any>({});
+  const [constants, setConstants] = useState<any>({});
+  const [sliderImages, setSliderImages] = useState<any>([])
+
+  const getApisAll = () => {
+    getSettings().then((res) => {
+      setData(res.data);
+    });
+
+    getConstants("slogan").then((res) => {
+      setConstants(res.data);
+    });
+
+    getSliderImages().then((res) => {
+      setSliderImages(res.data)
+    })
+  };
+
+  console.log(sliderImages, 'sliderImages')
+
+  useEffect(() => {
+    getApisAll();
+  }, []);
+
   const images = [
     "/welcomeImg1.jpg",
     "/welcomeImg2.jpg",
@@ -41,10 +66,12 @@ const WelcomeSection = () => {
             Professional. Innovative. Reliable.
           </p>
           <p className="lg:text-[40px] md:text-[40px] text-[25px] font-extrabold text-[#ffffff] mb-4">
-            The power of engineering, at your service
+            {constants.title}
+            {/* The power of engineering, at your service */}
           </p>
           <p className="lg:text-[20px] md:text-[20px] text-[20px] font-semibold text-[#ffffff]">
-            Welcome to our ACP Engineering website! <br /> 
+            {constants.description}
+            {/* Welcome to our ACP Engineering website! <br /> 
             We are pleased to introduce you our company with 5 (five) years of experience, which is one of
             the leading consulting construction companies in Azerbaijan. We
             specialize in the development and implementation of projects for the
@@ -53,14 +80,14 @@ const WelcomeSection = () => {
             quality of work, compliance with the deadlines and budget of the
             project, as well as an individual approach to each client. Our team
             of more than 150 dedicated civil engineers and professionals,
-            strives to ensure excellence in every project we undertake.
+            strives to ensure excellence in every project we undertake. */}
             <br />
           </p>
         </div>
         <div className="grid grid-cols-4 gap-6 mt-20">
           <div className="grid lg:text-start md:text-start text-center mb-10">
             <p className="lg:text-[40px] md:text-[40px] text-[20px] font-bold text-[#81a32b]">
-              8
+              {data.totalProjects}
             </p>
             <p className="lg:text-[19px] md:text-[19px] text-[16px] font-bold text-[#ffffff]">
               Total Projects
@@ -68,7 +95,7 @@ const WelcomeSection = () => {
           </div>
           <div className="grid lg:text-start md:text-start text-center mb-10">
             <p className="lg:text-[40px] md:text-[40px] text-[20px] font-bold text-[#81a32b]">
-              600km+
+              {data.totalRoad}km+
             </p>
             <p className="lg:text-[19px] md:text-[19px] text-[16px] font-bold text-[#ffffff]">
               Total Road
@@ -76,7 +103,7 @@ const WelcomeSection = () => {
           </div>
           <div className="grid lg:text-start md:text-start text-center mb-10">
             <p className="lg:text-[40px] md:text-[40px] text-[20px] font-bold text-[#81a32b]">
-             66424m
+              {data.totalTunnels}m
             </p>
             <p className="lg:text-[19px] md:text-[19px] text-[16px] font-bold text-[#ffffff]">
               Total Tunnels
@@ -84,33 +111,13 @@ const WelcomeSection = () => {
           </div>
           <div className="grid lg:text-start md:text-start text-center mb-10">
             <p className="lg:text-[40px] md:text-[40px] text-[20px] font-bold text-[#81a32b]">
-             121
+              {data.totalBridges}
             </p>
             <p className="lg:text-[19px] md:text-[19px] text-[16px] font-bold text-[#ffffff]">
               Total Bridges
             </p>
           </div>
         </div>
-        {/* <div className="card bg-[#F5F5F5] py-10 px-12 grid gap-8 lg:w-3/5 sm:w-5/5 w-5/5 mx-auto mr-0 mt-8 lg:mt-0 sm:mt-0">
-          <p className="text-[26px] font-bold text-[#000000]">
-            Residential House
-          </p>
-          <div>
-            <p className="text-[36px] font-bold text-[#81a32b]">78 000 м</p>
-            <p className="text-[18px] font-medium text-[#000000]">
-              Amount work done
-            </p>
-          </div>
-          <p className="text-[18px] font-semibold text-[#81a32b] flex gap-2">
-            <p>DETAILS</p>{" "}
-            <Image
-              src={"/rightArrowWelcome.svg"}
-              alt="Logo"
-              width={16}
-              height={14}
-            />
-          </p>
-        </div> */}
       </div>
     </div>
   );
