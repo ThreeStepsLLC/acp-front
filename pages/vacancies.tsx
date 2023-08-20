@@ -22,18 +22,15 @@ const Vacancies = () => {
 
   const onSubmit = (data: any) => {
     const formData = new FormData();
-    console.log(data.position, "data.position");
     const values = getValues();
 
-    const positionObj = {
-      id: data.position.label,
-    };
+    const positionObj =data.position.value
 
     for (const key in values) {
-      if (key === "cvFilePath") {
+      if (key === "file") {
         formData.append(key, values[key]);
       } else if (key === "position") {
-        formData.append(key, JSON.stringify(positionObj));
+        formData.append(key, positionObj);
       } else {
         formData.append(key, values[key]);
       }
@@ -183,7 +180,7 @@ const Vacancies = () => {
               send us your cv
             </h1>
             <div className="flex flex-wrap -mx-3 mb-6">
-              <div className="w-full md:w-1/2 px-3">
+              <div className="w-full md:w-1/2 px-3 mb-6">
                 <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
                   Full name
                 </label>
@@ -227,7 +224,7 @@ const Vacancies = () => {
               </div>
             </div>
             <div className="flex flex-wrap -mx-3 mb-6">
-              <div className="w-full md:w-1/2 px-3">
+              <div className="w-full md:w-1/2 px-3 mb-6">
                 <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
                   City
                 </label>
@@ -270,8 +267,8 @@ const Vacancies = () => {
                 />
               </div>
             </div>
-            <div className="flex flex-wrap -mx-3 mb-2">
-              <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+            <div className="flex flex-wrap -mx-3 mb-6">
+              <div className="w-full md:w-1/2 px-3 mb-6">
                 <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
                   Vacancy
                 </label>
@@ -281,7 +278,7 @@ const Vacancies = () => {
                   rules={{ required: true }}
                   render={({ field: { onChange, onBlur, value } }) => (
                     <Select
-                      styles={customStyles} // Apply custom styles here
+                      styles={customStyles}
                       options={positions.map((item: any) => ({
                         value: item.id,
                         label: item.title,
@@ -293,13 +290,13 @@ const Vacancies = () => {
                   )}
                 />
               </div>
-              <div className="w-full md:w-1/2 px-3">
+              <div className="w-full md:w-1/2 px-3 mb-2">
                 <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
                   CV
                 </label>
                 <Controller
                   control={control}
-                  name="cvFilePath"
+                  name="file"
                   rules={{ required: true }}
                   render={({ field: { onChange, onBlur, value } }) => (
                     <input
