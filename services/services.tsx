@@ -19,7 +19,7 @@ export const getProjects = (params?: any) => {
     .then((res: AxiosResponse) => res.data);
 };
 
-export const getSingleProjects = (id: number) => {
+export const getSingleProjects = (id: string) => {
   return api.get(`/projects/${id}`).then((res: AxiosResponse) => res.data);
 };
 

@@ -7,6 +7,7 @@ interface ProjectCardProps {
   image: string;
   caption: string;
   location: string;
+  id: string
   darkText?: boolean;
 }
 
@@ -14,9 +15,14 @@ const ProjectCard = ({
   image,
   caption,
   location,
+  id,
   darkText,
 }: ProjectCardProps) => {
   const router = useRouter();
+
+  const handleButtonClick = () => {
+    router.push(`/projectDetail/${id}`);
+  };
 
   return (
     <div className="grid gap-2">
@@ -46,7 +52,7 @@ const ProjectCard = ({
         </p>
         <Button
           text={"See project"}
-          onClick={() => router.push("/projectDetail")}
+          onClick={handleButtonClick}
         />
       </div>
       <hr className="color-[#A9A9A9] text-[#A9A9A9]" />

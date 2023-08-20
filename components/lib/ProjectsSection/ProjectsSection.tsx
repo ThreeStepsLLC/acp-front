@@ -48,6 +48,7 @@ const ProjectsSection = () => {
               image={item.imageUrl}
               caption={item.title}
               location={item.address}
+              id={item.id}
               darkText={true}
             />
           ))}
