@@ -43,9 +43,7 @@ const CoreValuesSection = () => {
         <span className="text-[#81a32b] text-[45px] font-bold">core values?</span>
         </p>
 
-        <p className="text-[#ffffff] text-[22px] font-normal">
-          {coreValues.description}
-        </p>
+        <p className="text-[#ffffff] text-[22px] font-normal" dangerouslySetInnerHTML={{__html:coreValues.description}} />
       </div>
     </div>
   );

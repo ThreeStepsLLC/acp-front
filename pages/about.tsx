@@ -32,7 +32,7 @@ const About = () => {
               />
               {constants.title}
             </p>
-            <p className="mt-2">{constants.description}</p>
+            <p className="mt-2" dangerouslySetInnerHTML={{__html:constants.description}} />
           </div>
         </div>
       </div>

@@ -22,13 +22,17 @@ const WelcomeSection = () => {
     })
   };
 
-  console.log(sliderImages, 'sliderImages')
+  console.log(sliderImages.map((item: any) => item.imageUrl), 'sliderImages')
 
   useEffect(() => {
     getApisAll();
   }, []);
 
-  const images = sliderImages; // Add your image URLs here
+  console.log(currentImageIndex, 'currentImageIndex')
+
+  const images = sliderImages.map((item: any) => item.imageUrl); // Add your image URLs here
+
+  console.log(images.length, 'images')
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -36,7 +40,8 @@ const WelcomeSection = () => {
         (prevIndex: number) => (prevIndex + 1) % images.length
       );
     }, 4000);
-  }, []);
+    console.log('salam')
+  }, [currentImageIndex]);
 
   return (
     <div
@@ -64,20 +69,7 @@ const WelcomeSection = () => {
             {constants.title}
             {/* The power of engineering, at your service */}
           </p>
-          <p className="lg:text-[20px] md:text-[20px] text-[20px] font-semibold text-[#ffffff]">
-            {constants.description}
-            {/* Welcome to our ACP Engineering website! <br /> 
-            We are pleased to introduce you our company with 5 (five) years of experience, which is one of
-            the leading consulting construction companies in Azerbaijan. We
-            specialize in the development and implementation of projects for the
-            construction and reconstruction of facilities that will be able to
-            implement your project at the highest level. We guarantee you high
-            quality of work, compliance with the deadlines and budget of the
-            project, as well as an individual approach to each client. Our team
-            of more than 150 dedicated civil engineers and professionals,
-            strives to ensure excellence in every project we undertake. */}
-            <br />
-          </p>
+          <p className="lg:text-[20px] md:text-[20px] text-[20px] font-semibold text-[#ffffff]" dangerouslySetInnerHTML={{__html:constants.description}} />
         </div>
         <div className="grid grid-cols-4 gap-6 mt-20">
           <div className="grid lg:text-start md:text-start text-center mb-10">

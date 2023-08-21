@@ -40,9 +40,7 @@ const Policies = () => {
               />
               {constantsValues.title}:
             </p>
-            <p className="mt-2">
-            {constantsValues.description}
-            </p>
+            <p className="mt-2" dangerouslySetInnerHTML={{__html:constantsValues.description}} />
           </div>
           <div>
             <p className="text-[#000000] text-[28px] font-semibold flex gap-4 items-center">
@@ -54,9 +52,7 @@ const Policies = () => {
               />
               {constantsMissions.title}:
             </p>
-            <p className="mt-2">
-              {constantsMissions.description}
-            </p>
+            <p className="mt-2" dangerouslySetInnerHTML={{__html:constantsMissions.description}} />
           </div>
         </div>
         <div className="grid lg:grid-cols-1 md:grid-cols-1 sm:grid-cols-1 my-14 gap-6">
@@ -70,9 +66,7 @@ const Policies = () => {
               />
              {constantsVisions.title}:
             </p>
-            <p className="mt-2">
-              {constantsVisions.description}
-            </p>
+            <p className="mt-2" dangerouslySetInnerHTML={{__html:constantsVisions.description}} />
           </div>
         </div>
       </div>

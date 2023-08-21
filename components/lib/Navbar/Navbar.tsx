@@ -9,7 +9,7 @@ export default function Example() {
   const [isNavbarSticky, setIsNavbarSticky] = useState(false);
 
   const handleScroll = () => {
-    if (window.scrollY >= 750) {
+    if (window.scrollY >= 700) {
       setIsNavbarSticky(true);
     } else {
       setIsNavbarSticky(false);
