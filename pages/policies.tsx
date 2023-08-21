@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import { getConstants } from "@/services/services";
 
-const policies = () => {
+const Policies = () => {
   const [constantsValues, setConstantsValues] = useState<any>({});
   const [constantsMissions, setConstantsMissions] = useState<any>({});
   const [constantsVisions, setConstantsVisions] = useState<any>({});
@@ -80,4 +80,4 @@ const policies = () => {
   );
 };
 
-export default policies;
+export default Policies;

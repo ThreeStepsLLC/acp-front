@@ -3,7 +3,7 @@ import PageHeader from "@/components/lib/PageHeader/PageHeader";
 import { getConstants } from "@/services/services";
 import React, { useEffect, useState } from "react";
 
-const experience = () => {
+const Experience = () => {
   const [constants, setConstants] = useState<any>({});
 
   const getConstantsAll = () => {
@@ -75,4 +75,4 @@ const experience = () => {
   );
 };
 
-export default experience;
+export default Experience;

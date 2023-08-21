@@ -34,8 +34,8 @@ const Projects = () => {
               image={item.imageUrl}
               caption={item.title}
               location={item.address}
-              darkText={true}
-            />
+              darkText={true} id={item.id} 
+               />
           ))}
             {/* <ProjectCard
               image={"/ZEFER.jpg"}

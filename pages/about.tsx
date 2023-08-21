@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import { getConstants } from "@/services/services";
 
-const about = () => {
+const About = () => {
   const [constants, setConstants] = useState<any>({});
 
   const getConstantsAll = () => {
@@ -40,4 +40,4 @@ const about = () => {
   );
 };
 
-export default about;
+export default About;
