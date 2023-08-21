@@ -28,7 +28,7 @@ const ProjectDetail = () => {
       <div className="container mx-auto px-12 py-20">
         <div className="grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 gap-12">
           <div className="table h-fit" style={{ border: "1px solid #00517b" }}>
-            {project.projectDetails.map((item: any, index: number) => (
+            {project?.projectDetails?.map((item: any, index: number) => (
               <div
                 key={index}
                 className="grid grid-cols-2"
@@ -57,7 +57,7 @@ const ProjectDetail = () => {
             }}
           >
             <div className="grid grid-cols-2 gap-4">
-              {project.galleryImages.map((item: any, index: string) => (
+              {project?.galleryImages?.map((item: any, index: string) => (
                 <a key={index} data-fancybox="gallery" href={item.path}>
                   <Image
                     src={item.path}
