@@ -26,7 +26,7 @@ const ProjectCard = ({
 
   return (
     <div className="grid gap-2">
-      <Image src={image} alt={"project"} width={744} height={500} />
+      <Image src={image} alt={"project"} width={744} height={500} style={{width: '100%'}} />
       <p
         className={
           darkText
