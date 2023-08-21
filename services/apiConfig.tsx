@@ -1,7 +1,7 @@
 import axios, { AxiosResponse } from "axios";
 
 const api = axios.create({
-  baseURL: "http://38.242.232.109:8084/api/v1/",
+  baseURL: "https://api.acp.com.az/api/v1/",
 });
 
 api.interceptors.request.use((config: any) => {
