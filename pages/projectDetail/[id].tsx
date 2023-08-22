@@ -18,10 +18,12 @@ const ProjectDetail = () => {
   };
 
   useEffect(() => {
+    if(id === undefined) return
     getDetailProject(id as string);
-  }, []);
+  }, [id]);
 
   const backgroundColors = ["#c0cca1", "#f0f0f0"];
+
   return (
     <Layout title="Projects">
       <PageHeader title={project.title} subTitle={"Projects"} />
