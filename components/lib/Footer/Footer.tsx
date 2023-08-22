@@ -23,8 +23,6 @@ const Footer = () => {
     getFooterValues()
   }, [])
 
-  console.log(data, 'data')
-
   return (
     <div
       className="bg-[#F5F5F5] text-[#00517b] px-10 lg:px-40 py-10 2xl:px-60"

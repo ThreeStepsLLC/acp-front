@@ -14,7 +14,6 @@ export const getSettings = () => {
 };
 
 export const getProjects = (params?: any) => {
-  console.log(params)
   return api.get(`/projects/last-langed`, {params})
     .then((res: AxiosResponse) => res.data);
 };

@@ -6,7 +6,7 @@ const WelcomeSection = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [data, setData] = useState<any>({});
   const [constants, setConstants] = useState<any>({});
-  const [sliderImages, setSliderImages] = useState<any>([])
+  const [sliderImages, setSliderImages] = useState<any>([]);
 
   const getApisAll = () => {
     getSettings().then((res) => {
@@ -18,30 +18,25 @@ const WelcomeSection = () => {
     });
 
     getSliderImages().then((res) => {
-      setSliderImages(res.data)
-    })
+      setSliderImages(res.data);
+    });
   };
-
-  console.log(sliderImages.map((item: any) => item.imageUrl), 'sliderImages')
 
   useEffect(() => {
     getApisAll();
-  }, []);
 
-  console.log(currentImageIndex, 'currentImageIndex')
+    // Automatically change the background image every 4 seconds
+    const intervalId = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 4000);
+
+    // Clean up the interval when the component unmounts or the image array changes
+    return () => clearInterval(intervalId);
+  }, []);
 
   const images = sliderImages.map((item: any) => item.imageUrl); // Add your image URLs here
 
-  console.log(images.length, 'images')
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentImageIndex(
-        (prevIndex: number) => (prevIndex + 1) % images.length
-      );
-    }, 4000);
-    console.log('salam')
-  }, [currentImageIndex]);
+  console.log(images, 'images')
 
   return (
     <div

@@ -19,8 +19,6 @@ const ProjectsSection = () => {
     });
   };
 
-  console.log(projects, "projects");
-
   useEffect(() => {
     getProjectsAll();
   }, []);

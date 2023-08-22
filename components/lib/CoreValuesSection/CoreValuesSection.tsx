@@ -15,8 +15,6 @@ const CoreValuesSection = () => {
     getCoreValues()
   }, [])
 
-  console.log(coreValues, 'coreValues')
-
   return (
     <div className="bg-[#00517b]">
       <div className="container mx-auto px-12 py-16">

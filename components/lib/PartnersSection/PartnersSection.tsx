@@ -15,8 +15,6 @@ const PartnersSection = () => {
     getPartnersAll();
   }, []);
 
-  console.log(partners, "partners");
-
   return (
     <div className="container mx-auto px-12 py-16">
       <p className="text-[#000000] text-[18px] font-semibold flex gap-4">

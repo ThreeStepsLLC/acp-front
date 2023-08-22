@@ -19,8 +19,6 @@ const ContactSection = ({ detailPage }: ContactSectionProps) => {
     getFooterValues();
   }, []);
 
-  console.log(data, 'data')
-
   return (
     <div className="container mx-auto px-12 py-16">
       {!detailPage && (

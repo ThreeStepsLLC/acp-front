@@ -16,8 +16,6 @@ const Projects = () => {
     });
   };
 
-  console.log(projects, "projects");
-
   useEffect(() => {
     getProjectsAll();
   }, []);
