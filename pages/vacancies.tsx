@@ -24,7 +24,7 @@ const Vacancies = () => {
     const formData = new FormData();
     const values = getValues();
 
-    const positionObj =data.position.value
+    const positionObj = data.position.value;
 
     for (const key in values) {
       if (key === "file") {
@@ -85,56 +85,18 @@ const Vacancies = () => {
               Recruitment:
             </p>
             <p className="mt-2">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Necessitatibus assumenda in molestiae consequatur nam expedita
-              nemo, vitae, iure rem quisquam provident quaerat, dignissimos
-              fuga? Laborum animi nesciunt officia temporibus aperiam. Lorem
-              ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus
-              assumenda in molestiae consequatur nam expedita nemo, vitae, iure
-              rem quisquam provident quaerat, dignissimos fuga? Laborum animi
-              nesciunt officia temporibus aperiam.
-            </p>
-          </div>
-          <div>
-            <p className="text-[#000000] text-[28px] font-semibold flex gap-4 items-center">
-              <Image
-                src={"yellowLine.svg"}
-                alt={"whatwedo"}
-                height={1}
-                width={40}
-              />
-              Job application:
-            </p>
-            <p className="mt-2">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Necessitatibus assumenda in molestiae consequatur nam expedita
-              nemo, vitae, iure rem quisquam provident quaerat, dignissimos
-              fuga? Laborum animi nesciunt officia temporibus aperiam. Lorem
-              ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus
-              assumenda in molestiae consequatur nam expedita nemo, vitae, iure
-              rem quisquam provident quaerat, dignissimos fuga? Laborum animi
-              nesciunt officia temporibus aperiam.
-            </p>
-          </div>
-          <div>
-            <p className="text-[#000000] text-[28px] font-semibold flex gap-4 items-center">
-              <Image
-                src={"yellowLine.svg"}
-                alt={"whatwedo"}
-                height={1}
-                width={40}
-              />
-              Your application:
-            </p>
-            <p className="mt-2">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Necessitatibus assumenda in molestiae consequatur nam expedita
-              nemo, vitae, iure rem quisquam provident quaerat, dignissimos
-              fuga? Laborum animi nesciunt officia temporibus aperiam. Lorem
-              ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus
-              assumenda in molestiae consequatur nam expedita nemo, vitae, iure
-              rem quisquam provident quaerat, dignissimos fuga? Laborum animi
-              nesciunt officia temporibus aperiam.
+              ACP Engineering is a reliable inspection company offering a wide
+              range of professional consulting services. We are a technical
+              supervision and inspection company specialized in transport
+              infrastructure construction that supervises the project
+              implementation and construction works under the requirements of
+              the technical specification, and the country&apos;s legislation,
+              regulations, and standards. Our team of over 150 dedicated civil
+              engineers and professionals is committed to delivering excellence
+              in every project we undertake. Get a chance to join our team today
+              by sending your resume. Find the right job for you - search the
+              latest positions in our company. We will provide a high-level
+              assistance during recruitment process.
             </p>
           </div>
           <div>
@@ -318,7 +280,7 @@ const Vacancies = () => {
               <div className="w-full md:w-1/1 px-3 mt-5 flex justify-center">
                 <button
                   type="submit"
-                  disabled={!formState.isValid} 
+                  disabled={!formState.isValid}
                   className="bg-[#81a32b] hover:bg-[#739126] w-40 text-[15px] text-center py-2 px-2 cursor-pointer font-semibold h-fit"
                 >
                   Submit
