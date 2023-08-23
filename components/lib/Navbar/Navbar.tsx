@@ -3,11 +3,15 @@ import { Dialog, Popover } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
 import Link from "next/link";
+import i18n from "i18next";
+import "@/components/layout/Language/i18n";
+import { useTranslation } from "react-i18next";
 
 export default function Example() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isNavbarSticky, setIsNavbarSticky] = useState(false);
   const [selectLang, setSelectedLang] = useState("");
+  const { t } = useTranslation("navigation");
 
   const handleScroll = () => {
     if (window.scrollY >= 700) {
@@ -27,6 +31,7 @@ export default function Example() {
   const setLang = () => {
     let selected = localStorage.getItem("selectedLanguage") || "en"; // Varsayılan dil
     setSelectedLang(selected);
+    void i18n.changeLanguage(selected);
   };
 
   const handleChangeSelect = (e: any) => {
@@ -70,7 +75,7 @@ export default function Example() {
             href={"/"}
             className="leading-6 hover:text-[#81a32b]"
           >
-            Home Page
+            {t("home")}
           </Link>
           <Popover>
             {({ open }) => (
@@ -80,7 +85,7 @@ export default function Example() {
                     open ? "text-[#81a32b]" : "text-[#00517b]"
                   } leading-6 hover:text-[#81a32b]`}
                 >
-                  About us
+                  {t("about")}
                 </Popover.Button>
                 <Popover.Panel
                   className={`${
@@ -91,13 +96,13 @@ export default function Example() {
                     href="/about"
                     className="block text-gray-800 hover:text-[#81a32b]"
                   >
-                    About company
+                    {t("aboutCompany")}
                   </Link>
                   <Link
                     href="/policies"
                     className="block text-gray-800 hover:text-[#81a32b]"
                   >
-                    Our Policies
+                    {t("ourPolicies")}
                   </Link>
                   {/* Add other dropdown items here */}
                 </Popover.Panel>
@@ -105,22 +110,22 @@ export default function Example() {
             )}
           </Popover>
           <Link href={"/experience"} className="leading-6 hover:text-[#81a32b]">
-            Experience Fields
+            {t("experience")}
           </Link>
           <Link href={"/projects"} className="leading-6 hover:text-[#81a32b]">
-            Projects
+            {t("projects")}
           </Link>
           <Link href={"/licences"} className="leading-6 hover:text-[#81a32b]">
-            Licences
+            {t("licences")}
           </Link>
           <Link href={"/vacancies"} className="leading-6 hover:text-[#81a32b]">
-            Vacancies
+            {t("vacancies")}
           </Link>
           <Link href={"/contact"} className="leading-6 hover:text-[#81a32b]">
-            Contact Us
+            {t("contact")}
           </Link>
           <select
-          className="cursor-pointer"
+            className="cursor-pointer"
             id="languageSelect"
             onChange={handleChangeSelect}
             value={selectLang}
@@ -166,21 +171,24 @@ export default function Example() {
                   href={"/"}
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 text-[14px]"
                 >
-                  Home Page
+                              {t("home")}
+
                 </Link>
                 <Link
                   passHref={true}
                   href={"/about"}
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 text-[14px]"
                 >
-                  About company
+                                      {t("aboutCompany")}
+
                 </Link>
                 <Link
                   passHref={true}
                   href={"/policies"}
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 text-[14px]"
                 >
-                  Our Policies
+                                      {t("ourPolicies")}
+
                 </Link>
 
                 <Link
@@ -188,46 +196,51 @@ export default function Example() {
                   href={"/experience"}
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 text-[14px]"
                 >
-                  Experience Fields
+                            {t("experience")}
+
                 </Link>
                 <Link
                   passHref={true}
                   href={"/projects"}
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 text-[14px]"
                 >
-                  Projects
+                            {t("projects")}
+
                 </Link>
                 <Link
                   passHref={true}
                   href={"/licences"}
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 text-[14px]"
                 >
-                  Licences
+                                        {t("licences")}
+
                 </Link>
                 <Link
                   passHref={true}
                   href={"/vacancies"}
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 text-[14px]"
                 >
-                  Vacancies
+                            {t("vacancies")}
+
                 </Link>
                 <Link
                   passHref={true}
                   href={"/contact"}
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 text-[14px]"
                 >
-                  Contact Us
+                            {t("contact")}
+
                 </Link>
                 <select
-          className="cursor-pointer"
-            id="languageSelect"
-            onChange={handleChangeSelect}
-            value={selectLang}
-          >
-            <option value="en">En</option>
-            <option value="az">Az</option>
-            <option value="ru">Ru</option>
-          </select>
+                  className="cursor-pointer"
+                  id="languageSelect"
+                  onChange={handleChangeSelect}
+                  value={selectLang}
+                >
+                  <option value="en">En</option>
+                  <option value="az">Az</option>
+                  <option value="ru">Ru</option>
+                </select>
               </div>
             </div>
           </div>

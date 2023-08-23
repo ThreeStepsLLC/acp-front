@@ -1,0 +1,13 @@
+{
+  "navigation": {
+    "home": "Home",
+    "about": "About us",
+    "experience": "Experience fields",
+    "projects": "Projects",
+    "licences": "Licences",
+    "vacancies": "Vacancies",
+    "contact": "Contact us",
+    "aboutCompany": "About Company",
+    "ourPolicies": "Our policies"
+  }
+}

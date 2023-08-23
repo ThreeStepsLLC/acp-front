@@ -1,0 +1,13 @@
+{
+  "navigation": {
+    "home": "Главная",
+    "about": "О нас",
+    "experience": "Сферы опыта",
+    "projects": "Проекты",
+    "licences": "Лицензии",
+    "vacancies": "Вакансии",
+    "contact": "Свяжитесь с нами",
+    "aboutCompany": "О компании",
+    "ourPolicies": "Наши политики"
+  }
+}
