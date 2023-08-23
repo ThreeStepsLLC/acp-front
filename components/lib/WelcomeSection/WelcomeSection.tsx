@@ -1,6 +1,10 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
-import { getConstants, getSettings, getSliderImages } from "@/services/services";
+import {
+  getConstants,
+  getSettings,
+  getSliderImages,
+} from "@/services/services";
 
 const WelcomeSection = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -24,19 +28,18 @@ const WelcomeSection = () => {
 
   useEffect(() => {
     getApisAll();
-
-    // Automatically change the background image every 4 seconds
+  }, []);
+  useEffect(() => {
     const intervalId = setInterval(() => {
       setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
     }, 4000);
 
-    // Clean up the interval when the component unmounts or the image array changes
     return () => clearInterval(intervalId);
-  }, []);
+  }, [currentImageIndex]);
 
   const images = sliderImages.map((item: any) => item.imageUrl); // Add your image URLs here
 
-  console.log(images, 'images')
+  console.log(images, "images");
 
   return (
     <div
@@ -64,7 +67,10 @@ const WelcomeSection = () => {
             {constants.title}
             {/* The power of engineering, at your service */}
           </p>
-          <p className="lg:text-[20px] md:text-[20px] text-[20px] font-semibold text-[#ffffff]" dangerouslySetInnerHTML={{__html:constants.description}} />
+          <p
+            className="lg:text-[20px] md:text-[20px] text-[20px] font-semibold text-[#ffffff]"
+            dangerouslySetInnerHTML={{ __html: constants.description }}
+          />
         </div>
         <div className="grid grid-cols-4 gap-6 mt-20">
           <div className="grid lg:text-start md:text-start text-center mb-10">
