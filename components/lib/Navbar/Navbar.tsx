@@ -171,24 +171,21 @@ export default function Example() {
                   href={"/"}
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 text-[14px]"
                 >
-                              {t("home")}
-
+                  {t("home")}
                 </Link>
                 <Link
                   passHref={true}
                   href={"/about"}
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 text-[14px]"
                 >
-                                      {t("aboutCompany")}
-
+                  {t("aboutCompany")}
                 </Link>
                 <Link
                   passHref={true}
                   href={"/policies"}
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 text-[14px]"
                 >
-                                      {t("ourPolicies")}
-
+                  {t("ourPolicies")}
                 </Link>
 
                 <Link
@@ -196,40 +193,35 @@ export default function Example() {
                   href={"/experience"}
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 text-[14px]"
                 >
-                            {t("experience")}
-
+                  {t("experience")}
                 </Link>
                 <Link
                   passHref={true}
                   href={"/projects"}
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 text-[14px]"
                 >
-                            {t("projects")}
-
+                  {t("projects")}
                 </Link>
                 <Link
                   passHref={true}
                   href={"/licences"}
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 text-[14px]"
                 >
-                                        {t("licences")}
-
+                  {t("licences")}
                 </Link>
                 <Link
                   passHref={true}
                   href={"/vacancies"}
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 text-[14px]"
                 >
-                            {t("vacancies")}
-
+                  {t("vacancies")}
                 </Link>
                 <Link
                   passHref={true}
                   href={"/contact"}
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 text-[14px]"
                 >
-                            {t("contact")}
-
+                  {t("contact")}
                 </Link>
                 <select
                   className="cursor-pointer"
