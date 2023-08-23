@@ -7,6 +7,7 @@ import Link from "next/link";
 export default function Example() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isNavbarSticky, setIsNavbarSticky] = useState(false);
+  const [selectLang, setSelectedLang] = useState("");
 
   const handleScroll = () => {
     if (window.scrollY >= 700) {
@@ -23,8 +24,27 @@ export default function Example() {
     };
   }, []);
 
+  const setLang = () => {
+    let selected = localStorage.getItem("selectedLanguage") || "en"; // Varsayılan dil
+    setSelectedLang(selected);
+  };
+
+  const handleChangeSelect = (e: any) => {
+    window.location.reload();
+  };
+
+  useEffect(() => {
+    setLang();
+  }, []);
+
   return (
-    <header style={isNavbarSticky ? {backgroundColor: 'white', width: '100%', position: 'fixed'} : {backgroundColor: 'white'}}>
+    <header
+      style={
+        isNavbarSticky
+          ? { backgroundColor: "white", width: "100%", position: "fixed" }
+          : { backgroundColor: "white" }
+      }
+    >
       <nav
         className="mx-auto flex items-center justify-between p-6 px-16 container mx-auto text-[#00517b] text-[16px] font-semibold"
         aria-label="Global"
@@ -99,6 +119,16 @@ export default function Example() {
           <Link href={"/contact"} className="leading-6 hover:text-[#81a32b]">
             Contact Us
           </Link>
+          <select
+          className="cursor-pointer"
+            id="languageSelect"
+            onChange={handleChangeSelect}
+            value={selectLang}
+          >
+            <option value="en">En</option>
+            <option value="az">Az</option>
+            <option value="ru">Ru</option>
+          </select>
         </Popover.Group>
       </nav>
 
@@ -112,7 +142,6 @@ export default function Example() {
         <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div className="flex items-center justify-between">
             <a href="#" className="-m-1.5 p-1.5">
-              <span className="sr-only">Your Company</span>
               <Image
                 src={"/logo.png"}
                 alt="Logo"
@@ -189,6 +218,16 @@ export default function Example() {
                 >
                   Contact Us
                 </Link>
+                <select
+          className="cursor-pointer"
+            id="languageSelect"
+            onChange={handleChangeSelect}
+            value={selectLang}
+          >
+            <option value="en">En</option>
+            <option value="az">Az</option>
+            <option value="ru">Ru</option>
+          </select>
               </div>
             </div>
           </div>

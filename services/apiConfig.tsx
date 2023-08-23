@@ -5,9 +5,19 @@ const api = axios.create({
 });
 
 api.interceptors.request.use((config: any) => {
+  let selectedLanguage = localStorage.getItem("selectedLanguage") || "en"; // Varsayılan dil
+
+  const languageSelect = document.getElementById(
+    "languageSelect"
+  ) as HTMLSelectElement;
+  languageSelect.addEventListener("change", (event) => {
+    selectedLanguage = languageSelect.value || "en";
+    localStorage.setItem("selectedLanguage", selectedLanguage); // Seçimi localStorageda sakla
+  });
+
   config.headers = {
     ...config.headers,
-    lang: "en",
+    lang: selectedLanguage,
   };
 
   return config;
