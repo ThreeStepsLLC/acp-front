@@ -2,12 +2,14 @@ import { getConstants, getSettings } from "@/services/services";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 import { IconContext } from "react-icons";
 import { AiOutlineMail } from "react-icons/ai";
 
 const Footer = () => {
   const [data, setData] = useState<any>({});
   const [values, setValues] = useState<any>({})
+  const { t } = useTranslation("navigation");
 
   const getFooterValues = () => {
     getSettings().then((res) => {
@@ -83,7 +85,7 @@ const Footer = () => {
                   height={30}
                   width={6}
                 />{" "}
-                <p>Home Page</p>
+                <p>{t("home")}</p>
               </Link>
             </li>
             <li className="mb-[14px] text-[#00517b] hover:text-[#81a32b]">
@@ -94,7 +96,7 @@ const Footer = () => {
                   height={30}
                   width={6}
                 />{" "}
-                <p>About Us</p>
+                <p>{t("aboutCompany")}</p>
               </Link>
             </li>
             <li className="mb-[14px] text-[#00517b] hover:text-[#81a32b]">
@@ -105,7 +107,7 @@ const Footer = () => {
                   height={30}
                   width={6}
                 />{" "}
-                <p>Our Policies</p>
+                <p>{t("ourPolicies")}</p>
               </Link>
             </li>
             <li className="mb-[14px] text-[#00517b] hover:text-[#81a32b]  ">
@@ -116,7 +118,7 @@ const Footer = () => {
                   height={30}
                   width={6}
                 />{" "}
-                <p>Experience Fields</p>
+                <p>{t("experience")}</p>
               </Link>
             </li>
             <li className="mb-[14px] text-[#00517b] hover:text-[#81a32b] ">
@@ -127,7 +129,7 @@ const Footer = () => {
                   height={30}
                   width={6}
                 />{" "}
-                <p>Projects</p>
+                <p>{t("projects")}</p>
               </Link>
             </li>
             <li className="mb-[14px] text-[#00517b] hover:text-[#81a32b] ">
@@ -138,7 +140,7 @@ const Footer = () => {
                   height={30}
                   width={6}
                 />{" "}
-                <p>Licences</p>
+                <p>{t("licences")}</p>
               </Link>
             </li>
             <li className="mb-[14px] text-[#00517b] hover:text-[#81a32b] ">
@@ -149,7 +151,7 @@ const Footer = () => {
                   height={30}
                   width={6}
                 />{" "}
-                <p>Vacancies</p>
+                <p>{t("vacancies")}</p>
               </Link>
             </li>
             <li className="mb-[14px] text-[#00517b] hover:text-[#81a32b] ">
@@ -160,7 +162,7 @@ const Footer = () => {
                   height={30}
                   width={6}
                 />{" "}
-                <p>Contact Us</p>
+                <p>{t("contact")}</p>
               </Link>
             </li>
           </ul>

@@ -9,5 +9,77 @@
     "contact": "Contact us",
     "aboutCompany": "About Company",
     "ourPolicies": "Our policies"
+  },
+  "homepage": {
+    "welcomeCap": "Professional. Innovative. Reliable",
+    "totalProjects": "Total Projects",
+    "totalRoad": "Total Road",
+    "totalTunnels": "Total Tunnels",
+    "totalBridges": "Total Bridges",
+    "whatwedo": "WHAT WE DO",
+    "ourProjects": "Our Projects",
+    "projects": "Projects",
+    "seeProject": "See project",
+    "seeProjectAll": "See all projects"
+  },
+  "serviceSection": {
+    "whychooseus": "WHY CHOOSE US",
+    "ourServices": "Our Services",
+    "service1": "Evaluate the Contractors performance",
+    "service2": "Supervise the Contractor to ensure they are following project requirements",
+    "service3": "Monitor the quality of site activities performed by the Contractor",
+    "service4": "Secure the local and international staff training, equipment, and services",
+    "service5": "Resolve the issues among the Contractor, Client, Government, and locals",
+    "service6": "Monitoring the Contractor to perform under FIDIC standards",
+    "service7": "Reporting and record-keeping of relevant project details",
+    "service8": "Technical support",
+    "service9": "Laboratory tests",
+    "service10": "Land surveying"
+  },
+  "partnersSection": {
+    "partners": "partners",
+    "desc": "Companies that partner with us"
+  },
+  "coreValuesSection": {
+    "coreValues": "CORE VALUES",
+    "desc": "What are our core values?"
+  },
+  "licencesSection": {
+    "licences": "LICENCES",
+    "desc": "What licenses do we have?"
+  },
+  "aboutCompany": {
+    "about": "About us",
+    "aboutCompany": "About Company"
+  },
+  "policies": {
+    "ourPolicies": "Our policies",
+    "companyPolicy": "Company Policy"
+  },
+  "experience": {
+    "experience": "Experience fields",
+    "ourExperiences": "Our Experiences"
+  },
+  "projects": {
+    "projects": "Projects",
+    "ourProjects": "Our Projects"
+  },
+  "licences": {
+    "ourLicences": "Our Licences",
+    "licences": "Licences"
+  },
+  "vacancies": {
+    "vacancies": "Vacancies",
+    "workWithUs": "Work with us",
+    "recruitment": "Recruitment",
+    "ourVacancies": "Our vacancies",
+    "desc": "ACP Engineering is a reliable inspection company offering a wide range of professional consulting services. We are a technical supervision and inspection company specialized in transport infrastructure construction that supervises the project implementation and construction works under the requirements of the technical specification, and the country's legislation, regulations, and standards. Our team of over 150 dedicated civil engineers and professionals is committed to delivering excellence in every project we undertake. Get a chance to join our team today by sending your resume. Find the right job for you - search the latest positions in our company. We will provide a high-level assistance during recruitment process."
+  },
+  "contact": {
+    "contact": "Contact us",
+    "information": "Contact Information",
+    "address": "ADDRESS",
+    "email": "EMAIL",
+    "phone": "PHONE"
   }
 }

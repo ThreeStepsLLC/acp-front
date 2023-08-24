@@ -9,5 +9,77 @@
     "contact": "Bizimlə əlaqə",
     "aboutCompany": "Şirkət haqqında",
     "ourPolicies": "Bizim siyasətimiz"
+  },
+  "homepage": {
+    "welcomeCap": "Peşəkar. Yenilikçi. Etibarlı.",
+    "totalProjects": "Ümumi layihələr",
+    "totalRoad": "Ümumi çəkilən yol",
+    "totalTunnels": "Ümumi tunellər",
+    "totalBridges": "Ümumi körpülər",
+    "whatwedo": "Biz nə edirik",
+    "ourProjects": "Proyektlərimiz",
+    "projects": "Proyektlər",
+    "seeProject": "Proyektə bax",
+    "seeProjectAll": "Bütün proyektlərə bax"
+  },
+  "serviceSection": {
+    "whychooseus": "NİYƏ BİZİ SEÇMƏLİSİNİZ",
+    "ourServices": "Bizim xidmətlərimiz",
+    "service1": "Müqavilə müəssisəsinin performansını qiymətləndirin",
+    "service2": "Müəssisəni nəzarət edin ki, layihə tələblərinə əməl etsinlər",
+    "service3": "Müqavilə müəssisəsi tərəfindən yer əməliyyatlarının keyfiyyətini monitorinq edin",
+    "service4": "Yerli və beynəlxalq personalın təlimatı, avadanlığı və xidmətləri təmin edin",
+    "service5": "Müqavilə müəssisəsi, müştəri, hökumət və yerli əhalini münaqişələri həll edin",
+    "service6": "Müqavilə müəssisəsini FIDIC standartlarına əsasən icra etməni nəzarət edin",
+    "service7": "Əlaqəli layihə detallarının hesabat və qeydiyyatını aparın",
+    "service8": "Texniki dəstək",
+    "service9": "Laboratoriya sınaqları",
+    "service10": "Torpaq təqdimatı"
+  },
+  "partnersSection": {
+    "partners": "Tərəfdaşlar",
+    "desc": "Bizimlə tərəfdaş olan şirkətlər"
+  },
+  "coreValuesSection": {
+    "coreValues": "ƏSAS DƏYƏRLƏR",
+    "desc": "Bizim əsas dəyərlərimiz nələrdir?"
+  },
+  "licencesSection": {
+    "licences": "LİSENZİYALAR",
+    "desc": "Bizim hansı lisenziyalarımız var?"
+  },
+  "aboutCompany": {
+    "about": "Haqqımızda",
+    "aboutCompany": "Şirkət haqqında"
+  },
+  "policies": {
+    "ourPolicies": "Bizim siyasətlərimiz",
+    "companyPolicy": "Şirkət Siyasəti"
+  },
+  "experience": {
+    "experience": "Təcrübə sahələri",
+    "ourExperiences": "Bizim Təcrübələrimiz"
+  },
+  "projects": {
+    "projects": "Layihələr",
+    "ourProjects": "Bizim layihələrimiz"
+  },
+  "licences": {
+    "ourLicences": "Bizim Lisenziyalarımız",
+    "licences": "Lisenziyalar"
+  },
+  "vacancies": {
+    "vacancies": "Vakansiyalar",
+    "workWithUs": "Bizimlə işləyin",
+    "recruitment": "İşə qəbul",
+    "ourVacancies": "Bizim vakansiyalarımız",
+    "desc": "ACP Mühəndislik etibarlı bir yoxlama şirkətidir və geniş bir profesionallıq konsaltinq xidməti təklif edir. Biz nəqliyyat infrastrukturunun qurğularının texniki nəzarət və yoxlama şirkətiyik, layihənin həyata keçirilməsini və tikinti işlərini texniki tələblər, ölkənin qanunvericiliyi, təsnifatları və standartlarına əsasən nəzarət edirik. 150-dən çox mütəxəssis mühəndis və mütəxəssisimiz hər layihədə mükafat almağa üstün xidmət göstərmək üçün əngagədirlər. Öz resume'nizi göndərərək bu gün bizim komandamıza qoşulmağın şansını əldə edin. Özünüz üçün doğru işi tapın - bizim şirkətimizdəki son vəzifələri axtarın. İşə qəbul prosesində yüksək səviyyəli kömək təmin edəcəyik."
+  },
+  "contact": {
+    "contact": "Bizimlə əlaqə saxlayın",
+    "information": "Əlaqə məlumatı",
+    "address": "ÜNVAN",
+    "email": "E-POÇT",
+    "phone": "TELEFON"
   }
 }

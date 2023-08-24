@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import Button from "../Button";
 import { useRouter } from "next/router";
+import { useTranslation } from "react-i18next";
 
 interface ProjectCardProps {
   image: string;
@@ -19,6 +20,7 @@ const ProjectCard = ({
   darkText,
 }: ProjectCardProps) => {
   const router = useRouter();
+  const { t } = useTranslation("homepage");
 
   const handleButtonClick = () => {
     router.push(`/projectDetail/${id}`);
@@ -51,7 +53,7 @@ const ProjectCard = ({
           </span>
         </p>
         <Button
-          text={"See project"}
+          text={t('seeProject')}
           onClick={handleButtonClick}
         />
       </div>

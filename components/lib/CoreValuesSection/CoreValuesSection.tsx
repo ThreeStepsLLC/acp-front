@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import { getConstants } from "@/services/services";
+import { useTranslation } from "react-i18next";
 
 const CoreValuesSection = () => {
   const [coreValues, setCoreValues] = useState<any>({})
+  const { t } = useTranslation("coreValuesSection");
 
   const getCoreValues = () => {
     getConstants("core-values").then((res) => {
@@ -34,11 +36,10 @@ const CoreValuesSection = () => {
             height={1}
             width={40}
           />
-          CORE VALUES
+        {t('coreValues')}
         </p>
         <p className="text-[#ffffff] text-[45px] font-bold mb-8">
-        What are our{" "}
-        <span className="text-[#81a32b] text-[45px] font-bold">core values?</span>
+        {t('desc')}
         </p>
 
         <p className="text-[#ffffff] text-[22px] font-normal" dangerouslySetInnerHTML={{__html:coreValues.description}} />

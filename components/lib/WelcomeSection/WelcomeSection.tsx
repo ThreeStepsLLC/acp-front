@@ -5,12 +5,14 @@ import {
   getSettings,
   getSliderImages,
 } from "@/services/services";
+import { useTranslation } from "react-i18next";
 
 const WelcomeSection = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [data, setData] = useState<any>({});
   const [constants, setConstants] = useState<any>({});
   const [sliderImages, setSliderImages] = useState<any>([]);
+  const { t } = useTranslation("homepage");
 
   const getApisAll = () => {
     getSettings().then((res) => {
@@ -61,11 +63,10 @@ const WelcomeSection = () => {
               height={1}
               width={40}
             />
-            Professional. Innovative. Reliable.
+            {t('welcomeCap')}
           </p>
           <p className="lg:text-[40px] md:text-[40px] text-[25px] font-extrabold text-[#ffffff] mb-4">
             {constants.title}
-            {/* The power of engineering, at your service */}
           </p>
           <p
             className="lg:text-[20px] md:text-[20px] text-[20px] font-semibold text-[#ffffff]"
@@ -78,7 +79,7 @@ const WelcomeSection = () => {
               {data.totalProjects}
             </p>
             <p className="lg:text-[19px] md:text-[19px] text-[16px] font-bold text-[#ffffff]">
-              Total Projects
+            {t('totalProjects')}
             </p>
           </div>
           <div className="grid lg:text-start md:text-start text-center mb-10">
@@ -86,7 +87,7 @@ const WelcomeSection = () => {
               {data.totalRoad}km+
             </p>
             <p className="lg:text-[19px] md:text-[19px] text-[16px] font-bold text-[#ffffff]">
-              Total Road
+            {t('totalRoad')}
             </p>
           </div>
           <div className="grid lg:text-start md:text-start text-center mb-10">
@@ -94,7 +95,7 @@ const WelcomeSection = () => {
               {data.totalTunnels}m
             </p>
             <p className="lg:text-[19px] md:text-[19px] text-[16px] font-bold text-[#ffffff]">
-              Total Tunnels
+            {t('totalTunnels')}
             </p>
           </div>
           <div className="grid lg:text-start md:text-start text-center mb-10">
@@ -102,7 +103,7 @@ const WelcomeSection = () => {
               {data.totalBridges}
             </p>
             <p className="lg:text-[19px] md:text-[19px] text-[16px] font-bold text-[#ffffff]">
-              Total Bridges
+            {t('totalBridges')}
             </p>
           </div>
         </div>

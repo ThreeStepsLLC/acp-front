@@ -1,7 +1,11 @@
 import React from "react";
 import Image from "next/image";
+import { useTranslation } from "react-i18next";
 
 const LicencesSection = () => {
+  const { t } = useTranslation("licencesSection");
+
+
   return (
     <div className="container mx-auto px-12 py-16">
                 <p className="text-[#000000] text-[18px] font-semibold flex gap-4">
@@ -11,12 +15,10 @@ const LicencesSection = () => {
             height={1}
             width={40}
           />
-          LICENCES
+          {t('licences')}
         </p>
         <p className="text-[#000000] text-[45px] font-bold mb-8">
-        What{' '}
-        <span className="text-[#81a32b] text-[45px] font-bold">licenses</span>
-        {' '}do we have?
+        {t('desc')}
       </p>
 
       <div className="lg:flex md:flex lg:justify-start md:justify-start justify-center grid gap-10">

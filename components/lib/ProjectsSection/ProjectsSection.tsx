@@ -4,10 +4,12 @@ import ProjectCard from "../ProjectCard";
 import Button from "../Button";
 import { useRouter } from "next/router";
 import { getProjects } from "@/services/services";
+import { useTranslation } from "react-i18next";
 
 const ProjectsSection = () => {
   const [projects, setProjects] = useState([]);
   const router = useRouter();
+  const { t } = useTranslation("homepage");
 
   const getProjectsAll = () => {
     const params = {
@@ -33,11 +35,10 @@ const ProjectsSection = () => {
             height={1}
             width={40}
           />
-          WHAT WE DO
+            {t('whatwedo')}
         </p>
         <p className="text-[#000000] text-[45px] font-bold mb-8">
-          Our{" "}
-          <span className="text-[#81a32b] text-[40px] font-bold">Projects</span>
+          {t('ourProjects')}
         </p>
         <div className="grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 gap-12 mb-10">
           {projects.map((item: any, index: number) => (
@@ -53,7 +54,7 @@ const ProjectsSection = () => {
         </div>
         <div className="items-center flex justify-center">
           <Button
-            text={"See all projects"}
+            text={t('seeProjectAll')}
             onClick={() => router.push("/projects")}
           />
         </div>
