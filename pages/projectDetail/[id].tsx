@@ -18,7 +18,7 @@ const ProjectDetail = () => {
   };
 
   useEffect(() => {
-    if(id === undefined) return
+    if (id === undefined) return;
     getDetailProject(id as string);
   }, [id]);
 
@@ -44,7 +44,10 @@ const ProjectDetail = () => {
                 <div className="tableCol font-bold text-[18px]">
                   {item.title}
                 </div>
-                <div className="tableCol font-bold text-[18px]" dangerouslySetInnerHTML={{__html:item.description}}/>
+                <div
+                  className="tableCol font-bold text-[18px]"
+                  dangerouslySetInnerHTML={{ __html: item.description }}
+                />
               </div>
             ))}
           </div>
@@ -72,11 +75,14 @@ const ProjectDetail = () => {
           </Fancybox>
         </div>
         <div className="grid grid-cols-1">
-          <p className="text-[#000810] font-normal text-[15px] mt-4" dangerouslySetInnerHTML={{__html:project.description}}/>
+          <p
+            className="text-[#000810] font-normal text-[15px] mt-4"
+            dangerouslySetInnerHTML={{ __html: project.description }}
+          />
         </div>
       </div>
     </Layout>
   );
 };
-// #f0f0f0
+
 export default ProjectDetail;
