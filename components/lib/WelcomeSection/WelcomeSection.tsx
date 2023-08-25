@@ -13,6 +13,7 @@ const WelcomeSection = () => {
   const [constants, setConstants] = useState<any>({});
   const [sliderImages, setSliderImages] = useState<any>([]);
   const { t } = useTranslation("homepage");
+  console.log(currentImageIndex, 'currentImageIndex')
 
   const getApisAll = () => {
     getSettings().then((res) => {
@@ -31,17 +32,18 @@ const WelcomeSection = () => {
   useEffect(() => {
     getApisAll();
   }, []);
+
   useEffect(() => {
     const intervalId = setInterval(() => {
-      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+      if (sliderImages.length > 0) {
+        setCurrentImageIndex((prevIndex) => (prevIndex + 1) % sliderImages.length);
+      }
     }, 4000);
-
+  
     return () => clearInterval(intervalId);
-  }, [currentImageIndex]);
+  }, [sliderImages]);
 
   const images = sliderImages.map((item: any) => item.imageUrl); // Add your image URLs here
-
-  console.log(images, "images");
 
   return (
     <div
