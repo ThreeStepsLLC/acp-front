@@ -51,7 +51,7 @@ export default function Example() {
       }
     >
       <nav
-        className="mx-auto flex items-center justify-between p-6 px-16 container mx-auto text-[#00517b] text-[16px] font-semibold"
+        className="mx-auto flex items-center justify-between p-6 px-10 lg:px-16 md:px-16 container mx-auto text-[#00517b] text-[16px] font-semibold"
         aria-label="Global"
       >
         <div className="flex lg:flex-1">
@@ -59,7 +59,17 @@ export default function Example() {
             <Image src={"/logo.png"} alt="Logo" width={85.08} height={41.41} />
           </Link>
         </div>
-        <div className="flex lg:hidden">
+        <div className="flex lg:hidden gap-4">
+        <select
+            className="cursor-pointer block lg:hidden"
+            id="languageSelect"
+            onChange={handleChangeSelect}
+            value={selectLang}
+          >
+            <option value="en">En</option>
+            <option value="az">Az</option>
+            <option value="ru">Ru</option>
+        </select>
           <button
             type="button"
             className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
@@ -124,16 +134,7 @@ export default function Example() {
           <Link href={"/contact"} className="leading-6 hover:text-[#81a32b]">
             {t("contact")}
           </Link>
-          <select
-            className="cursor-pointer"
-            id="languageSelect"
-            onChange={handleChangeSelect}
-            value={selectLang}
-          >
-            <option value="en">En</option>
-            <option value="az">Az</option>
-            <option value="ru">Ru</option>
-          </select>
+          
         </Popover.Group>
       </nav>
 
@@ -146,14 +147,14 @@ export default function Example() {
         <div className="fixed inset-0 z-10" />
         <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div className="flex items-center justify-between">
-            <a href="#" className="-m-1.5 p-1.5">
+            <Link href="/" className="-m-1.5 p-1.5">
               <Image
                 src={"/logo.png"}
                 alt="Logo"
                 width={88.08}
                 height={41.41}
               />
-            </a>
+            </Link>
             <button
               type="button"
               className="-m-2.5 rounded-md p-2.5 text-gray-700"
@@ -223,16 +224,6 @@ export default function Example() {
                 >
                   {t("contact")}
                 </Link>
-                <select
-                  className="cursor-pointer"
-                  id="languageSelect"
-                  onChange={handleChangeSelect}
-                  value={selectLang}
-                >
-                  <option value="en">En</option>
-                  <option value="az">Az</option>
-                  <option value="ru">Ru</option>
-                </select>
               </div>
             </div>
           </div>
