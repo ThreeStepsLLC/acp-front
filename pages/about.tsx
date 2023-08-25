@@ -3,9 +3,11 @@ import PageHeader from "@/components/lib/PageHeader/PageHeader";
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import { getConstants } from "@/services/services";
+import { useTranslation } from "react-i18next";
 
 const About = () => {
   const [constants, setConstants] = useState<any>({});
+  const { t } = useTranslation("aboutCompany");
 
   const getConstantsAll = () => {
     getConstants("who-are-we").then((res) => {
@@ -19,7 +21,7 @@ const About = () => {
 
   return (
     <Layout title="About us">
-      <PageHeader title={"About company"} subTitle={"About us"} />
+      <PageHeader title={t('aboutCompany')} subTitle={t('about')} />
       <div className="container mx-auto px-12 py-0">
         <div className="grid lg:grid-cols-1 md:grid-cols-1 sm:grid-cols-1 my-14 gap-6">
           <div>

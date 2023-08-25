@@ -3,11 +3,14 @@ import PageHeader from "@/components/lib/PageHeader/PageHeader";
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import { getConstants } from "@/services/services";
+import { useTranslation } from "react-i18next";
 
 const Policies = () => {
   const [constantsValues, setConstantsValues] = useState<any>({});
   const [constantsMissions, setConstantsMissions] = useState<any>({});
   const [constantsVisions, setConstantsVisions] = useState<any>({});
+  const { t } = useTranslation("policies");
+
 
   const getConstantsAll = () => {
     getConstants("our-values").then((res) => {
@@ -27,7 +30,7 @@ const Policies = () => {
 
   return (
     <Layout title="Policies">
-      <PageHeader title={"Company Policy"} subTitle={"Our Policies"} />
+      <PageHeader title={t('companyPolicy')} subTitle={t('ourPolicies')} />
       <div className="container mx-auto px-12 py-0">
         <div className="grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 my-14 gap-6">
           <div>

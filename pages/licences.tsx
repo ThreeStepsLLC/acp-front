@@ -3,10 +3,12 @@ import PageHeader from '@/components/lib/PageHeader/PageHeader';
 import React, { useState } from 'react';
 import Image from 'next/image';
 import Modal from 'react-modal';
+import { useTranslation } from 'react-i18next';
 
 const Licences = () => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState('');
+  const { t } = useTranslation("licences");
 
   const openModal = (imageSrc: any) => {
     setSelectedImage(imageSrc);
@@ -20,7 +22,7 @@ const Licences = () => {
 
   return (
     <Layout title="Licences">
-      <PageHeader title={'Licences'} subTitle={'Our Licences'} />
+      <PageHeader title={t('licences')} subTitle={t('ourLicences')} />
       <div className="container mx-auto px-16 py-16 lg:flex md:flex lg:justify-start md:justify-start justify-center grid gap-10">
         <Image
           src={'/ACP Engineering 9001 2023-1.jpg'}

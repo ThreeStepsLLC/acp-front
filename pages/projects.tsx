@@ -6,9 +6,11 @@ import ProjectCard from "@/components/lib/ProjectCard";
 import { ProjectCardDescription } from "@/components/lib/ProjectCard/ProjectCardDescription";
 import { useRouter } from "next/router";
 import { getProjects } from "@/services/services";
+import { useTranslation } from "react-i18next";
 
 const Projects = () => {
   const [projects, setProjects] = useState([]);
+  const { t } = useTranslation("projects");
 
   const getProjectsAll = () => {
     getProjects().then((res) => {
@@ -22,7 +24,7 @@ const Projects = () => {
 
   return (
     <Layout title="Projects">
-      <PageHeader title={"Our Projects"} subTitle={"Projects"} />
+      <PageHeader title={t('ourProjects')} subTitle={t('projects')} />
       <div>
         <div className="container mx-auto px-12 py-20">
           <div className="grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 gap-10">

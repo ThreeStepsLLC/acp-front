@@ -3,14 +3,17 @@ import PageHeader from "@/components/lib/PageHeader/PageHeader";
 import React from "react";
 import Image from "next/image";
 import ContactSection from "@/components/lib/ContactSection";
+import { useTranslation } from "react-i18next";
 
-const contact = () => {
+const Contact = () => {
+  const { t } = useTranslation("contact");
+
   return (
     <Layout title="Contact">
-      <PageHeader title={"Contact Information"} subTitle={"Contact Us"} />
+      <PageHeader title={t('information')} subTitle={t('contact')} />
       <ContactSection detailPage={true} />
     </Layout>
   );
 };
 
-export default contact;
+export default Contact;

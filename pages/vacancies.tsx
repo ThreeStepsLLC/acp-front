@@ -8,9 +8,12 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useForm, Controller } from "react-hook-form";
 import Select from "react-select"; // Import react-select
+import { useTranslation } from "react-i18next";
 
 const Vacancies = () => {
   const [positions, setPositions] = useState<any>([]);
+  const { t } = useTranslation("vacancies");
+
 
   const getPositionsAll = () => {
     getPositions().then((res) => {
@@ -71,7 +74,7 @@ const Vacancies = () => {
   return (
     <Layout title="Vacancies">
       <ToastContainer />
-      <PageHeader title={"Work with us"} subTitle={"Vacancies"} />
+      <PageHeader title={t('workWithUs')} subTitle={t('vacancies')} />
       <div className="container mx-auto px-12 py-0">
         <div className="grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 my-14 gap-6">
           <div>
@@ -82,21 +85,10 @@ const Vacancies = () => {
                 height={1}
                 width={40}
               />
-              Recruitment:
+              {t('recruitment')}:
             </p>
             <p className="mt-2">
-              ACP Engineering is a reliable inspection company offering a wide
-              range of professional consulting services. We are a technical
-              supervision and inspection company specialized in transport
-              infrastructure construction that supervises the project
-              implementation and construction works under the requirements of
-              the technical specification, and the country&apos;s legislation,
-              regulations, and standards. Our team of over 150 dedicated civil
-              engineers and professionals is committed to delivering excellence
-              in every project we undertake. Get a chance to join our team today
-              by sending your resume. Find the right job for you - search the
-              latest positions in our company. We will provide a high-level
-              assistance during recruitment process.
+              {t('desc')}
             </p>
           </div>
           <div>
@@ -107,7 +99,7 @@ const Vacancies = () => {
                 height={1}
                 width={40}
               />
-              Our vacancies:
+              {t('ourVacancies')}:
             </p>
             <ul className="text-[#000000] py-5 text-[18px]">
               {positions.map((item: any, index: number) => (
