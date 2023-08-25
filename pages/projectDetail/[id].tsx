@@ -22,11 +22,11 @@ const ProjectDetail = () => {
     getDetailProject(id as string);
   }, [id]);
 
-  const backgroundColors = ["#c0cca1", "#f0f0f0"];
+  const backgroundColors = ["#81a32b", "#f0f0f0"];
 
   return (
     <Layout title="Projects">
-      <PageHeader title={project.title} subTitle={"Projects"} />
+      <PageHeader title={project.title} />
       <div className="container mx-auto px-12 py-20">
         <div className="grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 gap-12">
           <div className="table h-fit" style={{ border: "1px solid #00517b" }}>
