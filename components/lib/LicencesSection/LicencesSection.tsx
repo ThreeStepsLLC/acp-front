@@ -3,7 +3,7 @@ import Image from "next/image";
 import { useTranslation } from "react-i18next";
 
 const LicencesSection = () => {
-  const { t } = useTranslation("licencesSection");
+  const { t } = useTranslation("licencesSection")
 
   return (
     <div className="container mx-auto px-12 py-16">
