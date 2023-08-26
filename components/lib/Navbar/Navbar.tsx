@@ -62,7 +62,7 @@ export default function Example() {
         <div className="flex lg:hidden gap-4">
         <select
             className="cursor-pointer block lg:hidden"
-            id="languageSelect"
+            id="languageSelectMobile"
             onChange={handleChangeSelect}
             value={selectLang}
           >
@@ -134,7 +134,16 @@ export default function Example() {
           <Link href={"/contact"} className="leading-6 hover:text-[#81a32b]">
             {t("contact")}
           </Link>
-          
+          <select
+            className="cursor-pointer"
+            id="languageSelectDesktop"
+            onChange={handleChangeSelect}
+            value={selectLang}
+          >
+            <option value="en">En</option>
+            <option value="az">Az</option>
+            <option value="ru">Ru</option>
+        </select>
         </Popover.Group>
       </nav>
 

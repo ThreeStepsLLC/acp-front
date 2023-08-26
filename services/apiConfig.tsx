@@ -7,11 +7,21 @@ const api = axios.create({
 api.interceptors.request.use((config: any) => {
   let selectedLanguage = localStorage.getItem("selectedLanguage") || "en"; // Varsayılan dil
 
-  const languageSelect = document.getElementById(
-    "languageSelect"
+  const languageSelectMobile = document.getElementById(
+    "languageSelectMobile"
   ) as HTMLSelectElement;
-  languageSelect.addEventListener("change", (event) => {
-    selectedLanguage = languageSelect.value || "en";
+
+  languageSelectMobile.addEventListener("change", (event) => {
+    selectedLanguage = languageSelectMobile.value || "en";
+    localStorage.setItem("selectedLanguage", selectedLanguage); // Seçimi localStorageda sakla
+  });
+
+  const languageSelectDesktop = document.getElementById(
+    "languageSelectDesktop"
+  ) as HTMLSelectElement;
+
+  languageSelectDesktop.addEventListener("change", (event) => {
+    selectedLanguage = languageSelectDesktop.value || "en";
     localStorage.setItem("selectedLanguage", selectedLanguage); // Seçimi localStorageda sakla
   });
 
