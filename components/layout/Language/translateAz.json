@@ -42,11 +42,9 @@
   },
   "coreValuesSection": {
     "coreValues": "ƏSAS DƏYƏRLƏR",
-    "desc": "Bizim əsas dəyərlərimiz nələrdir?"
-  },
-  "licencesSection": {
-    "licences": "LİSENZİYALAR",
-    "desc": "Bizim hansı lisenziyalarımız var?"
+    "desc": "Bizim əsas dəyərlərimiz nələrdir?",
+    "licencesCaption": "LİSENZİYALAR",
+    "descLic": "Bizim hansı lisenziyalarımız var?"
   },
   "aboutCompany": {
     "about": "Haqqımızda",

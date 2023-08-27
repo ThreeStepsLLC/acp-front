@@ -42,11 +42,9 @@
   },
   "coreValuesSection": {
     "coreValues": "CORE VALUES",
-    "desc": "What are our core values?"
-  },
-  "licencesSection": {
-    "licences": "LICENCES",
-    "desc": "What licenses do we have?"
+    "desc": "What are our core values?",
+    "licencesCaption": "LICENCES",
+    "descLic": "What licenses do we have?"
   },
   "aboutCompany": {
     "about": "About us",

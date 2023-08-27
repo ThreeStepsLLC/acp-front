@@ -42,11 +42,9 @@
   },
   "coreValuesSection": {
     "coreValues": "ОСНОВНЫЕ ЦЕННОСТИ",
-    "desc": "Какие у нас основные ценности?"
-  },
-  "licencesSection": {
-    "licences": "ЛИЦЕНЗИИ",
-    "desc": "Какие лицензии у нас есть?"
+    "desc": "Какие у нас основные ценности?",
+    "licencesCaption": "ЛИЦЕНЗИИ",
+    "descLic": "Какие лицензии у нас есть?"
   },
   "aboutCompany": {
     "about": "О нас",
