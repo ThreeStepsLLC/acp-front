@@ -60,7 +60,9 @@
   },
   "projects": {
     "projects": "Projects",
-    "ourProjects": "Our Projects"
+    "ourProjects": "Our Projects",
+    "progress": "Progress"
+
   },
   "licences": {
     "ourLicences": "Our Licences",

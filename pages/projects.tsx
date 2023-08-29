@@ -34,68 +34,10 @@ const Projects = () => {
               image={item.imageUrl}
               caption={item.title}
               location={item.address}
+              progress={item.progress}
               darkText={true} id={item.id} 
                />
           ))}
-            {/* <ProjectCard
-              image={"/ZEFER.jpg"}
-              caption={
-                "Ahmadbayli-Fuzuli–Shusha highway, also called “Zafar Yolu” (Victory Road) 51-101.5 km"
-              }
-              location={"Ahmadbayli - Fuzuli – Shusha"}
-              darkText={true}
-            />
-            <ProjectCard
-              darkText={true}
-              image={"/M1.jpeg"}
-              caption={
-                "M-1 BAKU-GUBA-THE STATE BOARDER OF THE RUSSIAN FEDERATION NEW MOTOR ROAD CONSTRUCTION CLIENT"
-              }
-              location={"Baku - Guba"}
-            />
-            <ProjectCard
-              darkText={true}
-              image={"/Horadiz.jpeg"}
-              caption={
-                "Construction project of Ahmadbayli - Horadiz - Minjivan - Agband highway"
-              }
-              location={"Horadiz - Minjivan - Agband"}
-            />
-            <ProjectCard
-              darkText={true}
-              image={"/shusha.png"}
-              caption={
-                "The construction of the Ahmadbayli - Fuzuli - Shusha highway 51+000-81+700 km"
-              }
-              location={"Fuzuli - Shusha"}
-            />
-
-            <ProjectCard
-              darkText={true}
-              image={"/Gubadli.jpeg"}
-              caption={"Construction of Khudafarin - Gubadli - Lachin highway"}
-              location={"Gubadli - Lachin"}
-            />
-            <ProjectCard
-              darkText={true}
-              image={"/welcomeImg4.png"}
-              caption={
-                "Construction of Toganali-Kalbajar-Istisu road & Murovdag tunnel underway"
-              }
-              location={"Toganali - Kalbajar"}
-            />
-            <ProjectCard
-              darkText={true}
-              image={"/LACI╠çN.png"}
-              caption={"The construction of the Kalbacar-Lachin highway"}
-              location={"Kalbacar - Lachin"}
-            />
-            <ProjectCard
-              darkText={true}
-              image={"/Aghdam.jpeg"}
-              caption={"Construction of Aghdam - Fuzuli Highway 0-32"}
-              location={"Aghdam - Fuzuli"}
-            /> */}
           </div>
         </div>
       </div>

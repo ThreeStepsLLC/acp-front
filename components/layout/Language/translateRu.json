@@ -60,7 +60,8 @@
   },
   "projects": {
     "projects": "Проекты",
-    "ourProjects": "Наши проекты"
+    "ourProjects": "Наши проекты",
+    "progress": "Прогресс"
   },
   "licences": {
     "ourLicences": "Наши лицензии",

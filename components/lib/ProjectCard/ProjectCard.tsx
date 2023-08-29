@@ -3,13 +3,15 @@ import Image from "next/image";
 import Button from "../Button";
 import { useRouter } from "next/router";
 import { useTranslation } from "react-i18next";
+import { GiProgression } from "react-icons/gi";
 
 interface ProjectCardProps {
   image: string;
   caption: string;
   location: string;
-  id: string
+  id: string;
   darkText?: boolean;
+  progress: number;
 }
 
 const ProjectCard = ({
@@ -18,6 +20,7 @@ const ProjectCard = ({
   location,
   id,
   darkText,
+  progress,
 }: ProjectCardProps) => {
   const router = useRouter();
   const { t } = useTranslation("homepage");
@@ -28,7 +31,13 @@ const ProjectCard = ({
 
   return (
     <div className="grid gap-2">
-      <Image src={image} alt={"project"} width={744} height={500} style={{width: '100%'}} />
+      <Image
+        src={image}
+        alt={"project"}
+        width={744}
+        height={500}
+        style={{ width: "100%" }}
+      />
       <p
         className={
           darkText
@@ -52,12 +61,23 @@ const ProjectCard = ({
             {location}
           </span>
         </p>
-        <Button
-          text={t('seeProject')}
-          onClick={handleButtonClick}
-        />
+        <Button text={t("seeProject")} onClick={handleButtonClick} />
       </div>
       <hr className="color-[#A9A9A9] text-[#A9A9A9]" />
+      <div className="flex justify-between items-center">
+        <p className="flex gap-2 items-center">
+          <GiProgression className="text-[27px] text-[#81a32b]" />
+          <span
+            className={
+              darkText
+                ? "text-[17px] text-[#00517b] font-normal"
+                : "text-[17px] text-[#ffffff] font-normal"
+            }
+          >
+            {progress}%
+          </span>
+        </p>
+      </div>
     </div>
   );
 };

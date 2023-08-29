@@ -5,11 +5,13 @@ import Image from "next/image";
 import Fancybox from "@/components/lib/FancyBox";
 import { useRouter } from "next/router";
 import { getSingleProjects } from "@/services/services";
+import { useTranslation } from "react-i18next";
 
 const ProjectDetail = () => {
   const [project, setProject] = useState<any>({});
   const router = useRouter();
   const id = router.query.id;
+  const { t } = useTranslation("projects");
 
   const getDetailProject = (id: string) => {
     getSingleProjects(id).then((res) => {
@@ -29,28 +31,53 @@ const ProjectDetail = () => {
       <PageHeader title={project.title} />
       <div className="container mx-auto px-12 py-20">
         <div className="grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 gap-12">
-          <div className="table h-fit" style={{ border: "1px solid #00517b" }}>
-            {project?.projectDetails?.map((item: any, index: number) => (
-              <div
-                key={index}
-                className="grid grid-cols-2"
-                style={{
-                  borderBottom: "1px solid black",
-                  padding: "10px",
-                  backgroundColor:
-                    backgroundColors[index % backgroundColors.length],
-                }}
-              >
-                <div className="tableCol font-bold text-[18px]">
-                  {item.title}
-                </div>
+          <div className="grid gap-4">
+            <div className="flex gap-2">
+              <p className="font-bold text-[18px]">{t("progress")}:</p>
+              <div className="w-full bg-[#00517b]  rounded-full dark:bg-[#00517b]">
                 <div
-                  className="tableCol font-bold text-[18px]"
-                  dangerouslySetInnerHTML={{ __html: item.description }}
-                />
+                  className="bg-[#81a32b] font-bold text-white text-center leading-none rounded-full"
+                  style={{
+                    width: `${project.progress}%`,
+                    height: "100%",
+                    display: "grid",
+                    alignItems: "center",
+                    fontSize: "14px",
+                    padding: "0px",
+                  }}
+                >
+                  {project.progress}%
+                </div>
               </div>
-            ))}
+            </div>
+
+            <div
+              className="table h-fit"
+              style={{ border: "1px solid #00517b" }}
+            >
+              {project?.projectDetails?.map((item: any, index: number) => (
+                <div
+                  key={index}
+                  className="grid grid-cols-2"
+                  style={{
+                    borderBottom: "1px solid black",
+                    padding: "10px",
+                    backgroundColor:
+                      backgroundColors[index % backgroundColors.length],
+                  }}
+                >
+                  <div className="tableCol font-bold text-[18px]">
+                    {item.title}
+                  </div>
+                  <div
+                    className="tableCol font-bold text-[18px]"
+                    dangerouslySetInnerHTML={{ __html: item.description }}
+                  />
+                </div>
+              ))}
+            </div>
           </div>
+
           <Fancybox
             options={{
               Carousel: {
@@ -74,6 +101,7 @@ const ProjectDetail = () => {
             </div>
           </Fancybox>
         </div>
+
         <div className="grid grid-cols-1">
           <p
             className="text-[#000810] font-normal text-[15px] mt-4"

@@ -1,26 +1,28 @@
-import Layout from '@/components/layout';
-import PageHeader from '@/components/lib/PageHeader/PageHeader';
-import React, { useEffect, useState } from 'react';
-import Image from 'next/image';
-import Modal from 'react-modal';
-import { useTranslation } from 'react-i18next';
-import { getLicenses } from '@/services/services';
+import Layout from "@/components/layout";
+import PageHeader from "@/components/lib/PageHeader/PageHeader";
+import React, { useEffect, useState } from "react";
+import Image from "next/image";
+import Modal from "react-modal";
+import { useTranslation } from "react-i18next";
+import { getLicenses } from "@/services/services";
 
 const Licences = () => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
-  const [selectedImage, setSelectedImage] = useState('');
-  const [data, setData] = useState([])
+  const [selectedImage, setSelectedImage] = useState("");
+  const [data, setData] = useState([]);
   const { t } = useTranslation("licences");
 
   const getAllLicenes = () => {
     getLicenses().then((res) => {
-      setData(res.data)
-    })
-  }
+      setData(res.data);
+    });
+  };
+
+  console.log(data, "data");
 
   useEffect(() => {
-    getAllLicenes()
-  }, [])
+    getAllLicenes();
+  }, []);
 
   const openModal = (imageSrc: any) => {
     setSelectedImage(imageSrc);
@@ -28,32 +30,36 @@ const Licences = () => {
   };
 
   const closeModal = () => {
-    setSelectedImage('');
+    setSelectedImage("");
     setModalIsOpen(false);
   };
 
   return (
     <Layout title="Licences">
-      <PageHeader title={t('licences')} subTitle={t('ourLicences')} />
+      <PageHeader title={t("licences")} subTitle={t("ourLicences")} />
       <div className="container mx-auto px-16 py-16 lg:flex md:flex lg:justify-start md:justify-start justify-center grid gap-10">
-        <Image
-          src={'/ACP Engineering 9001 2023-1.jpg'}
-          alt={'iso'}
+        {data.map((item: any) => (
+          <Image
+            key={item.id}
+            src={item.imageUrl}
+            alt={"iso"}
+            width={200}
+            height={200}
+            onClick={() => openModal(item.imageUrl)}
+            className="clickable-image"
+            style={{ cursor: "pointer" }}
+          />
+        ))}
+
+        {/* <Image
+          src={"/ACP Engineering 14001 2023-2.jpg"}
+          alt={"iso"}
           width={200}
           height={200}
-          onClick={() => openModal('/ACP Engineering 9001 2023-1.jpg')}
+          onClick={() => openModal("/ACP Engineering 14001 2023-2.jpg")}
           className="clickable-image"
-          style={{cursor: 'pointer'}}
-        />
-        <Image
-          src={'/ACP Engineering 14001 2023-2.jpg'}
-          alt={'iso'}
-          width={200}
-          height={200}
-          onClick={() => openModal('/ACP Engineering 14001 2023-2.jpg')}
-          className="clickable-image"
-          style={{cursor: 'pointer'}}
-        />
+          style={{ cursor: "pointer" }}
+        /> */}
       </div>
       <Modal
         isOpen={modalIsOpen}
@@ -62,11 +68,11 @@ const Licences = () => {
         className="image-modal"
         style={{
           content: {
-            maxWidth: '400px',
-            margin: 'auto',
-            marginTop: '20px',
-            border: '0px'
-          }
+            maxWidth: "400px",
+            margin: "auto",
+            marginTop: "20px",
+            border: "0px",
+          },
         }}
       >
         {selectedImage && (
