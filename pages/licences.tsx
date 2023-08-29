@@ -1,14 +1,26 @@
 import Layout from '@/components/layout';
 import PageHeader from '@/components/lib/PageHeader/PageHeader';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Modal from 'react-modal';
 import { useTranslation } from 'react-i18next';
+import { getLicenses } from '@/services/services';
 
 const Licences = () => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState('');
+  const [data, setData] = useState([])
   const { t } = useTranslation("licences");
+
+  const getAllLicenes = () => {
+    getLicenses().then((res) => {
+      setData(res.data)
+    })
+  }
+
+  useEffect(() => {
+    getAllLicenes()
+  }, [])
 
   const openModal = (imageSrc: any) => {
     setSelectedImage(imageSrc);

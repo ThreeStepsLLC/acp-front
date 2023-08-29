@@ -2,25 +2,25 @@
   "navigation": {
     "home": "Əsas səhifə",
     "about": "Haqqımızda",
-    "experience": "Təcrübə sahələri",
+    "experience": "Təcrübə Sahələri",
     "projects": "Layihələr",
     "licences": "Lisenziyalar",
     "vacancies": "Vakansiyalar",
-    "contact": "Bizimlə əlaqə",
-    "aboutCompany": "Şirkət haqqında",
-    "ourPolicies": "Bizim siyasətimiz"
+    "contact": "Bizimlə Əlaqə",
+    "aboutCompany": "Şirkət Haqqında",
+    "ourPolicies": "Bizim Siyasətimiz"
   },
   "homepage": {
     "welcomeCap": "Peşəkar. Yenilikçi. Etibarlı.",
-    "totalProjects": "Ümumi layihələr",
-    "totalRoad": "Ümumi çəkilən yol",
-    "totalTunnels": "Ümumi tunellər",
-    "totalBridges": "Ümumi körpülər",
-    "whatwedo": "Biz nə edirik",
-    "ourProjects": "Proyektlərimiz",
-    "projects": "Proyektlər",
-    "seeProject": "Proyektə bax",
-    "seeProjectAll": "Bütün proyektlərə bax"
+    "totalProjects": "Ümumi Layihələr",
+    "totalRoad": "Ümumi Çəkilən Yol",
+    "totalTunnels": "Ümumi Tunellər",
+    "totalBridges": "Ümumi Körpülər",
+    "whatwedo": "Biz Nə Edirik",
+    "ourProjects": "Layihələrimiz",
+    "projects": "Layihələr",
+    "seeProject": "Layihəyə bax",
+    "seeProjectAll": "Bütün Layihələrə bax"
   },
   "serviceSection": {
     "whychooseus": "NİYƏ BİZİ SEÇMƏLİSİNİZ",

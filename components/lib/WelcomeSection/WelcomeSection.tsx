@@ -71,7 +71,7 @@ const WelcomeSection = () => {
             {constants.title}
           </p>
           <p
-            className="lg:text-[20px] md:text-[20px] text-[20px] font-semibold text-[#ffffff]"
+            className="lg:text-[20px] md:text-[20px] text-[20px] font-normal text-[#ffffff]"
             dangerouslySetInnerHTML={{ __html: constants.description }}
           />
         </div>

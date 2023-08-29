@@ -1,11 +1,18 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
-import { getConstants } from "@/services/services";
+import { getConstants, getSeparateLicenses } from "@/services/services";
 import { useTranslation } from "react-i18next";
 
 const CoreValuesSection = () => {
   const [coreValues, setCoreValues] = useState<any>({})
+  const [data, setData] = useState([])
   const { t } = useTranslation("coreValuesSection");
+
+  const getAllLicenes = () => {
+    getSeparateLicenses().then((res) => {
+      setData(res.data)
+    })
+  }
 
   const getCoreValues = () => {
     getConstants("core-values").then((res) => {
@@ -15,6 +22,7 @@ const CoreValuesSection = () => {
 
   useEffect(() => {
     getCoreValues()
+    getAllLicenes()
   }, [])
 
   return (

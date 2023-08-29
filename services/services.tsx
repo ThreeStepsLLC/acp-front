@@ -14,7 +14,8 @@ export const getSettings = () => {
 };
 
 export const getProjects = (params?: any) => {
-  return api.get(`/projects/last-langed`, {params})
+  return api
+    .get(`/projects/last-langed`, { params })
     .then((res: AxiosResponse) => res.data);
 };
 
@@ -38,4 +39,12 @@ export const getConstants = (id: string) => {
   return api
     .get(`/constants/${id}/langed`)
     .then((res: AxiosResponse) => res.data);
+};
+
+export const getLicenses = () => {
+  return api.get(`/licenses`).then((res: AxiosResponse) => res.data);
+};
+
+export const getSeparateLicenses = () => {
+  return api.get(`/separate-licenses`).then((res: AxiosResponse) => res.data);
 };
