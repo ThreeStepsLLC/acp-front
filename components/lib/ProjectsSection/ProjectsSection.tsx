@@ -35,10 +35,10 @@ const ProjectsSection = () => {
             height={1}
             width={40}
           />
-            {t('whatwedo')}
+          {t("whatwedo")}
         </p>
         <p className="text-[#000000] text-[45px] font-bold mb-8">
-          {t('ourProjects')}
+          {t("ourProjects")}
         </p>
         <div className="grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 gap-12 mb-10">
           {projects.map((item: any, index: number) => (
@@ -49,12 +49,13 @@ const ProjectsSection = () => {
               location={item.address}
               id={item.id}
               darkText={true}
+              progress={item.progress}
             />
           ))}
         </div>
         <div className="items-center flex justify-center">
           <Button
-            text={t('seeProjectAll')}
+            text={t("seeProjectAll")}
             onClick={() => router.push("/projects")}
           />
         </div>
