@@ -49,38 +49,42 @@ const ProjectCard = ({
       </p>
       <hr className="color-[#A9A9A9] text-[#A9A9A9]" />
       <div className="flex justify-between items-center">
+        <div className="grid gap-2">
+          <div className="flex justify-between items-center">
+            <p className="flex gap-2 items-center">
+              <GiProgression className="text-[27px] text-[#81a32b]" />
+              <span
+                className={
+                  darkText
+                    ? "text-[17px] text-[#00517b] font-normal"
+                    : "text-[17px] text-[#ffffff] font-normal"
+                }
+              >
+                {progress}%
+              </span>
+            </p>
+          </div>
 
-<div className="grid gap-2">
-        <p className="flex gap-3 items-center">
-          <Image src={"location.svg"} alt={"location"} width={28} height={18} />
-          <span
-            className={
-              darkText
-                ? "text-[15px] text-[#00517b] font-normal"
-                : "text-[15px] text-[#ffffff] font-normal"
-            }
-          >
-            {location}
-          </span>
-        </p>
+          <p className="flex gap-3 items-center">
+            <Image
+              src={"location.svg"}
+              alt={"location"}
+              width={28}
+              height={18}
+            />
+            <span
+              className={
+                darkText
+                  ? "text-[15px] text-[#00517b] font-normal"
+                  : "text-[15px] text-[#ffffff] font-normal"
+              }
+            >
+              {location}
+            </span>
+          </p>
+        </div>
 
-        <div className="flex justify-between items-center">
-        <p className="flex gap-2 items-center">
-          <GiProgression className="text-[27px] text-[#81a32b]" />
-          <span
-            className={
-              darkText
-                ? "text-[17px] text-[#00517b] font-normal"
-                : "text-[17px] text-[#ffffff] font-normal"
-            }
-          >
-            {progress}%
-          </span>
-        </p>
-      </div>
-      </div>
-
-      <Button text={t("seeProject")} onClick={handleButtonClick} />
+        <Button text={t("seeProject")} onClick={handleButtonClick} />
       </div>
       <hr className="color-[#A9A9A9] text-[#A9A9A9]" />
     </div>
