@@ -31,12 +31,11 @@ const ProjectDetail = () => {
       <PageHeader title={project.title} />
       <div className="container mx-auto px-12 py-20">
         <div className="grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 gap-12">
-          <div className="grid gap-4">
-            <div className="flex gap-2">
+          <div>
+            <div className="flex gap-2 mb-4">
               <p className="font-bold text-[18px]">{t("progress")}:</p>
               <div className="w-full bg-[#00517b]  rounded-full dark:bg-[#00517b]">
-                <div
-                  className="bg-[#81a32b] font-bold text-white text-center leading-none rounded-full"
+                <div className="bg-[#81a32b] font-bold text-white text-center leading-none rounded-full"
                   style={{
                     width: `${project.progress}%`,
                     height: "100%",
@@ -53,7 +52,7 @@ const ProjectDetail = () => {
 
             <div
               className="table h-fit"
-              style={{ border: "1px solid #00517b" }}
+              style={{ border: "1px solid #00517b", width: '100%' }}
             >
               {project?.projectDetails?.map((item: any, index: number) => (
                 <div
