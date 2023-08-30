@@ -14,6 +14,8 @@ const CoreValuesSection = () => {
     })
   }
 
+  console.log(data, 'data');
+
   const getCoreValues = () => {
     getConstants("core-values").then((res) => {
       setCoreValues(res.data);
@@ -62,8 +64,9 @@ const CoreValuesSection = () => {
         <p className="text-[#000000] text-[45px] font-bold mb-8">{t("descLic")}</p>
   
         <div className="lg:flex md:flex lg:justify-start md:justify-start justify-center grid gap-10">
-          <Image src={"/ISOCER1.png"} alt={"iso"} width={200} height={200} />
-          <Image src={"/ISOCER2.png"} alt={"iso"} width={200} height={200} />
+          {
+            data.map((item: any) => <Image key={item.id} src={item.imageUrl} alt={"iso"} width={200} height={200} />)
+          }
         </div>
       </div>
       </>
