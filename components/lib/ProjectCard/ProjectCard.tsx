@@ -84,7 +84,9 @@ const ProjectCard = ({
           </p>
         </div>
 
-        <Button text={t("seeProject")} onClick={handleButtonClick} />
+        <div className="grid" style={{height:'100%', alignItems: 'end'}}>
+          <Button text={t("seeProject")} onClick={handleButtonClick} />
+        </div>
       </div>
       <hr className="color-[#A9A9A9] text-[#A9A9A9]" />
     </div>
