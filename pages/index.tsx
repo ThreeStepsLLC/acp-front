@@ -13,7 +13,6 @@ export default function Home() {
     <Layout title="Home">
       <WelcomeSection />
       <ProjectsSection />
-      <FutureSection />
       <PartnersSection />
       <CoreValuesSection />
     </Layout>

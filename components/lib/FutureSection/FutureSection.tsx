@@ -6,6 +6,8 @@ import { useTranslation } from "react-i18next";
 const FutureSection = () => {
   const { t } = useTranslation("homepage");
 
+  console.log('salam');
+
   return (
     <div className="bg-[#00517b]">
       <div className="container mx-auto px-12 py-16">

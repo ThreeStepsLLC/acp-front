@@ -49,7 +49,18 @@
   },
   "partnersSection": {
     "partners": "Tərəfdaşlar",
-    "desc": "Bizimlə tərəfdaş olan şirkətlər"
+    "desc": "Bizimlə tərəfdaş olan şirkətlər",
+    "whychooseus": "NİYƏ BİZİ SEÇMƏLİSİNİZ",
+    "ourServices": "Bizim xidmətlərimiz",
+    "service1": "Tikinti zamanı Sifarişçinin tələbi əsasında Podratçı fəaliyyətinə texniki nəzarətin həyata keçirilməsi",
+    "service2": "Podratçının sahədə gördüyü işin standart, norma və qanunlara uyğunluğunun monitorinqi",
+    "service3": "Yerli və beynəlxalq heyətə təlimlərin keçirilməsi, lazımi xidmət və alətlərlə təmin olunması",
+    "service4": "Müştəri, Sifarişçi, Podratçı və yerli nümayəndələr arasında yarana biləcək məsələ və problemlərin aradan qaldırılması",
+    "service5": "İşlərin gedişat və metodlarının yoxlanılması",
+    "service6": "Müvafiq layihə detallarının hesabatı və uçotunun aparılması",
+    "service7": "Texniki və mühəndislik dəstəyi ",
+    "service8": "Laboratoriya tesləri",
+    "service9": "Geodeziya işləri"
   },
   "coreValuesSection": {
     "coreValues": "ƏSAS DƏYƏRLƏR",
