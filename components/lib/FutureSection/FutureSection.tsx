@@ -4,7 +4,7 @@ import Card from "../Card";
 import { useTranslation } from "react-i18next";
 
 const FutureSection = () => {
-  const { t } = useTranslation("serviceSection");
+  const { t } = useTranslation("homepage");
 
   return (
     <div className="bg-[#00517b]">
