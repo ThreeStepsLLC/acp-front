@@ -15,7 +15,10 @@ const seo = ({
         content={title || "Pinghome - Free uptime monitoring service"}
         itemProp="name"
       />
-      <meta name="google-site-verification" content="dmf-_1sk30US8GCrfPyZIAwW9azdx0LODncH7lUIiCc" />
+      <meta
+        name="google-site-verification"
+        content="dmf-_1sk30US8GCrfPyZIAwW9azdx0LODncH7lUIiCc"
+      />
       <meta content={description} id="meta-description" name="description" />
       <meta
         content={
