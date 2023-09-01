@@ -4,15 +4,27 @@ import React from "react";
 import Image from "next/image";
 import ContactSection from "@/components/lib/ContactSection";
 import { useTranslation } from "react-i18next";
+import Head from "next/head";
+import Seo from "@/components/lib/Seo/Seo";
 
 const Contact = () => {
   const { t } = useTranslation("contact");
 
   return (
-    <Layout title="Contact">
-      <PageHeader title={t('information')} subTitle={t('contact')} />
-      <ContactSection detailPage={true} />
-    </Layout>
+    <>
+      <Head>
+        <Seo
+          description={"ACP Engineering"}
+          keywords={"ACP Engineering"}
+          title={t("contact")}
+        />
+      </Head>
+
+      <Layout title="Contact">
+        <PageHeader title={t("information")} subTitle={t("contact")} />
+        <ContactSection detailPage={true} />
+      </Layout>
+    </>
   );
 };
 

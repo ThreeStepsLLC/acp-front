@@ -5,6 +5,8 @@ import Image from "next/image";
 import Modal from "react-modal";
 import { useTranslation } from "react-i18next";
 import { getLicenses } from "@/services/services";
+import Head from "next/head";
+import Seo from "@/components/lib/Seo/Seo";
 
 const Licences = () => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
@@ -35,51 +37,50 @@ const Licences = () => {
   };
 
   return (
-    <Layout title="Licences">
-      <PageHeader title={t("licences")} subTitle={t("ourLicences")} />
-      <div className="container mx-auto px-16 py-16 lg:flex md:flex lg:justify-start md:justify-start justify-center grid gap-10">
-        {data.map((item: any) => (
-          <Image
-            key={item.id}
-            src={item.imageUrl}
-            alt={"iso"}
-            width={200}
-            height={200}
-            onClick={() => openModal(item.imageUrl)}
-            className="clickable-image"
-            style={{ cursor: "pointer" }}
-          />
-        ))}
-
-        {/* <Image
-          src={"/ACP Engineering 14001 2023-2.jpg"}
-          alt={"iso"}
-          width={200}
-          height={200}
-          onClick={() => openModal("/ACP Engineering 14001 2023-2.jpg")}
-          className="clickable-image"
-          style={{ cursor: "pointer" }}
-        /> */}
-      </div>
-      <Modal
-        isOpen={modalIsOpen}
-        onRequestClose={closeModal}
-        contentLabel="Image Modal"
-        className="image-modal"
-        style={{
-          content: {
-            maxWidth: "400px",
-            margin: "auto",
-            marginTop: "20px",
-            border: "0px",
-          },
-        }}
-      >
-        {selectedImage && (
-          <Image src={selectedImage} alt="iso" width={800} height={800} />
-        )}
-      </Modal>
-    </Layout>
+    <>
+      <Head>
+        <Seo
+          description={"ACP Engineering"}
+          keywords={"ACP Engineering"}
+          title={t("ourLicences")}
+        />
+      </Head>
+      <Layout title="Licences">
+        <PageHeader title={t("licences")} subTitle={t("ourLicences")} />
+        <div className="container mx-auto px-16 py-16 lg:flex md:flex lg:justify-start md:justify-start justify-center grid gap-10">
+          {data.map((item: any) => (
+            <Image
+              key={item.id}
+              src={item.imageUrl}
+              alt={"iso"}
+              width={200}
+              height={200}
+              onClick={() => openModal(item.imageUrl)}
+              className="clickable-image"
+              style={{ cursor: "pointer" }}
+            />
+          ))}
+        </div>
+        <Modal
+          isOpen={modalIsOpen}
+          onRequestClose={closeModal}
+          contentLabel="Image Modal"
+          className="image-modal"
+          style={{
+            content: {
+              maxWidth: "400px",
+              margin: "auto",
+              marginTop: "20px",
+              border: "0px",
+            },
+          }}
+        >
+          {selectedImage && (
+            <Image src={selectedImage} alt="iso" width={800} height={800} />
+          )}
+        </Modal>
+      </Layout>
+    </>
   );
 };
 

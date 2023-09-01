@@ -4,6 +4,8 @@ import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import { getConstants } from "@/services/services";
 import { useTranslation } from "react-i18next";
+import Seo from '@/components/lib/Seo/Seo'
+import Head from "next/head";
 
 const About = () => {
   const [constants, setConstants] = useState<any>({});
@@ -20,6 +22,10 @@ const About = () => {
   }, []);
 
   return (
+    <>
+    <Head>
+      <Seo description={'ACP Engineering'} keywords={'ACP Engineering'} title={t('about')} />
+    </Head>
     <Layout title="About us">
       <PageHeader title={t('aboutCompany')} subTitle={t('about')} />
       <div className="container mx-auto px-12 py-0">
@@ -39,6 +45,7 @@ const About = () => {
         </div>
       </div>
     </Layout>
+    </>
   );
 };
 
