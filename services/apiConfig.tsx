@@ -1,7 +1,7 @@
 import axios, { AxiosResponse } from "axios";
 
 const api = axios.create({
-  baseURL: "https://api.afmpro.az/api/v1/",
+  baseURL: "http://api.afmpro.az/api/v1/",
 });
 
 api.interceptors.request.use((config: any) => {
