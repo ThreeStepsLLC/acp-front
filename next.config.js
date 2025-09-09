@@ -10,6 +10,8 @@ module.exports = {
       {
         protocol: 'http',
         hostname: 'cdn.afmpro.az',
+        port: '',
+        search: '',
       },
     ],
   },
