@@ -7,11 +7,7 @@ module.exports = {
   },
   images: {
     remotePatterns: [
-      {
-        protocol: 'http',
-        hostname: 'cdn.afmpro.az',
-        port: '80',
-      },
+      new URL('http://cdn.afmpro.az/**')
     ],
   },
 };
