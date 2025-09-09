@@ -35,7 +35,7 @@ const Footer = () => {
     >
       <div className="grid lg:grid-cols-3 sm:grid-cols-2 gap-12">
         <div>
-          <Image src={"/logo.png"} alt="Logo" width={88.08} height={41.41} />
+          <Image src={"/afmpro-logo.jpeg"} alt="Logo" width={88.08} height={41.41} />
           <p className="text-[16px] mt-[20px]" dangerouslySetInnerHTML={{__html:values.description}} />
         </div>
         <div>
@@ -172,7 +172,7 @@ const Footer = () => {
       <hr className="mt-[31px] mb-[49px] text-[#00517b]" />
 
       <div className="lg:flex sm:grid lg:justify-between sm:justify-center text-center text-[14px] gap-2">
-        <p className="opacity-100">© 2023 ACP. All rights reserved.</p>
+        <p className="opacity-100">© 2025 AFM PRO. All rights reserved.</p>
         <div className="flex justify-between font-bold gap-2">
           <a href={data.instagram} target="blank">
             <Image

@@ -76,8 +76,8 @@ const Vacancies = () => {
     <>
       <Head>
         <Seo
-          description={"ACP Engineering"}
-          keywords={"ACP Engineering"}
+          description={"AFM PRO"}
+          keywords={"AFM PRO"}
           title={t("vacancies")}
         />
       </Head>
