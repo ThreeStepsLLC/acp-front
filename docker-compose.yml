@@ -6,8 +6,6 @@ services:
     image: afmpro-front-image
     container_name: afmpro-front
     restart: always
-    ports:
-      - "3006:3000"
     networks:
       - proxynet
 
