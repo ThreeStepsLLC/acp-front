@@ -35,7 +35,7 @@ const Footer = () => {
     >
       <div className="grid lg:grid-cols-3 sm:grid-cols-2 gap-12">
         <div>
-          <Image src={"/afmpro-logo.jpeg"} alt="Logo" width={88.08} height={41.41} />
+          <Image src={"/afmpro-logo.jpeg"} alt="Logo" width={200} height={41.41} />
           <p className="text-[16px] mt-[20px]" dangerouslySetInnerHTML={{__html:values.description}} />
         </div>
         <div>

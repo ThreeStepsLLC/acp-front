@@ -160,7 +160,7 @@ export default function Example() {
               <Image
                 src={"/afmpro-logo.jpeg"}
                 alt="Logo"
-                width={88.08}
+                width={200}
                 height={41.41}
               />
             </Link>
