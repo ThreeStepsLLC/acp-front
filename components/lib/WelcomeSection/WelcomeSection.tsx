@@ -84,30 +84,7 @@ const WelcomeSection = () => {
             {t('totalProjects')}
             </p>
           </div>
-          <div className="grid lg:text-start md:text-start text-center mb-10">
-            <p className="lg:text-[40px] md:text-[40px] text-[20px] font-bold text-[#81a32b]">
-              {data.totalRoad}km+
-            </p>
-            <p className="lg:text-[19px] md:text-[19px] text-[16px] font-bold text-[#ffffff]">
-            {t('totalRoad')}
-            </p>
-          </div>
-          <div className="grid lg:text-start md:text-start text-center mb-10">
-            <p className="lg:text-[40px] md:text-[40px] text-[20px] font-bold text-[#81a32b]">
-              {data.totalTunnels}m
-            </p>
-            <p className="lg:text-[19px] md:text-[19px] text-[16px] font-bold text-[#ffffff]">
-            {t('totalTunnels')}
-            </p>
-          </div>
-          <div className="grid lg:text-start md:text-start text-center mb-10">
-            <p className="lg:text-[40px] md:text-[40px] text-[20px] font-bold text-[#81a32b]">
-              {data.totalBridges}
-            </p>
-            <p className="lg:text-[19px] md:text-[19px] text-[16px] font-bold text-[#ffffff]">
-            {t('totalBridges')}
-            </p>
-          </div>
+          
         </div>
       </div>
     </div>

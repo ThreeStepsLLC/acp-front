@@ -63,7 +63,7 @@ const ContactSection = ({ detailPage }: ContactSectionProps) => {
         </div>
 
         <div className="grid gap-8">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3037.6206229300033!2d49.90629127486197!3d40.417254455609154!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40306329b9bcb60b%3A0xaa68aaf831e30045!2sSport%20Plaza!5e0!3m2!1saz!2saz!4v1692116753924!5m2!1saz!2saz" width="100%" height="450" loading="lazy"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d759.3414871125008!2d49.86213295953729!3d40.42289499783883!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4030880f64f54d15%3A0xe264eb7f049e97c7!2s57c%20Ajami%20Nakhchivani%2C%20Baku!5e0!3m2!1sen!2saz!4v1757442850305!5m2!1sen!2saz" width="100%" height="450" style={{border: 0}} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
         </div>
       </div>
     </div>
