@@ -6,7 +6,7 @@ on:
       - afmpro
 
 env:
-  APP_NAME: ${{ github.event.repository.name }}
+  APP_NAME: afmpro-front
   IMAGE_TAG: ${{ github.sha }}
 
 jobs:
