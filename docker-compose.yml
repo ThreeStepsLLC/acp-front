@@ -16,7 +16,7 @@
 services:
   afmpro-front:
     image: $IMAGE_NAME:$IMAGE_TAG
-    container_name: $APP_NAME
+    container_name: afmpro-front
     restart: always
     networks:
       proxynet:
