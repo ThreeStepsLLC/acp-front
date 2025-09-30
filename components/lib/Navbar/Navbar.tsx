@@ -46,12 +46,12 @@ export default function Example() {
     <header
       style={
         isNavbarSticky
-          ? { backgroundColor: "white", width: "100%", position: "fixed" }
-          : { backgroundColor: "white" }
+          ? { backgroundColor: "#593d71", width: "100%", position: "fixed" }
+          : { backgroundColor: "#593d71" }
       }
     >
       <nav
-        className="mx-auto flex items-center justify-between p-6 px-10 lg:px-16 md:px-16 container mx-auto text-[#00517b] text-[16px] font-semibold"
+        className="mx-auto flex items-center justify-between p-6 px-10 lg:px-16 md:px-16 container bg-[#593d71] mx-auto text-[#fff] text-[16px] font-semibold"
         aria-label="Global"
       >
         <div className="flex lg:flex-1">
@@ -61,7 +61,7 @@ export default function Example() {
         </div>
         <div className="flex lg:hidden gap-4">
         <select
-            className="cursor-pointer block lg:hidden"
+            className="cursor-pointer block lg:hidden text-black"
             id="languageSelectMobile"
             onChange={handleChangeSelect}
             value={selectLang}
@@ -92,7 +92,7 @@ export default function Example() {
               <>
                 <Popover.Button
                   className={`${
-                    open ? "text-[#81a32b]" : "text-[#00517b]"
+                    open ? "text-[#81a32b]" : "text-[#fff]"
                   } leading-6 hover:text-[#81a32b]`}
                 >
                   {t("about")}
@@ -135,7 +135,7 @@ export default function Example() {
             {t("contact")}
           </Link>
           <select
-            className="cursor-pointer"
+            className="cursor-pointer text-black"
             id="languageSelectDesktop"
             onChange={handleChangeSelect}
             value={selectLang}

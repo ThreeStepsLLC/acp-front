@@ -41,7 +41,7 @@ const ProjectCard = ({
       <p
         className={
           darkText
-            ? "text-[20px] text-[#00517b] font-bold"
+            ? "text-[20px] text-[#593d71] font-bold"
             : "text-[20px] text-[#ffffff] font-bold"
         }
       >
@@ -56,7 +56,7 @@ const ProjectCard = ({
               <span
                 className={
                   darkText
-                    ? "text-[17px] text-[#00517b] font-normal"
+                    ? "text-[17px] text-[#593d71] font-normal"
                     : "text-[17px] text-[#ffffff] font-normal"
                 }
               >
@@ -75,7 +75,7 @@ const ProjectCard = ({
             <span
               className={
                 darkText
-                  ? "text-[15px] text-[#00517b] font-normal"
+                  ? "text-[15px] text-[#593d71] font-normal"
                   : "text-[15px] text-[#ffffff] font-normal"
               }
             >

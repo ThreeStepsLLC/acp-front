@@ -60,7 +60,7 @@ const Vacancies = () => {
   const customStyles = {
     control: (provided: any, state: any) => ({
       ...provided,
-      border: state.isFocused ? "1px solid #739126" : "1px solid #00517b",
+      border: state.isFocused ? "1px solid #739126" : "1px solid #593d71",
       borderRadius: "0px",
       backgroundColor: state.isFocused ? "white" : "whitesmoke",
       height: "45px",
@@ -135,7 +135,7 @@ const Vacancies = () => {
                   marginBottom: "20px",
                   fontWeight: "bold",
                   fontSize: "20px",
-                  color: "#00517b",
+                  color: "#593d71",
                 }}
               >
                 send us your cv
@@ -151,7 +151,7 @@ const Vacancies = () => {
                     rules={{ required: true }}
                     render={({ field: { onChange, onBlur, value } }) => (
                       <input
-                        className="appearance-none block w-full bg-[#F5F5F5] text-gray-700 border border-[#00517b] py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-[#739126]"
+                        className="appearance-none block w-full bg-[#F5F5F5] text-gray-700 border border-[#593d71] py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-[#739126]"
                         id="grid-last-name"
                         type="text"
                         placeholder="Full name"
@@ -172,7 +172,7 @@ const Vacancies = () => {
                     rules={{ required: true }}
                     render={({ field: { onChange, onBlur, value } }) => (
                       <input
-                        className="appearance-none block w-full bg-[#F5F5F5] text-gray-700 border border-[#00517b] py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-[#739126]"
+                        className="appearance-none block w-full bg-[#F5F5F5] text-gray-700 border border-[#593d71] py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-[#739126]"
                         id="grid-last-name"
                         type="mail"
                         placeholder="Email"
@@ -195,7 +195,7 @@ const Vacancies = () => {
                     name="city"
                     render={({ field: { onChange, onBlur, value } }) => (
                       <input
-                        className="appearance-none block w-full bg-[#F5F5F5] text-gray-700 border border-[#00517b] py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-[#739126]"
+                        className="appearance-none block w-full bg-[#F5F5F5] text-gray-700 border border-[#593d71] py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-[#739126]"
                         id="grid-last-name"
                         type="text"
                         placeholder="City"
@@ -216,7 +216,7 @@ const Vacancies = () => {
                     rules={{ required: true }}
                     render={({ field: { onChange, onBlur, value } }) => (
                       <input
-                        className="appearance-none block w-full bg-[#F5F5F5] text-gray-700 border border-[#00517b] py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-[#739126]"
+                        className="appearance-none block w-full bg-[#F5F5F5] text-gray-700 border border-[#593d71] py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-[#739126]"
                         id="grid-last-name"
                         type="text"
                         placeholder="Phone number"
@@ -261,7 +261,7 @@ const Vacancies = () => {
                     rules={{ required: true }}
                     render={({ field: { onChange, onBlur, value } }) => (
                       <input
-                        className="appearance-none block w-full bg-[#F5F5F5] text-gray-700 border border-[#00517b] px-4 leading-tight focus:outline-none focus:bg-white focus:border-[#739126]"
+                        className="appearance-none block w-full bg-[#F5F5F5] text-gray-700 border border-[#593d71] px-4 leading-tight focus:outline-none focus:bg-white focus:border-[#739126]"
                         id="grid-last-name"
                         type="file"
                         placeholder="Phone number"

@@ -29,7 +29,7 @@ const CoreValuesSection = () => {
 
   return (
     <>
-      <div className="bg-[#00517b]">
+      <div className="bg-[#593d71]">
         <div className="container mx-auto px-12 py-16">
           <div
             style={{

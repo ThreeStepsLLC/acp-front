@@ -75,7 +75,7 @@ const WelcomeSection = () => {
             dangerouslySetInnerHTML={{ __html: constants.description }}
           />
         </div>
-        <div className="grid grid-cols-4 gap-6 mt-20">
+        {/* <div className="grid grid-cols-4 gap-6 mt-20">
           <div className="grid lg:text-start md:text-start text-center mb-10">
             <p className="lg:text-[40px] md:text-[40px] text-[20px] font-bold text-[#81a32b]">
               {data.totalProjects}
@@ -108,7 +108,7 @@ const WelcomeSection = () => {
             {t('totalBridges')}
             </p>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );
