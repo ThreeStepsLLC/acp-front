@@ -33,8 +33,8 @@ const Policies = () => {
     <>
       <Head>
         <Seo
-          description={"ACP Engineering"}
-          keywords={"ACP Engineering"}
+          description={"Elevate Agency"}
+          keywords={"Elevate Agency"}
           title={t("ourLicences")}
         />
       </Head>

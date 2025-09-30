@@ -172,7 +172,7 @@ const Footer = () => {
       <hr className="mt-[31px] mb-[49px] text-[#00517b]" />
 
       <div className="lg:flex sm:grid lg:justify-between sm:justify-center text-center text-[14px] gap-2">
-        <p className="opacity-100">© 2023 ACP. All rights reserved.</p>
+        <p className="opacity-100">© 2025 Elevate Agency. All rights reserved.</p>
         <div className="flex justify-between font-bold gap-2">
           <a href={data.instagram} target="blank">
             <Image
