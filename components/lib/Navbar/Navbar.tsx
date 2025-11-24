@@ -51,12 +51,12 @@ export default function Example() {
       }
     >
       <nav
-        className="mx-auto flex items-center justify-between p-6 px-10 lg:px-16 md:px-16 container mx-auto text-[#00517b] text-[16px] font-semibold"
+        className="mx-auto flex items-center justify-between px-10 lg:px-16 md:px-16 container mx-auto text-[#2C308B] text-[16px] font-semibold h-[90px]"
         aria-label="Global"
       >
         <div className="flex lg:flex-1">
-          <Link href="/" className="-m-1.5 p-1.5">
-            <Image src={"/afmpro-logo.png"} alt="Logo" width={200} height={41.41} />
+          <Link href="/" className="block">
+            <Image src={"/logo.png"} alt="Logo" width={150} height={25} />
           </Link>
         </div>
         <div className="flex lg:hidden gap-4">
@@ -83,7 +83,7 @@ export default function Example() {
           <Link
             passHref={true}
             href={"/"}
-            className="leading-6 hover:text-[#81a32b]"
+            className="hover:text-[#81a32b]"
           >
             {t("home")}
           </Link>
@@ -92,8 +92,8 @@ export default function Example() {
               <>
                 <Popover.Button
                   className={`${
-                    open ? "text-[#81a32b]" : "text-[#00517b]"
-                  } leading-6 hover:text-[#81a32b]`}
+                    open ? "text-[#81a32b]" : "text-[#2C308B]"
+                  } hover:text-[#81a32b]`}
                 >
                   {t("about")}
                 </Popover.Button>
@@ -119,19 +119,19 @@ export default function Example() {
               </>
             )}
           </Popover>
-          <Link href={"/experience"} className="leading-6 hover:text-[#81a32b]">
+          <Link href={"/experience"} className="hover:text-[#81a32b]">
             {t("experience")}
           </Link>
-          <Link href={"/projects"} className="leading-6 hover:text-[#81a32b]">
-            {t("projects")}
+          <Link href={"/services"} className="hover:text-[#81a32b]">
+            {t("services")}
           </Link>
-          <Link href={"/licences"} className="leading-6 hover:text-[#81a32b]">
+          <Link href={"/licences"} className="hover:text-[#81a32b]">
             {t("licences")}
           </Link>
-          <Link href={"/vacancies"} className="leading-6 hover:text-[#81a32b]">
+          <Link href={"/vacancies"} className="hover:text-[#81a32b]">
             {t("vacancies")}
           </Link>
-          <Link href={"/contact"} className="leading-6 hover:text-[#81a32b]">
+          <Link href={"/contact"} className="hover:text-[#81a32b]">
             {t("contact")}
           </Link>
           <select
@@ -158,10 +158,10 @@ export default function Example() {
           <div className="flex items-center justify-between">
             <Link href="/" className="-m-1.5 p-1.5">
               <Image
-                src={"/afmpro-logo.png"}
+                src={"/logo.png"}
                 alt="Logo"
-                width={200}
-                height={41.41}
+                width={150}
+                height={25}
               />
             </Link>
             <button
@@ -207,10 +207,10 @@ export default function Example() {
                 </Link>
                 <Link
                   passHref={true}
-                  href={"/projects"}
+                  href={"/services"}
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 text-[14px]"
                 >
-                  {t("projects")}
+                  {t("services")}
                 </Link>
                 <Link
                   passHref={true}

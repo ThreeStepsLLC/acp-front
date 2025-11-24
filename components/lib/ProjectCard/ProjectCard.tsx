@@ -25,6 +25,9 @@ const ProjectCard = ({
   const router = useRouter();
   const { t } = useTranslation("homepage");
 
+  // Fix incorrect port in image URLs from backend
+  const fixedImage = image?.replace(':8098', ':8080') || image;
+
   const handleButtonClick = () => {
     router.push(`/projectDetail/${id}`);
   };
@@ -32,7 +35,7 @@ const ProjectCard = ({
   return (
     <div className="grid gap-2">
       <Image
-        src={image}
+        src={fixedImage}
         alt={"project"}
         width={744}
         height={500}
@@ -41,7 +44,7 @@ const ProjectCard = ({
       <p
         className={
           darkText
-            ? "text-[20px] text-[#00517b] font-bold"
+            ? "text-[20px] text-[#2C308B] font-bold"
             : "text-[20px] text-[#ffffff] font-bold"
         }
       >
@@ -56,7 +59,7 @@ const ProjectCard = ({
               <span
                 className={
                   darkText
-                    ? "text-[17px] text-[#00517b] font-normal"
+                    ? "text-[17px] text-[#2C308B] font-normal"
                     : "text-[17px] text-[#ffffff] font-normal"
                 }
               >
@@ -75,7 +78,7 @@ const ProjectCard = ({
             <span
               className={
                 darkText
-                  ? "text-[15px] text-[#00517b] font-normal"
+                  ? "text-[15px] text-[#2C308B] font-normal"
                   : "text-[15px] text-[#ffffff] font-normal"
               }
             >

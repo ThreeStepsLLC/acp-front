@@ -24,7 +24,7 @@ const About = () => {
   return (
     <>
     <Head>
-      <Seo description={'AFM PRO'} keywords={'AFM PRO'} title={t('about')} />
+      <Seo description={'ONAY Consulting'} keywords={'ONAY Consulting'} title={t('about')} />
     </Head>
     <Layout title="About us">
       <PageHeader title={t('aboutCompany')} subTitle={t('about')} />

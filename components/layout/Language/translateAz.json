@@ -3,6 +3,7 @@
     "home": "Əsas səhifə",
     "about": "Haqqımızda",
     "experience": "Təcrübə Sahələri",
+    "services": "Xidmətlər",
     "projects": "Layihələr",
     "licences": "Lisenziyalar",
     "vacancies": "Vakansiyalar",
@@ -94,7 +95,7 @@
     "workWithUs": "Bizimlə işləyin",
     "recruitment": "İşə qəbul",
     "ourVacancies": "Bizim vakansiyalarımız",
-    "desc": "AFM PRO etibarlı bir yoxlama şirkətidir və geniş bir profesionallıq konsaltinq xidməti təklif edir. Biz nəqliyyat infrastrukturunun qurğularının texniki nəzarət və yoxlama şirkətiyik, layihənin həyata keçirilməsini və tikinti işlərini texniki tələblər, ölkənin qanunvericiliyi, təsnifatları və standartlarına əsasən nəzarət edirik. 150-dən çox mütəxəssis mühəndis və mütəxəssisimiz hər layihədə mükafat almağa üstün xidmət göstərmək üçün əngagədirlər. Öz resume'nizi göndərərək bu gün bizim komandamıza qoşulmağın şansını əldə edin. Özünüz üçün doğru işi tapın - bizim şirkətimizdəki son vəzifələri axtarın. İşə qəbul prosesində yüksək səviyyəli kömək təmin edəcəyik."
+    "desc": "ONAY Consulting etibarlı bir yoxlama şirkətidir və geniş bir profesionallıq konsaltinq xidməti təklif edir. Biz nəqliyyat infrastrukturunun qurğularının texniki nəzarət və yoxlama şirkətiyik, layihənin həyata keçirilməsini və tikinti işlərini texniki tələblər, ölkənin qanunvericiliyi, təsnifatları və standartlarına əsasən nəzarət edirik. 150-dən çox mütəxəssis mühəndis və mütəxəssisimiz hər layihədə mükafat almağa üstün xidmət göstərmək üçün əngagədirlər. Öz resume'nizi göndərərək bu gün bizim komandamıza qoşulmağın şansını əldə edin. Özünüz üçün doğru işi tapın - bizim şirkətimizdəki son vəzifələri axtarın. İşə qəbul prosesində yüksək səviyyəli kömək təmin edəcəyik."
   },
   "contact": {
     "contact": "Bizimlə əlaqə saxlayın",
@@ -102,5 +103,9 @@
     "address": "ÜNVAN",
     "email": "E-POÇT",
     "phone": "TELEFON"
+  },
+  "servicesPage": {
+    "services": "Xidmətlər",
+    "ourServices": "Bizim xidmətlərimiz"
   }
 }
