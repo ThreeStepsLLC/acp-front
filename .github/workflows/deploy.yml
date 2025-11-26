@@ -1,12 +1,12 @@
-name: Build and Deploy
+name: Build and Deploy (Onay Consulting Front)
 
 on:
   push:
     branches:
-      - afmpro
+      - onayconsulting 
 
 env:
-  APP_NAME: afmpro-front
+  APP_NAME: onayconsulting-front  
   IMAGE_TAG: ${{ github.sha }}
 
 jobs:
@@ -29,17 +29,19 @@ jobs:
         run: |
           docker build --cache-from $IMAGE_NAME:latest \
             -t $IMAGE_NAME:$IMAGE_TAG \
-            --build-arg BASE_URL=https://api.afmpro.az/api/v1/ .
+            --build-arg BASE_URL=https://api.onayconsulting.az/api/v1/ . 
           docker push $IMAGE_NAME:$IMAGE_TAG
           docker tag $IMAGE_NAME:$IMAGE_TAG $IMAGE_NAME:latest
           docker push $IMAGE_NAME:latest
+          # QEYD: API ünvanı backend deploy olduqdan sonra aktiv olacaq.
+          # Əgər domen .com-dursa, zəhmət olmasa düzəlt.
 
   deploy:
     needs: build
     runs-on: ubuntu-latest
     environment:
       name: production
-      url: https://afmpro.az
+      url: https://onayconsulting.az 
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -55,18 +57,23 @@ jobs:
 
       - name: Copy files to remote server
         run: |
-          ssh -o StrictHostKeyChecking=no -i ssh_key root@${{ secrets.HOST_IP }} "mkdir -p /root/ThreeStepsLLC/${{ env.APP_NAME }}"
-          scp -o StrictHostKeyChecking=no -i ssh_key docker-compose.processed.yml root@${{ secrets.HOST_IP }}:/root/ThreeStepsLLC/${{ env.APP_NAME }}/docker-compose.yml
+          ssh -o StrictHostKeyChecking=no -i ssh_key deployuser@${{ secrets.HOST_IP }} "mkdir -p /home/deployuser/apps/${{ env.APP_NAME }}"
+          
+          scp -o StrictHostKeyChecking=no -i ssh_key docker-compose.processed.yml deployuser@${{ secrets.HOST_IP }}:/home/deployuser/apps/${{ env.APP_NAME }}/docker-compose.yml
+          
           if [ -n "${{ secrets.ENV_FILE }}" ]; then
             echo "${{ secrets.ENV_FILE }}" > .env
-            scp -o StrictHostKeyChecking=no -i ssh_key .env root@${{ secrets.HOST_IP }}:/root/ThreeStepsLLC/${{ env.APP_NAME }}/.env
+            scp -o StrictHostKeyChecking=no -i ssh_key .env deployuser@${{ secrets.HOST_IP }}:/home/deployuser/apps/${{ env.APP_NAME }}/.env
           fi
 
       - name: Deploy on remote server
         run: |
-          ssh -o StrictHostKeyChecking=no -i ssh_key root@${{ secrets.HOST_IP }} "
-          cd /root/ThreeStepsLLC/${{ env.APP_NAME }}
+          ssh -o StrictHostKeyChecking=no -i ssh_key deployuser@${{ secrets.HOST_IP }} "
+          cd /home/deployuser/apps/${{ env.APP_NAME }}
+          
           echo '${{ secrets.GITHUB_TOKEN }}' | docker login ghcr.io -u ${{ github.actor }} --password-stdin
+          
           docker compose down
           docker compose up -d
+          
           docker image prune -af"
