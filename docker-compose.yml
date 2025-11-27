@@ -15,7 +15,7 @@
 
 services:
   onayconsulting-frontend:
-    image: ghcr.io/threestepsllc/onayconsulting-frontend:${IMAGE_TAG}
+    image: ghcr.io/threestepsllc/acp-front:${IMAGE_TAG}
     container_name: onayconsulting-frontend
     restart: always
     ports:
@@ -26,4 +26,3 @@ services:
 networks:
   proxynet:
     external: true
-
