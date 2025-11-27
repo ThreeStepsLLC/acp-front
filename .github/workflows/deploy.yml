@@ -50,17 +50,17 @@ jobs:
 
       - name: Prepare SSH key
         run: |
-          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ssh_key
+          echo "${{ secrets.ONAY_SSH_PRIVATE_KEY  }}" > ssh_key
           chmod 600 ssh_key
 
       - name: Copy docker-compose to server
         run: |
-          ssh -o StrictHostKeyChecking=no -i ssh_key deployuser@${{ secrets.HOST_IP }} "mkdir -p /home/deployuser/apps/${{ env.APP_NAME }}"
-          scp -o StrictHostKeyChecking=no -i ssh_key docker-compose.yml deployuser@${{ secrets.HOST_IP }}:/home/deployuser/apps/${{ env.APP_NAME }}/docker-compose.yml
+          ssh -o StrictHostKeyChecking=no -i ssh_key deployuser@${{ secrets.ONAY_HOST_IP  }} "mkdir -p /home/deployuser/apps/${{ env.APP_NAME }}"
+          scp -o StrictHostKeyChecking=no -i ssh_key docker-compose.yml deployuser@${{ secrets.ONAY_HOST_IP  }}:/home/deployuser/apps/${{ env.APP_NAME }}/docker-compose.yml
 
       - name: Deploy on remote server
         run: |
-          ssh -o StrictHostKeyChecking=no -i ssh_key deployuser@${{ secrets.HOST_IP }} "
+          ssh -o StrictHostKeyChecking=no -i ssh_key deployuser@${{ secrets.ONAY_HOST_IP  }} "
           cd /home/deployuser/apps/${{ env.APP_NAME }}
           
           echo '${{ secrets.GITHUB_TOKEN }}' | docker login ghcr.io -u ${{ github.actor }} --password-stdin
