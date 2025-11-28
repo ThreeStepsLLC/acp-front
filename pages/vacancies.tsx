@@ -119,31 +119,22 @@ const Vacancies = () => {
           </div>
           <div className="grid lg:grid-cols-1 md:grid-cols-1 sm:grid-cols-1 my-14 gap-6">
             <form
-              className="w-full max-w-lg"
-              style={{
-                margin: "auto",
-                backgroundColor: "whitesmoke",
-                padding: "25px",
-                borderRadius: "5px",
-              }}
+              className="w-full max-w-3xl mx-auto bg-white shadow-lg rounded-lg overflow-hidden"
               onSubmit={handleSubmit((data) => onSubmit(data))}
             >
-              <h1
-                style={{
-                  textTransform: "uppercase",
-                  textAlign: "center",
-                  marginBottom: "20px",
-                  fontWeight: "bold",
-                  fontSize: "20px",
-                  color: "#2C308B",
-                }}
-              >
-                send us your cv
-              </h1>
-              <div className="flex flex-wrap -mx-3 mb-6">
-                <div className="w-full md:w-1/2 px-3 mb-6">
-                  <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
-                    Full name
+              <div className="bg-gradient-to-r from-[#2C308B] to-[#3d42a8] px-8 py-6">
+                <h1 className="text-white text-2xl font-bold text-center tracking-wide">
+                  SEND US YOUR CV
+                </h1>
+                <p className="text-white/80 text-center text-sm mt-2">
+                  Join our team and start your career journey with us
+                </p>
+              </div>
+              <div className="px-8 py-8">
+              <div className="grid md:grid-cols-2 gap-6 mb-6">
+                <div>
+                  <label className="block text-[#2C308B] text-sm font-semibold mb-2">
+                    Full Name *
                   </label>
                   <Controller
                     control={control}
@@ -151,10 +142,9 @@ const Vacancies = () => {
                     rules={{ required: true }}
                     render={({ field: { onChange, onBlur, value } }) => (
                       <input
-                        className="appearance-none block w-full bg-[#F5F5F5] text-gray-700 border border-[#2C308B] py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-[#739126]"
-                        id="grid-last-name"
+                        className="w-full bg-gray-50 text-gray-800 border-2 border-gray-200 rounded-lg py-3 px-4 focus:outline-none focus:border-[#2C308B] focus:bg-white transition-all"
                         type="text"
-                        placeholder="Full name"
+                        placeholder="Enter your full name"
                         onChange={onChange}
                         onBlur={onBlur}
                         value={value}
@@ -162,9 +152,9 @@ const Vacancies = () => {
                     )}
                   />
                 </div>
-                <div className="w-full md:w-1/2 px-3">
-                  <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
-                    Email
+                <div>
+                  <label className="block text-[#2C308B] text-sm font-semibold mb-2">
+                    Email Address *
                   </label>
                   <Controller
                     control={control}
@@ -172,10 +162,9 @@ const Vacancies = () => {
                     rules={{ required: true }}
                     render={({ field: { onChange, onBlur, value } }) => (
                       <input
-                        className="appearance-none block w-full bg-[#F5F5F5] text-gray-700 border border-[#2C308B] py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-[#739126]"
-                        id="grid-last-name"
-                        type="mail"
-                        placeholder="Email"
+                        className="w-full bg-gray-50 text-gray-800 border-2 border-gray-200 rounded-lg py-3 px-4 focus:outline-none focus:border-[#2C308B] focus:bg-white transition-all"
+                        type="email"
+                        placeholder="your.email@example.com"
                         onChange={onChange}
                         onBlur={onBlur}
                         value={value}
@@ -184,10 +173,10 @@ const Vacancies = () => {
                   />
                 </div>
               </div>
-              <div className="flex flex-wrap -mx-3 mb-6">
-                <div className="w-full md:w-1/2 px-3 mb-6">
-                  <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
-                    City
+              <div className="grid md:grid-cols-2 gap-6 mb-6">
+                <div>
+                  <label className="block text-[#2C308B] text-sm font-semibold mb-2">
+                    City *
                   </label>
                   <Controller
                     control={control}
@@ -195,10 +184,9 @@ const Vacancies = () => {
                     name="city"
                     render={({ field: { onChange, onBlur, value } }) => (
                       <input
-                        className="appearance-none block w-full bg-[#F5F5F5] text-gray-700 border border-[#2C308B] py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-[#739126]"
-                        id="grid-last-name"
+                        className="w-full bg-gray-50 text-gray-800 border-2 border-gray-200 rounded-lg py-3 px-4 focus:outline-none focus:border-[#2C308B] focus:bg-white transition-all"
                         type="text"
-                        placeholder="City"
+                        placeholder="Enter your city"
                         onChange={onChange}
                         onBlur={onBlur}
                         value={value}
@@ -206,9 +194,9 @@ const Vacancies = () => {
                     )}
                   />
                 </div>
-                <div className="w-full md:w-1/2 px-3">
-                  <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
-                    Phone number
+                <div>
+                  <label className="block text-[#2C308B] text-sm font-semibold mb-2">
+                    Phone Number *
                   </label>
                   <Controller
                     control={control}
@@ -216,10 +204,9 @@ const Vacancies = () => {
                     rules={{ required: true }}
                     render={({ field: { onChange, onBlur, value } }) => (
                       <input
-                        className="appearance-none block w-full bg-[#F5F5F5] text-gray-700 border border-[#2C308B] py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-[#739126]"
-                        id="grid-last-name"
+                        className="w-full bg-gray-50 text-gray-800 border-2 border-gray-200 rounded-lg py-3 px-4 focus:outline-none focus:border-[#2C308B] focus:bg-white transition-all"
                         type="text"
-                        placeholder="Phone number"
+                        placeholder="+994 XX XXX XX XX"
                         onChange={onChange}
                         onBlur={onBlur}
                         value={value}
@@ -228,10 +215,10 @@ const Vacancies = () => {
                   />
                 </div>
               </div>
-              <div className="flex flex-wrap -mx-3 mb-6">
-                <div className="w-full md:w-1/2 px-3 mb-6">
-                  <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
-                    Vacancy
+              <div className="grid md:grid-cols-2 gap-6 mb-6">
+                <div>
+                  <label className="block text-[#2C308B] text-sm font-semibold mb-2">
+                    Position *
                   </label>
                   <Controller
                     control={control}
@@ -247,13 +234,14 @@ const Vacancies = () => {
                         onChange={onChange}
                         onBlur={onBlur}
                         value={value}
+                        placeholder="Select a position"
                       />
                     )}
                   />
                 </div>
-                <div className="w-full md:w-1/2 px-3 mb-2">
-                  <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
-                    CV
+                <div>
+                  <label className="block text-[#2C308B] text-sm font-semibold mb-2">
+                    Upload CV *
                   </label>
                   <Controller
                     control={control}
@@ -261,30 +249,26 @@ const Vacancies = () => {
                     rules={{ required: true }}
                     render={({ field: { onChange, onBlur, value } }) => (
                       <input
-                        className="appearance-none block w-full bg-[#F5F5F5] text-gray-700 border border-[#2C308B] px-4 leading-tight focus:outline-none focus:bg-white focus:border-[#739126]"
-                        id="grid-last-name"
+                        className="w-full bg-gray-50 text-gray-800 border-2 border-gray-200 rounded-lg py-3 px-4 focus:outline-none focus:border-[#2C308B] focus:bg-white transition-all file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-[#2C308B] file:text-white hover:file:bg-[#1f2261] file:cursor-pointer"
                         type="file"
-                        placeholder="Phone number"
-                        style={{
-                          paddingTop: "0.6rem",
-                          paddingBottom: "0.5rem",
-                        }}
-                        onChange={(e) => onChange(e?.target?.files?.[0])} // Dosya nesnesini ekliyoruz
+                        accept=".pdf,.doc,.docx"
+                        onChange={(e) => onChange(e?.target?.files?.[0])}
                         onBlur={onBlur}
                       />
                     )}
                   />
                 </div>
+              </div>
 
-                <div className="w-full md:w-1/1 px-3 mt-5 flex justify-center">
-                  <button
-                    type="submit"
-                    disabled={!formState.isValid}
-                    className="bg-[#81a32b] hover:bg-[#739126] w-40 text-[15px] text-center py-2 px-2 cursor-pointer font-semibold h-fit"
-                  >
-                    Submit
-                  </button>
-                </div>
+              <div className="flex justify-center pt-4">
+                <button
+                  type="submit"
+                  disabled={!formState.isValid}
+                  className="bg-[#2C308B] hover:bg-[#1f2261] disabled:bg-gray-400 disabled:cursor-not-allowed text-white px-12 py-3 rounded-lg font-semibold text-base transition-all transform hover:scale-105 shadow-md hover:shadow-lg"
+                >
+                  Submit Application
+                </button>
+              </div>
               </div>
             </form>
           </div>

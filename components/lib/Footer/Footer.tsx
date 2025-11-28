@@ -5,7 +5,7 @@ import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { IconContext } from "react-icons";
 import { AiOutlineMail } from "react-icons/ai";
-import { FaFacebookF, FaLinkedinIn } from "react-icons/fa";
+import { FaFacebookF, FaLinkedinIn, FaWhatsapp, FaInstagram } from "react-icons/fa";
 
 const Footer = () => {
   const [data, setData] = useState<any>({});
@@ -188,6 +188,22 @@ const Footer = () => {
             className="bg-[#2C308B] p-2 rounded-full hover:bg-[#1e2161] transition-colors"
           >
             <FaFacebookF className="text-white" size={16} />
+          </a>
+          <a 
+            href={data.instagram || "https://instagram.com"} 
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-[#2C308B] p-2 rounded-full hover:bg-[#1e2161] transition-colors"
+          >
+            <FaInstagram className="text-white" size={16} />
+          </a>
+          <a 
+            href="https://wa.me/994102565464" 
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-[#2C308B] p-2 rounded-full hover:bg-[#1e2161] transition-colors"
+          >
+            <FaWhatsapp className="text-white" size={16} />
           </a>
           <a 
             href={data.linkedin || "https://linkedin.com"} 

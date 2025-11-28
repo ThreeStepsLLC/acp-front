@@ -91,7 +91,7 @@ export default function Example() {
           <Link
             passHref={true}
             href={"/"}
-            className="hover:text-[#81a32b]"
+            className="hover:text-[#1e40af]"
           >
             {t("home")}
           </Link>
@@ -100,8 +100,8 @@ export default function Example() {
               <>
                 <Popover.Button
                   className={`${
-                    open ? "text-[#81a32b]" : "text-[#2C308B]"
-                  } hover:text-[#81a32b]`}
+                    open ? "text-[#1e40af]" : "text-[#2C308B]"
+                  } hover:text-[#1e40af]`}
                 >
                   {t("about")}
                 </Popover.Button>
@@ -112,13 +112,13 @@ export default function Example() {
                 >
                   <Link
                     href="/about"
-                    className="block text-gray-800 hover:text-[#81a32b]"
+                    className="block text-gray-800 hover:text-[#1e40af]"
                   >
                     {t("aboutCompany")}
                   </Link>
                   <Link
                     href="/policies"
-                    className="block text-gray-800 hover:text-[#81a32b]"
+                    className="block text-gray-800 hover:text-[#1e40af]"
                   >
                     {t("ourPolicies")}
                   </Link>
@@ -127,19 +127,19 @@ export default function Example() {
               </>
             )}
           </Popover>
-          <Link href={"/experience"} className="hover:text-[#81a32b]">
+          <Link href={"/experience"} className="hover:text-[#1e40af]">
             {t("experience")}
           </Link>
-          <Link href={"/services"} className="hover:text-[#81a32b]">
+          <Link href={"/services"} className="hover:text-[#1e40af]">
             {t("services")}
           </Link>
-          <Link href={"/licences"} className="hover:text-[#81a32b]">
+          <Link href={"/licences"} className="hover:text-[#1e40af]">
             {t("licences")}
           </Link>
-          <Link href={"/vacancies"} className="hover:text-[#81a32b]">
+          <Link href={"/vacancies"} className="hover:text-[#1e40af]">
             {t("vacancies")}
           </Link>
-          <Link href={"/contact"} className="hover:text-[#81a32b]">
+          <Link href={"/contact"} className="hover:text-[#1e40af]">
             {t("contact")}
           </Link>
           <select
