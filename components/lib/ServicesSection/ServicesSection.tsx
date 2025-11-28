@@ -22,6 +22,7 @@ const ServicesSection = () => {
   const [services, setServices] = useState<Service[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [svgContents, setSvgContents] = useState<{ [key: string]: string }>({});
   const { t } = useTranslation("serviceSection");
 
   const fetchServices = async () => {
@@ -30,6 +31,26 @@ const ServicesSection = () => {
       const response = await getServices();
       const activeServices = response.data.filter((s: Service) => s.status);
       setServices(activeServices);
+      
+      // Fetch SVG contents without modification
+      const svgPromises = activeServices.map(async (service: Service) => {
+        try {
+          const svgResponse = await fetch(service.iconUrl);
+          const svgText = await svgResponse.text();
+          return { id: service.id, svg: svgText };
+        } catch (err) {
+          console.error(`Failed to load SVG for ${service.id}:`, err);
+          return { id: service.id, svg: '' };
+        }
+      });
+      
+      const svgResults = await Promise.all(svgPromises);
+      const svgMap: { [key: string]: string } = {};
+      svgResults.forEach(result => {
+        svgMap[result.id] = result.svg;
+      });
+      setSvgContents(svgMap);
+      
       setError(null);
     } catch (err) {
       console.error("Error fetching services:", err);
@@ -105,16 +126,10 @@ const ServicesSection = () => {
               key={service.id}
               className="bg-transparent p-8 rounded-lg border-2 border-white/30 hover:border-[#81a32b] transition-all duration-300"
             >
-              <div className="mb-6">
-                <Image
-                  src={service.iconUrl}
-                  alt={getLocalizedTitle(service)}
-                  width={60}
-                  height={60}
-                  className="object-contain"
-                  style={{ filter: 'brightness(0) invert(1)' }}
-                />
-              </div>
+              <div 
+                className="mb-6 w-[60px] h-[60px]"
+                dangerouslySetInnerHTML={{ __html: svgContents[service.id] || '' }}
+              />
               <h3 className="text-white text-[20px] font-bold mb-4 leading-tight">
                 {getLocalizedTitle(service)}
               </h3>

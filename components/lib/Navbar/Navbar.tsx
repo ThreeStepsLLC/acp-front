@@ -28,6 +28,15 @@ export default function Example() {
     };
   }, []);
 
+  // Add/remove padding to body when navbar becomes sticky
+  useEffect(() => {
+    if (isNavbarSticky) {
+      document.body.style.paddingTop = "90px";
+    } else {
+      document.body.style.paddingTop = "0px";
+    }
+  }, [isNavbarSticky]);
+
   const setLang = () => {
     let selected = localStorage.getItem("selectedLanguage") || "en"; // Varsayılan dil
     setSelectedLang(selected);
@@ -44,11 +53,10 @@ export default function Example() {
 
   return (
     <header
-      style={
-        isNavbarSticky
-          ? { backgroundColor: "white", width: "100%", position: "fixed" }
-          : { backgroundColor: "white" }
-      }
+      className={`transition-all duration-300 ${
+        isNavbarSticky ? "fixed top-0 left-0 right-0 shadow-md z-50" : ""
+      }`}
+      style={{ backgroundColor: "white" }}
     >
       <nav
         className="mx-auto flex items-center justify-between px-10 lg:px-16 md:px-16 container mx-auto text-[#2C308B] text-[16px] font-semibold h-[90px]"

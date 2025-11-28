@@ -5,6 +5,7 @@ import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { IconContext } from "react-icons";
 import { AiOutlineMail } from "react-icons/ai";
+import { FaFacebookF, FaLinkedinIn } from "react-icons/fa";
 
 const Footer = () => {
   const [data, setData] = useState<any>({});
@@ -59,7 +60,7 @@ const Footer = () => {
             </div>
             <div className="flex gap-3 items-center">
               <IconContext.Provider
-                value={{ color: "rgb(129 163 43/var(--tw-text-opacity))", className: "global-class-name" }}
+                value={{ color: "#2C308B", className: "global-class-name" }}
               >
                 <div>
                   <AiOutlineMail style={{fontSize: '20px'}} />
@@ -83,7 +84,7 @@ const Footer = () => {
         <div>
           <p className="text-[26px] font-bold mb-[20px]">Company</p>
           <ul className="text-[16px]">
-            <li className="mb-[14px] text-[#2C308B] hover:text-[#81a32b]">
+            <li className="mb-[14px] text-[#2C308B] hover:text-[#1e2161]">
               <Link passHref={true} href={"/"} className="flex gap-2">
                 <Image
                   src={"/rightFooter.svg"}
@@ -94,7 +95,7 @@ const Footer = () => {
                 <p>{t("home")}</p>
               </Link>
             </li>
-            <li className="mb-[14px] text-[#2C308B] hover:text-[#81a32b]">
+            <li className="mb-[14px] text-[#2C308B] hover:text-[#1e2161]">
               <Link href={"/about"} className="flex gap-2">
                 <Image
                   src={"/rightFooter.svg"}
@@ -105,7 +106,7 @@ const Footer = () => {
                 <p>{t("aboutCompany")}</p>
               </Link>
             </li>
-            <li className="mb-[14px] text-[#2C308B] hover:text-[#81a32b]">
+            <li className="mb-[14px] text-[#2C308B] hover:text-[#1e2161]">
               <Link href={"/policies"} className="flex gap-2">
                 <Image
                   src={"/rightFooter.svg"}
@@ -116,7 +117,7 @@ const Footer = () => {
                 <p>{t("ourPolicies")}</p>
               </Link>
             </li>
-            <li className="mb-[14px] text-[#2C308B] hover:text-[#81a32b]  ">
+            <li className="mb-[14px] text-[#2C308B] hover:text-[#1e2161]  ">
               <Link href={"/experience"} className="flex gap-2">
                 <Image
                   src={"/rightFooter.svg"}
@@ -127,7 +128,7 @@ const Footer = () => {
                 <p>{t("experience")}</p>
               </Link>
             </li>
-            <li className="mb-[14px] text-[#2C308B] hover:text-[#81a32b] ">
+            <li className="mb-[14px] text-[#2C308B] hover:text-[#1e2161] ">
               <Link href={"/projects"} className="flex gap-2">
                 <Image
                   src={"/rightFooter.svg"}
@@ -138,7 +139,7 @@ const Footer = () => {
                 <p>{t("projects")}</p>
               </Link>
             </li>
-            <li className="mb-[14px] text-[#2C308B] hover:text-[#81a32b] ">
+            <li className="mb-[14px] text-[#2C308B] hover:text-[#1e2161] ">
               <Link href={"/licences"} className="flex gap-2">
                 <Image
                   src={"/rightFooter.svg"}
@@ -149,7 +150,7 @@ const Footer = () => {
                 <p>{t("licences")}</p>
               </Link>
             </li>
-            <li className="mb-[14px] text-[#2C308B] hover:text-[#81a32b] ">
+            <li className="mb-[14px] text-[#2C308B] hover:text-[#1e2161] ">
               <Link href={"/vacancies"} className="flex gap-2">
                 <Image
                   src={"/rightFooter.svg"}
@@ -160,7 +161,7 @@ const Footer = () => {
                 <p>{t("vacancies")}</p>
               </Link>
             </li>
-            <li className="mb-[14px] text-[#2C308B] hover:text-[#81a32b] ">
+            <li className="mb-[14px] text-[#2C308B] hover:text-[#1e2161] ">
               <Link href={"/contact"} className="flex gap-2">
                 <Image
                   src={"/rightFooter.svg"}
@@ -179,33 +180,22 @@ const Footer = () => {
 
       <div className="lg:flex sm:grid lg:justify-between sm:justify-center text-center text-[14px] gap-2">
         <p className="opacity-100">© 2025 ONAY Consulting. All rights reserved.</p>
-        <div className="flex justify-between font-bold gap-2">
-          <a href={data.instagram} target="blank">
-            <Image
-              className="bg-[#81a32b] p-2 rounded-full"
-              src={"/instaIcon.svg"}
-              alt={""}
-              width={30}
-              height={30}
-            />
+        <div className="flex justify-center items-center font-bold gap-3">
+          <a 
+            href={data.facebook || "https://facebook.com"} 
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-[#2C308B] p-2 rounded-full hover:bg-[#1e2161] transition-colors"
+          >
+            <FaFacebookF className="text-white" size={16} />
           </a>
-          <a href={data.twitter} target="blank">
-            <Image
-              className="bg-[#81a32b] p-2 rounded-full"
-              src={"/twitterIcon.svg"}
-              alt={""}
-              width={30}
-              height={30}
-            />
-          </a>
-          <a href={data.whatsapp} target="blank">
-            <Image
-              className="bg-[#81a32b] p-2 rounded-full"
-              src={"/whatsappIcon.svg"}
-              alt={""}
-              width={30}
-              height={30}
-            />
+          <a 
+            href={data.linkedin || "https://linkedin.com"} 
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-[#2C308B] p-2 rounded-full hover:bg-[#1e2161] transition-colors"
+          >
+            <FaLinkedinIn className="text-white" size={16} />
           </a>
         </div>
       </div>

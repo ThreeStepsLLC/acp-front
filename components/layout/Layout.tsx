@@ -20,7 +20,7 @@ const Layout = ({ children, title, ...props }: LayoutProps) => {
   
       <div {...props}>
         <Navbar />
-        <main>{children}</main>
+        <main className="relative">{children}</main>
         <Footer />
       </div>
     </>
