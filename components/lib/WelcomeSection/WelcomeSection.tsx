@@ -47,17 +47,15 @@ const WelcomeSection = () => {
 
   return (
     <div
-      className="relative overflow-hidden"
+      className="relative overflow-hidden flex items-start lg:items-center"
       style={{
-        display: "grid",
-        alignContent: "center",
         backgroundImage: `linear-gradient(transparent 0%, black 150%), url('${images[currentImageIndex]}')`,
         backgroundSize: "cover",
         minHeight: "100vh",
       }}
     >
       <div className="container mx-auto px-12 grid lg:grid-cols-1 md:grid-cols-1 sm:grid-cols-1 pb-10 relative">
-        <div className="lg:py-10 lg:pt-16 pt-40 py-0">
+        <div className="lg:py-10 lg:pt-16 pt-32 py-0">
           <p className="text-[#ffffff] lg:text-[18px] md:text-[18px] text-[14px] font-semibold flex gap-4">
             <Image
               src={"yellowLine.svg"}
