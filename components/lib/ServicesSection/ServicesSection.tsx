@@ -124,7 +124,7 @@ const ServicesSection = () => {
           {services.map((service) => (
             <div
               key={service.id}
-              className="bg-transparent p-8 rounded-lg border-2 border-white/30 hover:border-[#81a32b] transition-all duration-300"
+              className="bg-transparent p-8 rounded-lg border-2 border-white/30 hover:border-gray-400 transition-all duration-300"
             >
               <div 
                 className="mb-6 w-[60px] h-[60px]"
