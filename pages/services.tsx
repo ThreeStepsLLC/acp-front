@@ -12,7 +12,7 @@ export default function Services() {
         title={t("services")}
         subTitle={t("ourServices")}
       />
-      <ServicesSection />
+      <ServicesSection showDescription={true} />
     </Layout>
   );
 }

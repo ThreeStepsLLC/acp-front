@@ -59,7 +59,7 @@ export default function Example() {
       style={{ backgroundColor: "white" }}
     >
       <nav
-        className="mx-auto flex items-center justify-between px-10 lg:px-16 md:px-16 container mx-auto text-[#2C308B] text-[16px] font-semibold h-[90px]"
+        className="mx-auto flex items-center justify-between px-10 lg:px-16 md:px-16 container mx-auto text-[#005ACC] text-[16px] font-semibold h-[90px]"
         aria-label="Global"
       >
         <div className="flex lg:flex-1">
@@ -91,7 +91,7 @@ export default function Example() {
           <Link
             passHref={true}
             href={"/"}
-            className="hover:text-[#1e40af]"
+            className="hover:text-[#0047A3]"
           >
             {t("home")}
           </Link>
@@ -100,8 +100,8 @@ export default function Example() {
               <>
                 <Popover.Button
                   className={`${
-                    open ? "text-[#1e40af]" : "text-[#2C308B]"
-                  } hover:text-[#1e40af]`}
+                    open ? "text-[#0047A3]" : "text-[#005ACC]"
+                  } hover:text-[#0047A3]`}
                 >
                   {t("about")}
                 </Popover.Button>
@@ -112,13 +112,13 @@ export default function Example() {
                 >
                   <Link
                     href="/about"
-                    className="block text-gray-800 hover:text-[#1e40af]"
+                    className="block text-gray-800 hover:text-[#0047A3]"
                   >
                     {t("aboutCompany")}
                   </Link>
                   <Link
                     href="/policies"
-                    className="block text-gray-800 hover:text-[#1e40af]"
+                    className="block text-gray-800 hover:text-[#0047A3]"
                   >
                     {t("ourPolicies")}
                   </Link>
@@ -127,19 +127,16 @@ export default function Example() {
               </>
             )}
           </Popover>
-          <Link href={"/experience"} className="hover:text-[#1e40af]">
+          <Link href={"/experience"} className="hover:text-[#0047A3]">
             {t("experience")}
           </Link>
-          <Link href={"/services"} className="hover:text-[#1e40af]">
+          <Link href={"/services"} className="hover:text-[#0047A3]">
             {t("services")}
           </Link>
-          <Link href={"/licences"} className="hover:text-[#1e40af]">
-            {t("licences")}
-          </Link>
-          <Link href={"/vacancies"} className="hover:text-[#1e40af]">
+          <Link href={"/vacancies"} className="hover:text-[#0047A3]">
             {t("vacancies")}
           </Link>
-          <Link href={"/contact"} className="hover:text-[#1e40af]">
+          <Link href={"/contact"} className="hover:text-[#0047A3]">
             {t("contact")}
           </Link>
           <select
@@ -219,13 +216,6 @@ export default function Example() {
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 text-[14px]"
                 >
                   {t("services")}
-                </Link>
-                <Link
-                  passHref={true}
-                  href={"/licences"}
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 text-[14px]"
-                >
-                  {t("licences")}
                 </Link>
                 <Link
                   passHref={true}

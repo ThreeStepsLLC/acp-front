@@ -52,3 +52,7 @@ export const getSeparateLicenses = () => {
 export const getServices = () => {
   return api.get("/services").then((res: AxiosResponse) => res.data);
 };
+
+export const getServicesDescription = () => {
+  return api.get("/services-description").then((res: AxiosResponse) => res.data);
+};

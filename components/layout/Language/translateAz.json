@@ -9,7 +9,9 @@
     "vacancies": "Vakansiyalar",
     "contact": "Bizimlə Əlaqə",
     "aboutCompany": "Şirkət Haqqında",
-    "ourPolicies": "Bizim Siyasətimiz"
+    "ourPolicies": "Bizim Siyasətimiz",
+    "contacts": "Əlaqə",
+    "company": "Şirkət"
   },
   "homepage": {
     "welcomeCap": "Peşəkar. Yenilikçi. Etibarlı.",
@@ -46,7 +48,9 @@
     "service6": "Müvafiq layihə detallarının hesabatı və uçotunun aparılması",
     "service7": "Texniki və mühəndislik dəstəyi ",
     "service8": "Laboratoriya tesləri",
-    "service9": "Geodeziya işləri"
+    "service9": "Geodeziya işləri",
+    "readMore": "Ətraflı",
+    "readLess": "Daha az"
   },
   "partnersSection": {
     "partners": "Tərəfdaşlar",

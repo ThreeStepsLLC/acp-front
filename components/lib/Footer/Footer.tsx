@@ -28,7 +28,7 @@ const Footer = () => {
 
   return (
     <div
-      className="bg-[#F5F5F5] text-[#2C308B] px-10 lg:px-40 py-10 2xl:px-60"
+      className="bg-[#F5F5F5] text-[#005ACC] px-10 lg:px-40 py-10 2xl:px-60"
       style={{
         width: "100%",
         height: "100%",
@@ -46,7 +46,7 @@ const Footer = () => {
           <p className="text-[16px] mt-[-50px]" dangerouslySetInnerHTML={{__html:values.description}} />
         </div>
         <div>
-          <p className="text-[26px] font-bold mb-[20px]">Contacts</p>
+          <p className="text-[26px] font-bold mb-[20px]">{t("contacts")}</p>
           <div className="grid gap-8">
             <div className="flex gap-3">
               <Image
@@ -56,17 +56,17 @@ const Footer = () => {
                 width={18}
                 height={30}
               />
-              <p className="text-[16px] text-[#2C308B]">{data.phone}</p>
+              <p className="text-[16px] text-[#005ACC]">{data.phone}</p>
             </div>
             <div className="flex gap-3 items-center">
               <IconContext.Provider
-                value={{ color: "#2C308B", className: "global-class-name" }}
+                value={{ color: "#005ACC", className: "global-class-name" }}
               >
                 <div>
                   <AiOutlineMail style={{fontSize: '20px'}} />
                 </div>
               </IconContext.Provider>
-              <p className="text-[16px] text-[#2C308B]">{data.mailAddressForContact}</p>
+              <p className="text-[16px] text-[#005ACC]">{data.mailAddressForContact}</p>
             </div>
             <div className="flex gap-3">
               <Image
@@ -75,16 +75,16 @@ const Footer = () => {
                 width={14}
                 height={18}
               />
-              <p className="text-[16px] text-[#2C308B]">
+              <p className="text-[16px] text-[#005ACC]">
                 {data.officeAddress}
               </p>
             </div>
           </div>
         </div>
         <div>
-          <p className="text-[26px] font-bold mb-[20px]">Company</p>
+          <p className="text-[26px] font-bold mb-[20px]">{t("company")}</p>
           <ul className="text-[16px]">
-            <li className="mb-[14px] text-[#2C308B] hover:text-[#1e2161]">
+            <li className="mb-[14px] text-[#005ACC] hover:text-[#003D8F]">
               <Link passHref={true} href={"/"} className="flex gap-2">
                 <Image
                   src={"/rightFooter.svg"}
@@ -95,7 +95,7 @@ const Footer = () => {
                 <p>{t("home")}</p>
               </Link>
             </li>
-            <li className="mb-[14px] text-[#2C308B] hover:text-[#1e2161]">
+            <li className="mb-[14px] text-[#005ACC] hover:text-[#003D8F]">
               <Link href={"/about"} className="flex gap-2">
                 <Image
                   src={"/rightFooter.svg"}
@@ -106,7 +106,7 @@ const Footer = () => {
                 <p>{t("aboutCompany")}</p>
               </Link>
             </li>
-            <li className="mb-[14px] text-[#2C308B] hover:text-[#1e2161]">
+            <li className="mb-[14px] text-[#005ACC] hover:text-[#003D8F]">
               <Link href={"/policies"} className="flex gap-2">
                 <Image
                   src={"/rightFooter.svg"}
@@ -117,7 +117,7 @@ const Footer = () => {
                 <p>{t("ourPolicies")}</p>
               </Link>
             </li>
-            <li className="mb-[14px] text-[#2C308B] hover:text-[#1e2161]  ">
+            <li className="mb-[14px] text-[#005ACC] hover:text-[#003D8F]  ">
               <Link href={"/experience"} className="flex gap-2">
                 <Image
                   src={"/rightFooter.svg"}
@@ -128,7 +128,7 @@ const Footer = () => {
                 <p>{t("experience")}</p>
               </Link>
             </li>
-            <li className="mb-[14px] text-[#2C308B] hover:text-[#1e2161] ">
+            <li className="mb-[14px] text-[#005ACC] hover:text-[#003D8F] ">
               <Link href={"/projects"} className="flex gap-2">
                 <Image
                   src={"/rightFooter.svg"}
@@ -139,18 +139,7 @@ const Footer = () => {
                 <p>{t("projects")}</p>
               </Link>
             </li>
-            <li className="mb-[14px] text-[#2C308B] hover:text-[#1e2161] ">
-              <Link href={"/licences"} className="flex gap-2">
-                <Image
-                  src={"/rightFooter.svg"}
-                  alt={"footerIcon"}
-                  height={30}
-                  width={6}
-                />{" "}
-                <p>{t("licences")}</p>
-              </Link>
-            </li>
-            <li className="mb-[14px] text-[#2C308B] hover:text-[#1e2161] ">
+            <li className="mb-[14px] text-[#005ACC] hover:text-[#003D8F] ">
               <Link href={"/vacancies"} className="flex gap-2">
                 <Image
                   src={"/rightFooter.svg"}
@@ -161,7 +150,7 @@ const Footer = () => {
                 <p>{t("vacancies")}</p>
               </Link>
             </li>
-            <li className="mb-[14px] text-[#2C308B] hover:text-[#1e2161] ">
+            <li className="mb-[14px] text-[#005ACC] hover:text-[#003D8F] ">
               <Link href={"/contact"} className="flex gap-2">
                 <Image
                   src={"/rightFooter.svg"}
@@ -176,7 +165,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <hr className="mt-[31px] mb-[49px] text-[#2C308B]" />
+      <hr className="mt-[31px] mb-[49px] text-[#005ACC]" />
 
       <div className="lg:flex sm:grid lg:justify-between sm:justify-center text-center text-[14px] gap-2">
         <p className="opacity-100">© 2025 ONAY Consulting. All rights reserved.</p>
@@ -185,7 +174,7 @@ const Footer = () => {
             href={data.facebook || "https://facebook.com"} 
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-[#2C308B] p-2 rounded-full hover:bg-[#1e2161] transition-colors"
+            className="bg-[#005ACC] p-2 rounded-full hover:bg-[#003D8F] transition-colors"
           >
             <FaFacebookF className="text-white" size={16} />
           </a>
@@ -193,7 +182,7 @@ const Footer = () => {
             href={data.instagram || "https://instagram.com"} 
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-[#2C308B] p-2 rounded-full hover:bg-[#1e2161] transition-colors"
+            className="bg-[#005ACC] p-2 rounded-full hover:bg-[#003D8F] transition-colors"
           >
             <FaInstagram className="text-white" size={16} />
           </a>
@@ -201,7 +190,7 @@ const Footer = () => {
             href="https://wa.me/994102565464" 
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-[#2C308B] p-2 rounded-full hover:bg-[#1e2161] transition-colors"
+            className="bg-[#005ACC] p-2 rounded-full hover:bg-[#003D8F] transition-colors"
           >
             <FaWhatsapp className="text-white" size={16} />
           </a>
@@ -209,7 +198,7 @@ const Footer = () => {
             href={data.linkedin || "https://linkedin.com"} 
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-[#2C308B] p-2 rounded-full hover:bg-[#1e2161] transition-colors"
+            className="bg-[#005ACC] p-2 rounded-full hover:bg-[#003D8F] transition-colors"
           >
             <FaLinkedinIn className="text-white" size={16} />
           </a>

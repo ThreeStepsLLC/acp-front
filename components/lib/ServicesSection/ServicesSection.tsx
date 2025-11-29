@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
-import { getServices } from "@/services/services";
+import { getServices, getServicesDescription } from "@/services/services";
 import { useTranslation } from "react-i18next";
 import i18n from "i18next";
 
@@ -18,19 +18,47 @@ interface Service {
   status: boolean;
 }
 
-const ServicesSection = () => {
+interface ServicesDescription {
+  id: string;
+  descriptionAz: string;
+  descriptionEn: string;
+  descriptionRu: string;
+}
+
+interface ServicesSectionProps {
+  showDescription?: boolean;
+}
+
+const ServicesSection = ({ showDescription = false }: ServicesSectionProps) => {
   const [services, setServices] = useState<Service[]>([]);
+  const [servicesDescription, setServicesDescription] = useState<ServicesDescription | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [svgContents, setSvgContents] = useState<{ [key: string]: string }>({});
+  const [isExpanded, setIsExpanded] = useState(false);
   const { t } = useTranslation("serviceSection");
+  
+  const MAX_DESCRIPTION_LENGTH = 300;
 
   const fetchServices = async () => {
     try {
       setLoading(true);
-      const response = await getServices();
-      const activeServices = response.data.filter((s: Service) => s.status);
+      
+      // Only fetch description if showDescription is true
+      const promises = showDescription 
+        ? [getServices(), getServicesDescription()]
+        : [getServices()];
+      
+      const responses = await Promise.all(promises);
+      const servicesResponse = responses[0];
+      const descriptionResponse = responses[1];
+      
+      const activeServices = servicesResponse.data.filter((s: Service) => s.status);
       setServices(activeServices);
+      
+      if (showDescription && descriptionResponse) {
+        setServicesDescription(descriptionResponse.data);
+      }
       
       // Fetch SVG contents without modification
       const svgPromises = activeServices.map(async (service: Service) => {
@@ -88,6 +116,49 @@ const ServicesSection = () => {
     }
   };
 
+  const getLocalizedServicesDescription = () => {
+    if (!servicesDescription) return "";
+    const lang = i18n.language || "en";
+    let description = "";
+    switch (lang) {
+      case "az":
+        description = servicesDescription.descriptionAz;
+        break;
+      case "ru":
+        description = servicesDescription.descriptionRu;
+        break;
+      default:
+        description = servicesDescription.descriptionEn;
+    }
+    
+    // Make "Onay Consulting" bold
+    return description.replace(/Onay Consulting/g, '<strong>Onay Consulting</strong>');
+  };
+
+  const stripHtmlTags = (html: string) => {
+    const tmp = document.createElement("DIV");
+    tmp.innerHTML = html;
+    return tmp.textContent || tmp.innerText || "";
+  };
+
+  const getTruncatedDescription = () => {
+    const fullDescription = getLocalizedServicesDescription();
+    const plainText = stripHtmlTags(fullDescription);
+    
+    if (plainText.length <= MAX_DESCRIPTION_LENGTH || isExpanded) {
+      return fullDescription;
+    }
+    
+    // Find a good breaking point near the max length
+    const truncated = plainText.substring(0, MAX_DESCRIPTION_LENGTH);
+    const lastSpace = truncated.lastIndexOf(" ");
+    const breakPoint = lastSpace > 0 ? lastSpace : MAX_DESCRIPTION_LENGTH;
+    const truncatedText = plainText.substring(0, breakPoint);
+    
+    // Apply bold to "Onay Consulting" in truncated text
+    return truncatedText.replace(/Onay Consulting/g, '<strong>Onay Consulting</strong>') + "...";
+  };
+
   if (loading) {
     return (
       <div className="container mx-auto px-12 py-16">
@@ -104,44 +175,89 @@ const ServicesSection = () => {
     );
   }
 
-  return (
-    <div className="bg-[#2C308B] py-16">
-      <div className="container mx-auto px-12">
-        <p className="text-white text-[18px] font-semibold flex gap-4 items-center">
-          <Image
-            src={"/yellowLine.svg"}
-            alt={"services"}
-            height={1}
-            width={40}
-          />
-          {t("whychooseus")}
-        </p>
-        <p className="text-white text-[45px] font-bold mb-12">
-          {t("ourServices")}
-        </p>
+  const getServicesTitle = () => {
+    const lang = i18n.language || "en";
+    switch (lang) {
+      case "az":
+        return "Xidmətlər";
+      case "ru":
+        return "Услуги";
+      default:
+        return "Services";
+    }
+  };
 
-        <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6">
-          {services.map((service) => (
-            <div
-              key={service.id}
-              className="bg-transparent p-8 rounded-lg border-2 border-white/30 hover:border-gray-400 transition-all duration-300"
-            >
-              <div 
-                className="mb-6 w-[60px] h-[60px]"
-                dangerouslySetInnerHTML={{ __html: svgContents[service.id] || '' }}
-              />
-              <h3 className="text-white text-[20px] font-bold mb-4 leading-tight">
-                {getLocalizedTitle(service)}
-              </h3>
-              <div 
-                className="text-white text-[15px] leading-relaxed opacity-90"
-                dangerouslySetInnerHTML={{ __html: getLocalizedDescription(service) }}
-              />
-            </div>
-          ))}
+  return (
+    <>
+      {showDescription && servicesDescription && (
+        <div className="bg-white py-12">
+          <div className="container mx-auto px-12">
+            <style jsx>{`
+              .services-description :global(strong),
+              .services-description :global(b) {
+                font-weight: 700;
+              }
+            `}</style>
+            <div 
+              className="services-description text-gray-800 text-[16px] leading-relaxed"
+              dangerouslySetInnerHTML={{ 
+                __html: isExpanded ? getLocalizedServicesDescription() : getTruncatedDescription() 
+              }}
+            />
+            {stripHtmlTags(getLocalizedServicesDescription()).length > MAX_DESCRIPTION_LENGTH && (
+              <button
+                onClick={() => setIsExpanded(!isExpanded)}
+                className="text-[#005ACC] hover:text-[#0047a3] mt-3 text-[15px] font-semibold underline transition-colors"
+              >
+                {isExpanded ? t("readLess") || "Daha az" : t("readMore") || "Ətraflı"}
+              </button>
+            )}
+          </div>
+        </div>
+      )}
+
+      <div className="bg-[#005ACC] py-16">
+        <div className="container mx-auto px-12">
+          {!showDescription && (
+            <>
+              <p className="text-white text-[18px] font-semibold flex gap-4 items-center">
+                <Image
+                  src={"/yellowLine.svg"}
+                  alt={"services"}
+                  height={1}
+                  width={40}
+                />
+                {t("whychooseus")}
+              </p>
+              <p className="text-white text-[45px] font-bold mb-12">
+                {t("ourServices")}
+              </p>
+            </>
+          )}
+          
+          <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6">
+            {services.map((service) => (
+              <div
+                key={service.id}
+                className="bg-transparent p-8 rounded-lg border-2 border-white/30 hover:border-gray-400 transition-all duration-300"
+              >
+                <div 
+                  className="mb-6 w-[60px] h-[60px]"
+                  dangerouslySetInnerHTML={{ __html: svgContents[service.id] || '' }}
+                />
+                <h3 className="text-white text-[20px] font-bold mb-4 leading-tight">
+                  {getLocalizedTitle(service)}
+                </h3>
+                <div 
+                  className="text-white text-[15px] leading-relaxed opacity-90"
+                  dangerouslySetInnerHTML={{ __html: getLocalizedDescription(service) }}
+                />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

@@ -34,7 +34,7 @@ const ProjectDetail = () => {
           <div>
             <div className="flex gap-2 mb-4">
               <p className="font-bold text-[18px]">{t("progress")}:</p>
-              <div className="w-full bg-[#2C308B]  rounded-full dark:bg-[#2C308B]">
+              <div className="w-full bg-[#005ACC]  rounded-full dark:bg-[#005ACC]">
                 <div className="bg-[#81a32b] font-bold text-white text-center leading-none rounded-full"
                   style={{
                     width: `${project.progress}%`,
@@ -52,7 +52,7 @@ const ProjectDetail = () => {
 
             <div
               className="table h-fit"
-              style={{ border: "1px solid #2C308B", width: '100%' }}
+              style={{ border: "1px solid #005ACC", width: '100%' }}
             >
               {project?.projectDetails?.map((item: any, index: number) => (
                 <div

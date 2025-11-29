@@ -9,7 +9,9 @@
     "vacancies": "Vacancies",
     "contact": "Contact us",
     "aboutCompany": "About Company",
-    "ourPolicies": "Our Policies"
+    "ourPolicies": "Our Policies",
+    "contacts": "Contacts",
+    "company": "Company"
   },
   "homepage": {
     "welcomeCap": "Professional. Innovative. Reliable",
@@ -47,7 +49,9 @@
     "service7": "Reporting and record-keeping of relevant project details",
     "service8": "Technical support",
     "service9": "Laboratory tests",
-    "service10": "Land surveying"
+    "service10": "Land surveying",
+    "readMore": "Read more",
+    "readLess": "Read less"
   },
   "partnersSection": {
     "partners": "partners",
