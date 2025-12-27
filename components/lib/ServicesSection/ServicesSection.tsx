@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { getServices, getServicesDescription } from "@/services/services";
 import { useTranslation } from "react-i18next";
 import i18n from "i18next";
@@ -27,9 +28,11 @@ interface ServicesDescription {
 
 interface ServicesSectionProps {
   showDescription?: boolean;
+  layout?: 'grid' | 'list';
+  highlightServiceId?: string;
 }
 
-const ServicesSection = ({ showDescription = false }: ServicesSectionProps) => {
+const ServicesSection = ({ showDescription = false, layout = 'grid', highlightServiceId }: ServicesSectionProps) => {
   const [services, setServices] = useState<Service[]>([]);
   const [servicesDescription, setServicesDescription] = useState<ServicesDescription | null>(null);
   const [loading, setLoading] = useState(true);
@@ -223,7 +226,7 @@ const ServicesSection = ({ showDescription = false }: ServicesSectionProps) => {
         </div>
       )}
 
-      <div className="bg-primary py-16">
+      <div className={`py-16 ${layout === 'list' ? 'bg-pink-50' : 'bg-primary'}`}>
         <div className="container mx-auto px-12">
           <style jsx>{`
             .service-icon {
@@ -237,6 +240,18 @@ const ServicesSection = ({ showDescription = false }: ServicesSectionProps) => {
               width: 48px;
               height: 48px;
               fill: white;
+            }
+            .service-icon-list {
+              height: 64px;
+              width: 64px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            }
+            .service-icon-list svg {
+              width: 64px;
+              height: 64px;
+              fill: #8c7493;
             }
           `}</style>
           {!showDescription && (
@@ -256,26 +271,71 @@ const ServicesSection = ({ showDescription = false }: ServicesSectionProps) => {
             </>
           )}
           
-          <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6">
-            {services.map((service) => (
-              <div
-                key={service.id}
-                className="bg-transparent p-8 rounded-lg border-2 border-white/30 hover:border-gray-400 transition-all duration-300"
-              >
-                <div 
-                  className="service-icon mb-6"
-                  dangerouslySetInnerHTML={{ __html: svgContents[service.id] || '' }}
-                />
-                <h3 className="text-white text-[20px] font-bold mb-4 leading-tight">
-                  {getLocalizedTitle(service)}
-                </h3>
-                <div 
-                  className="text-white text-[15px] leading-relaxed opacity-90"
-                  dangerouslySetInnerHTML={{ __html: getLocalizedDescription(service) }}
-                />
-              </div>
-            ))}
-          </div>
+          {layout === 'grid' ? (
+            <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6">
+              {services.map((service) => (
+                <div
+                  key={service.id}
+                  className="bg-transparent p-8 rounded-lg border-2 border-white/30 hover:border-gray-400 transition-all duration-300"
+                >
+                  <div 
+                    className="service-icon mb-6"
+                    dangerouslySetInnerHTML={{ __html: svgContents[service.id] || '' }}
+                  />
+                  <h3 className="text-white text-[20px] font-bold mb-6 leading-tight">
+                    {getLocalizedTitle(service)}
+                  </h3>
+                  {!showDescription && (
+                    <Link 
+                      href={`/services?service=${service.id}`}
+                      className="inline-flex items-center text-white hover:text-gray-200 text-[14px] font-semibold transition-colors bg-primary-light hover:bg-primary px-4 py-2 rounded-md"
+                    >
+                      {t("readMore") || "Ətraflıya"}
+                      <Image
+                        src="/rightArrowPink.svg"
+                        alt="arrow"
+                        width={16}
+                        height={16}
+                        className="ml-2"
+                      />
+                    </Link>
+                  )}
+                </div>
+              ))}
+            </div>
+          ) : (
+            <div className="space-y-8">
+              {services.map((service) => (
+                <div
+                  key={service.id}
+                  data-service-id={service.id}
+                  className={`bg-pink-50 rounded-lg p-8 shadow-lg transition-all duration-300 border-2 ${
+                    highlightServiceId === service.id 
+                      ? 'ring-4 ring-primary shadow-xl border-primary' 
+                      : 'hover:shadow-xl border-transparent hover:border-primary/20'
+                  }`}
+                >
+                  <div className="flex flex-col lg:flex-row gap-8">
+                    <div className="flex-shrink-0">
+                      <div 
+                        className="service-icon-list mb-4 lg:mb-0"
+                        dangerouslySetInnerHTML={{ __html: svgContents[service.id]?.replace(/fill="white"/g, 'fill="#8c7493"') || '' }}
+                      />
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-primary text-[28px] font-bold mb-4 leading-tight">
+                        {getLocalizedTitle(service)}
+                      </h3>
+                      <div 
+                        className="text-gray-700 text-[16px] leading-relaxed"
+                        dangerouslySetInnerHTML={{ __html: getLocalizedDescription(service) }}
+                      />
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
         </div>
       </div>
     </>
