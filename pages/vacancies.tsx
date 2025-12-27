@@ -1,5 +1,4 @@
 import Layout from "@/components/layout";
-import Button from "@/components/lib/Button";
 import PageHeader from "@/components/lib/PageHeader/PageHeader";
 import { getPositions, postVacancies } from "@/services/services";
 import Image from "next/image";
@@ -60,14 +59,14 @@ const Vacancies = () => {
   const customStyles = {
     control: (provided: any, state: any) => ({
       ...provided,
-      border: state.isFocused ? "1px solid #739126" : "1px solid #005ACC",
+      border: state.isFocused ? "1px solid #7a6481" : "1px solid #8c7493",
       borderRadius: "0px",
       backgroundColor: state.isFocused ? "white" : "whitesmoke",
       height: "45px",
     }),
     option: (provided: any, state: any) => ({
       ...provided,
-      backgroundColor: state.isSelected ? "#739126" : "white",
+      backgroundColor: state.isSelected ? "#7a6481" : "white",
       color: state.isSelected ? "white" : "black",
     }),
   };
@@ -111,7 +110,7 @@ const Vacancies = () => {
               <ul className="text-[#000000] py-5 text-[18px]">
                 {positions.map((item: any, index: number) => (
                   <li key={index} className="flex gap-2">
-                    <p className="text-[#81a32b]">•</p> {item.title}
+                    <p className="text-[#8c7493]">•</p> {item.title}
                   </li>
                 ))}
               </ul>
@@ -122,7 +121,7 @@ const Vacancies = () => {
               className="w-full max-w-3xl mx-auto bg-white shadow-lg rounded-lg overflow-hidden"
               onSubmit={handleSubmit((data) => onSubmit(data))}
             >
-              <div className="bg-gradient-to-r from-[#005ACC] to-[#0066E6] px-8 py-6">
+              <div className="bg-gradient-to-r from-[#8c7493] to-[#7a6481] px-8 py-6">
                 <h1 className="text-white text-2xl font-bold text-center tracking-wide">
                   SEND US YOUR CV
                 </h1>
@@ -133,7 +132,7 @@ const Vacancies = () => {
               <div className="px-8 py-8">
               <div className="grid md:grid-cols-2 gap-6 mb-6">
                 <div>
-                  <label className="block text-[#005ACC] text-sm font-semibold mb-2">
+                  <label className="block text-[#8c7493] text-sm font-semibold mb-2">
                     Full Name *
                   </label>
                   <Controller
@@ -142,7 +141,7 @@ const Vacancies = () => {
                     rules={{ required: true }}
                     render={({ field: { onChange, onBlur, value } }) => (
                       <input
-                        className="w-full bg-gray-50 text-gray-800 border-2 border-gray-200 rounded-lg py-3 px-4 focus:outline-none focus:border-[#005ACC] focus:bg-white transition-all"
+                        className="w-full bg-gray-50 text-gray-800 border-2 border-gray-200 rounded-lg py-3 px-4 focus:outline-none focus:border-[#8c7493] focus:bg-white transition-all"
                         type="text"
                         placeholder="Enter your full name"
                         onChange={onChange}
@@ -153,7 +152,7 @@ const Vacancies = () => {
                   />
                 </div>
                 <div>
-                  <label className="block text-[#005ACC] text-sm font-semibold mb-2">
+                  <label className="block text-[#8c7493] text-sm font-semibold mb-2">
                     Email Address *
                   </label>
                   <Controller
@@ -162,7 +161,7 @@ const Vacancies = () => {
                     rules={{ required: true }}
                     render={({ field: { onChange, onBlur, value } }) => (
                       <input
-                        className="w-full bg-gray-50 text-gray-800 border-2 border-gray-200 rounded-lg py-3 px-4 focus:outline-none focus:border-[#005ACC] focus:bg-white transition-all"
+                        className="w-full bg-gray-50 text-gray-800 border-2 border-gray-200 rounded-lg py-3 px-4 focus:outline-none focus:border-[#8c7493] focus:bg-white transition-all"
                         type="email"
                         placeholder="your.email@example.com"
                         onChange={onChange}
@@ -175,7 +174,7 @@ const Vacancies = () => {
               </div>
               <div className="grid md:grid-cols-2 gap-6 mb-6">
                 <div>
-                  <label className="block text-[#005ACC] text-sm font-semibold mb-2">
+                  <label className="block text-[#8c7493] text-sm font-semibold mb-2">
                     City *
                   </label>
                   <Controller
@@ -184,7 +183,7 @@ const Vacancies = () => {
                     name="city"
                     render={({ field: { onChange, onBlur, value } }) => (
                       <input
-                        className="w-full bg-gray-50 text-gray-800 border-2 border-gray-200 rounded-lg py-3 px-4 focus:outline-none focus:border-[#005ACC] focus:bg-white transition-all"
+                        className="w-full bg-gray-50 text-gray-800 border-2 border-gray-200 rounded-lg py-3 px-4 focus:outline-none focus:border-[#8c7493] focus:bg-white transition-all"
                         type="text"
                         placeholder="Enter your city"
                         onChange={onChange}
@@ -195,7 +194,7 @@ const Vacancies = () => {
                   />
                 </div>
                 <div>
-                  <label className="block text-[#005ACC] text-sm font-semibold mb-2">
+                  <label className="block text-[#8c7493] text-sm font-semibold mb-2">
                     Phone Number *
                   </label>
                   <Controller
@@ -204,7 +203,7 @@ const Vacancies = () => {
                     rules={{ required: true }}
                     render={({ field: { onChange, onBlur, value } }) => (
                       <input
-                        className="w-full bg-gray-50 text-gray-800 border-2 border-gray-200 rounded-lg py-3 px-4 focus:outline-none focus:border-[#005ACC] focus:bg-white transition-all"
+                        className="w-full bg-gray-50 text-gray-800 border-2 border-gray-200 rounded-lg py-3 px-4 focus:outline-none focus:border-[#8c7493] focus:bg-white transition-all"
                         type="text"
                         placeholder="+994 XX XXX XX XX"
                         onChange={onChange}
@@ -217,7 +216,7 @@ const Vacancies = () => {
               </div>
               <div className="grid md:grid-cols-2 gap-6 mb-6">
                 <div>
-                  <label className="block text-[#005ACC] text-sm font-semibold mb-2">
+                  <label className="block text-[#8c7493] text-sm font-semibold mb-2">
                     Position *
                   </label>
                   <Controller
@@ -240,7 +239,7 @@ const Vacancies = () => {
                   />
                 </div>
                 <div>
-                  <label className="block text-[#005ACC] text-sm font-semibold mb-2">
+                  <label className="block text-[#8c7493] text-sm font-semibold mb-2">
                     Upload CV *
                   </label>
                   <Controller
@@ -249,7 +248,7 @@ const Vacancies = () => {
                     rules={{ required: true }}
                     render={({ field: { onChange, onBlur, value } }) => (
                       <input
-                        className="w-full bg-gray-50 text-gray-800 border-2 border-gray-200 rounded-lg py-3 px-4 focus:outline-none focus:border-[#005ACC] focus:bg-white transition-all file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-[#005ACC] file:text-white hover:file:bg-[#003D8F] file:cursor-pointer"
+                        className="w-full bg-gray-50 text-gray-800 border-2 border-gray-200 rounded-lg py-3 px-4 focus:outline-none focus:border-[#8c7493] focus:bg-white transition-all file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-[#8c7493] file:text-white hover:file:bg-[#7a6481] file:cursor-pointer"
                         type="file"
                         accept=".pdf,.doc,.docx"
                         onChange={(e) => onChange(e?.target?.files?.[0])}
@@ -264,7 +263,7 @@ const Vacancies = () => {
                 <button
                   type="submit"
                   disabled={!formState.isValid}
-                  className="bg-[#005ACC] hover:bg-[#003D8F] disabled:bg-gray-400 disabled:cursor-not-allowed text-white px-12 py-3 rounded-lg font-semibold text-base transition-all transform hover:scale-105 shadow-md hover:shadow-lg"
+                  className="bg-[#8c7493] hover:bg-[#7a6481] disabled:bg-gray-400 disabled:cursor-not-allowed text-white px-12 py-3 rounded-lg font-semibold text-base transition-all transform hover:scale-105 shadow-md hover:shadow-lg"
                 >
                   Submit Application
                 </button>
