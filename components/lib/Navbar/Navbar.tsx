@@ -59,7 +59,7 @@ export default function Example() {
       style={{ backgroundColor: "white" }}
     >
       <nav
-        className="mx-auto flex items-center justify-between px-10 lg:px-16 md:px-16 container mx-auto text-[#005ACC] text-[16px] font-semibold h-[90px]"
+        className="mx-auto flex items-center justify-between px-10 lg:px-16 md:px-16 container mx-auto text-primary text-[16px] font-semibold h-[90px]"
         aria-label="Global"
       >
         <div className="flex lg:flex-1">
@@ -91,7 +91,7 @@ export default function Example() {
           <Link
             passHref={true}
             href={"/"}
-            className="hover:text-[#0047A3]"
+            className="hover:text-primary-hover"
           >
             {t("home")}
           </Link>
@@ -100,8 +100,8 @@ export default function Example() {
               <>
                 <Popover.Button
                   className={`${
-                    open ? "text-[#0047A3]" : "text-[#005ACC]"
-                  } hover:text-[#0047A3]`}
+                    open ? "text-primary-hover" : "text-primary"
+                  } hover:text-primary-hover`}
                 >
                   {t("about")}
                 </Popover.Button>
@@ -112,13 +112,13 @@ export default function Example() {
                 >
                   <Link
                     href="/about"
-                    className="block text-gray-800 hover:text-[#0047A3]"
+                    className="block text-gray-800 hover:text-primary-hover"
                   >
                     {t("aboutCompany")}
                   </Link>
                   <Link
                     href="/policies"
-                    className="block text-gray-800 hover:text-[#0047A3]"
+                    className="block text-gray-800 hover:text-primary-hover"
                   >
                     {t("ourPolicies")}
                   </Link>
@@ -127,16 +127,16 @@ export default function Example() {
               </>
             )}
           </Popover>
-          <Link href={"/experience"} className="hover:text-[#0047A3]">
+          <Link href={"/experience"} className="hover:text-primary-hover">
             {t("experience")}
           </Link>
-          <Link href={"/services"} className="hover:text-[#0047A3]">
+          <Link href={"/services"} className="hover:text-primary-hover">
             {t("services")}
           </Link>
-          <Link href={"/vacancies"} className="hover:text-[#0047A3]">
+          <Link href={"/vacancies"} className="hover:text-primary-hover">
             {t("vacancies")}
           </Link>
-          <Link href={"/contact"} className="hover:text-[#0047A3]">
+          <Link href={"/contact"} className="hover:text-primary-hover">
             {t("contact")}
           </Link>
           <select

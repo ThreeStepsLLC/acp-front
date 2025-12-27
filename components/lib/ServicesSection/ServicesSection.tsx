@@ -60,11 +60,17 @@ const ServicesSection = ({ showDescription = false }: ServicesSectionProps) => {
         setServicesDescription(descriptionResponse.data);
       }
       
-      // Fetch SVG contents without modification
+      // Fetch SVG contents and normalize them
       const svgPromises = activeServices.map(async (service: Service) => {
         try {
           const svgResponse = await fetch(service.iconUrl);
-          const svgText = await svgResponse.text();
+          let svgText = await svgResponse.text();
+          
+          // Remove existing width and height attributes and add consistent ones
+          svgText = svgText.replace(/width="[^"]*"/g, '');
+          svgText = svgText.replace(/height="[^"]*"/g, '');
+          svgText = svgText.replace(/<svg/, '<svg width="48" height="48"');
+          
           return { id: service.id, svg: svgText };
         } catch (err) {
           console.error(`Failed to load SVG for ${service.id}:`, err);
@@ -131,8 +137,8 @@ const ServicesSection = ({ showDescription = false }: ServicesSectionProps) => {
         description = servicesDescription.descriptionEn;
     }
     
-    // Make "Onay Consulting" bold
-    return description.replace(/Onay Consulting/g, '<strong>Onay Consulting</strong>');
+    // Make "Elevate Agency" bold
+    return description.replace(/Elevate Agency/g, '<strong>Elevate Agency</strong>');
   };
 
   const stripHtmlTags = (html: string) => {
@@ -155,8 +161,8 @@ const ServicesSection = ({ showDescription = false }: ServicesSectionProps) => {
     const breakPoint = lastSpace > 0 ? lastSpace : MAX_DESCRIPTION_LENGTH;
     const truncatedText = plainText.substring(0, breakPoint);
     
-    // Apply bold to "Onay Consulting" in truncated text
-    return truncatedText.replace(/Onay Consulting/g, '<strong>Onay Consulting</strong>') + "...";
+    // Apply bold to "Elevate Agency" in truncated text
+    return truncatedText.replace(/Elevate Agency/g, '<strong>Elevate Agency</strong>') + "...";
   };
 
   if (loading) {
@@ -175,17 +181,6 @@ const ServicesSection = ({ showDescription = false }: ServicesSectionProps) => {
     );
   }
 
-  const getServicesTitle = () => {
-    const lang = i18n.language || "en";
-    switch (lang) {
-      case "az":
-        return "Xidmətlər";
-      case "ru":
-        return "Услуги";
-      default:
-        return "Services";
-    }
-  };
 
   return (
     <>
@@ -197,6 +192,18 @@ const ServicesSection = ({ showDescription = false }: ServicesSectionProps) => {
               .services-description :global(b) {
                 font-weight: 700;
               }
+              .service-icon {
+                height: 48px;
+                width: 48px;
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+              }
+              .service-icon svg {
+                width: 48px;
+                height: 48px;
+                fill: white;
+              }
             `}</style>
             <div 
               className="services-description text-gray-800 text-[16px] leading-relaxed"
@@ -207,7 +214,7 @@ const ServicesSection = ({ showDescription = false }: ServicesSectionProps) => {
             {stripHtmlTags(getLocalizedServicesDescription()).length > MAX_DESCRIPTION_LENGTH && (
               <button
                 onClick={() => setIsExpanded(!isExpanded)}
-                className="text-[#005ACC] hover:text-[#0047a3] mt-3 text-[15px] font-semibold underline transition-colors"
+                className="text-primary hover:text-primary-hover mt-3 text-[15px] font-semibold underline transition-colors"
               >
                 {isExpanded ? t("readLess") || "Daha az" : t("readMore") || "Ətraflı"}
               </button>
@@ -216,8 +223,22 @@ const ServicesSection = ({ showDescription = false }: ServicesSectionProps) => {
         </div>
       )}
 
-      <div className="bg-[#005ACC] py-16">
+      <div className="bg-primary py-16">
         <div className="container mx-auto px-12">
+          <style jsx>{`
+            .service-icon {
+              height: 48px;
+              width: 48px;
+              display: flex;
+              align-items: center;
+              justify-content: flex-start;
+            }
+            .service-icon svg {
+              width: 48px;
+              height: 48px;
+              fill: white;
+            }
+          `}</style>
           {!showDescription && (
             <>
               <p className="text-white text-[18px] font-semibold flex gap-4 items-center">
@@ -242,7 +263,7 @@ const ServicesSection = ({ showDescription = false }: ServicesSectionProps) => {
                 className="bg-transparent p-8 rounded-lg border-2 border-white/30 hover:border-gray-400 transition-all duration-300"
               >
                 <div 
-                  className="mb-6 w-[60px] h-[60px]"
+                  className="service-icon mb-6"
                   dangerouslySetInnerHTML={{ __html: svgContents[service.id] || '' }}
                 />
                 <h3 className="text-white text-[20px] font-bold mb-4 leading-tight">

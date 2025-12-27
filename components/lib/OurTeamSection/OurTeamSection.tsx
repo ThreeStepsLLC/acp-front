@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 const OurTeamSection = () => {
   return (
-    <div className="bg-[#005ACC]">
+    <div className="bg-primary">
       <div className="container mx-auto px-12 py-20">
         <p className='text-[#ffffff] text-[18px] font-semibold flex gap-4'><Image src={'yellowLine.svg'} alt={'whatwedo'} height={1} width={40} /> Truth in engineering</p>
         <p className='text-[#ffffff] text-[45px] font-bold mb-6'><span className='text-[#81a32b] text-[45px] font-bold'>Our Team</span> is Responsible <br /> for The Best Construction</p>

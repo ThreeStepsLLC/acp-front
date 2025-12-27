@@ -1,4 +1,4 @@
-name: Build and Deploy (Onay Consulting Front)
+name: Build and Deploy (Elevate Agency Front)
 
 on:
   push:
@@ -29,7 +29,7 @@ jobs:
         run: |
           docker build \
             -t $IMAGE_NAME:$IMAGE_TAG \
-            --build-arg NEXT_PUBLIC_API_URL=https://api.onayconsulting.az/api/v1/ .
+            --build-arg NEXT_PUBLIC_API_URL=https://apim.elevateagency.az/api/v1/ .
           
           docker push $IMAGE_NAME:$IMAGE_TAG
           docker tag $IMAGE_NAME:$IMAGE_TAG $IMAGE_NAME:latest

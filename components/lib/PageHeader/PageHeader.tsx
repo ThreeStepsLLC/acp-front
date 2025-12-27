@@ -8,7 +8,7 @@ interface PageHeaderProps {
 
 const PageHeader = ({title, subTitle}: PageHeaderProps) => {
   return (
-    <div className='bg-[#005ACC] w-5/5 pt-5 pb-10'>
+    <div className='bg-primary w-5/5 pt-5 pb-10'>
         <div className="container mx-auto grid gap-4 px-16 py-10">
           {
             subTitle && <p className="text-[#ffffff] text-[18px] font-semibold flex gap-4">

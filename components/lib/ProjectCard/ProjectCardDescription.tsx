@@ -24,7 +24,7 @@ export const ProjectCardDescription = ({
       <div className="grid content-start lg:gap-2 md:gap-7 gap-4 py-2">
         <p className="flex gap-3 items-center">
           <Image src={"location.svg"} alt={"location"} width={22} height={18} />
-          <span className={"text-[16px] text-[#005ACC] font-normal"}>
+          <span className={"text-[16px] text-primary font-normal"}>
             {location}
           </span>
         </p>

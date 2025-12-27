@@ -19,7 +19,7 @@ const CoreValuesSection = () => {
 
   return (
     <>
-      <div className="bg-[#005ACC]">
+      <div className="bg-primary">
         <div className="container mx-auto px-12 py-16">
           <div
             style={{

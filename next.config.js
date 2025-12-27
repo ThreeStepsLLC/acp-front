@@ -6,7 +6,7 @@ module.exports = {
         appDir: true
     },
     images: {
-        domains: ['cdn.afmpro.az', 'api.onayconsulting.az'],
+        domains: ['cdn.afmpro.az', 'apim.elevateagency.az'],
         remotePatterns: [
             {
                 protocol: 'http',
@@ -16,7 +16,7 @@ module.exports = {
             },
             {
                 protocol: 'https',
-                hostname: 'api.onayconsulting.az',
+                hostname: 'apim.elevateagency.az',
                 pathname: '/**',
             },
         ],

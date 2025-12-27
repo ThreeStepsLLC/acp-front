@@ -28,7 +28,7 @@ const Footer = () => {
 
   return (
     <div
-      className="bg-[#F5F5F5] text-[#005ACC] px-10 lg:px-40 py-10 2xl:px-60"
+      className="bg-[#F5F5F5] text-primary px-10 lg:px-40 py-10 2xl:px-60"
       style={{
         width: "100%",
         height: "100%",
@@ -50,32 +50,33 @@ const Footer = () => {
           <div className="grid gap-8">
             <div className="flex gap-3">
               <Image
-                className=""
+                className="filter-primary-color"
                 src={"/phone.svg"}
                 alt={"phone"}
                 width={18}
                 height={30}
               />
-              <p className="text-[16px] text-[#005ACC]">{data.phone}</p>
+              <p className="text-[16px] text-primary">{data.phone}</p>
             </div>
             <div className="flex gap-3 items-center">
               <IconContext.Provider
-                value={{ color: "#005ACC", className: "global-class-name" }}
+                value={{ color: "#b49cbd", className: "global-class-name" }}
               >
                 <div>
                   <AiOutlineMail style={{fontSize: '20px'}} />
                 </div>
               </IconContext.Provider>
-              <p className="text-[16px] text-[#005ACC]">{data.mailAddressForContact}</p>
+              <p className="text-[16px] text-primary">{data.mailAddressForContact}</p>
             </div>
             <div className="flex gap-3">
               <Image
+                className="filter-primary-color"
                 src={"/location.svg"}
                 alt={"location"}
                 width={14}
                 height={18}
               />
-              <p className="text-[16px] text-[#005ACC]">
+              <p className="text-[16px] text-primary">
                 {data.officeAddress}
               </p>
             </div>
@@ -84,9 +85,10 @@ const Footer = () => {
         <div>
           <p className="text-[26px] font-bold mb-[20px]">{t("company")}</p>
           <ul className="text-[16px]">
-            <li className="mb-[14px] text-[#005ACC] hover:text-[#003D8F]">
+            <li className="mb-[14px] text-primary hover:text-primary-hover">
               <Link passHref={true} href={"/"} className="flex gap-2">
                 <Image
+                  className="filter-primary-color"
                   src={"/rightFooter.svg"}
                   alt={"footerIcon"}
                   height={30}
@@ -95,9 +97,10 @@ const Footer = () => {
                 <p>{t("home")}</p>
               </Link>
             </li>
-            <li className="mb-[14px] text-[#005ACC] hover:text-[#003D8F]">
+            <li className="mb-[14px] text-primary hover:text-primary-hover">
               <Link href={"/about"} className="flex gap-2">
                 <Image
+                  className="filter-primary-color"
                   src={"/rightFooter.svg"}
                   alt={"footerIcon"}
                   height={30}
@@ -106,9 +109,10 @@ const Footer = () => {
                 <p>{t("aboutCompany")}</p>
               </Link>
             </li>
-            <li className="mb-[14px] text-[#005ACC] hover:text-[#003D8F]">
+            <li className="mb-[14px] text-primary hover:text-primary-hover">
               <Link href={"/policies"} className="flex gap-2">
                 <Image
+                  className="filter-primary-color"
                   src={"/rightFooter.svg"}
                   alt={"footerIcon"}
                   height={30}
@@ -117,9 +121,10 @@ const Footer = () => {
                 <p>{t("ourPolicies")}</p>
               </Link>
             </li>
-            <li className="mb-[14px] text-[#005ACC] hover:text-[#003D8F]  ">
+            <li className="mb-[14px] text-primary hover:text-primary-hover">
               <Link href={"/experience"} className="flex gap-2">
                 <Image
+                  className="filter-primary-color"
                   src={"/rightFooter.svg"}
                   alt={"footerIcon"}
                   height={30}
@@ -128,9 +133,10 @@ const Footer = () => {
                 <p>{t("experience")}</p>
               </Link>
             </li>
-            <li className="mb-[14px] text-[#005ACC] hover:text-[#003D8F] ">
+            <li className="mb-[14px] text-primary hover:text-primary-hover">
               <Link href={"/projects"} className="flex gap-2">
                 <Image
+                  className="filter-primary-color"
                   src={"/rightFooter.svg"}
                   alt={"footerIcon"}
                   height={30}
@@ -139,9 +145,10 @@ const Footer = () => {
                 <p>{t("projects")}</p>
               </Link>
             </li>
-            <li className="mb-[14px] text-[#005ACC] hover:text-[#003D8F] ">
+            <li className="mb-[14px] text-primary hover:text-primary-hover">
               <Link href={"/vacancies"} className="flex gap-2">
                 <Image
+                  className="filter-primary-color"
                   src={"/rightFooter.svg"}
                   alt={"footerIcon"}
                   height={30}
@@ -150,9 +157,10 @@ const Footer = () => {
                 <p>{t("vacancies")}</p>
               </Link>
             </li>
-            <li className="mb-[14px] text-[#005ACC] hover:text-[#003D8F] ">
+            <li className="mb-[14px] text-primary hover:text-primary-hover">
               <Link href={"/contact"} className="flex gap-2">
                 <Image
+                  className="filter-primary-color"
                   src={"/rightFooter.svg"}
                   alt={"footerIcon"}
                   height={30}
@@ -165,16 +173,16 @@ const Footer = () => {
         </div>
       </div>
 
-      <hr className="mt-[31px] mb-[49px] text-[#005ACC]" />
+      <hr className="mt-[31px] mb-[49px] text-primary" />
 
       <div className="lg:flex sm:grid lg:justify-between sm:justify-center text-center text-[14px] gap-2">
-        <p className="opacity-100">© 2025 ONAY Consulting. All rights reserved.</p>
+        <p className="opacity-100">© 2025 Elevate Agency. All rights reserved.</p>
         <div className="flex justify-center items-center font-bold gap-3">
           <a 
             href={data.facebook || "https://facebook.com"} 
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-[#005ACC] p-2 rounded-full hover:bg-[#003D8F] transition-colors"
+            className="bg-primary p-2 rounded-full hover:bg-primary-hover transition-colors"
           >
             <FaFacebookF className="text-white" size={16} />
           </a>
@@ -182,7 +190,7 @@ const Footer = () => {
             href={data.instagram || "https://instagram.com"} 
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-[#005ACC] p-2 rounded-full hover:bg-[#003D8F] transition-colors"
+            className="bg-primary p-2 rounded-full hover:bg-primary-hover transition-colors"
           >
             <FaInstagram className="text-white" size={16} />
           </a>
@@ -190,7 +198,7 @@ const Footer = () => {
             href="https://wa.me/994102565464" 
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-[#005ACC] p-2 rounded-full hover:bg-[#003D8F] transition-colors"
+            className="bg-primary p-2 rounded-full hover:bg-primary-hover transition-colors"
           >
             <FaWhatsapp className="text-white" size={16} />
           </a>
@@ -198,7 +206,7 @@ const Footer = () => {
             href={data.linkedin || "https://linkedin.com"} 
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-[#005ACC] p-2 rounded-full hover:bg-[#003D8F] transition-colors"
+            className="bg-primary p-2 rounded-full hover:bg-primary-hover transition-colors"
           >
             <FaLinkedinIn className="text-white" size={16} />
           </a>

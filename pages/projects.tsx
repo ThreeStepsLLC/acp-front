@@ -28,8 +28,8 @@ const Projects = () => {
     <>
       <Head>
         <Seo
-          description={"ONAY Consulting"}
-          keywords={"ONAY Consulting"}
+          description={"Elevate Agency"}
+          keywords={"Elevate Agency"}
           title={t("projects")}
         />
       </Head>

@@ -9,9 +9,10 @@ module.exports = {
     extend: {
       colors: {
         primary: {
-          DEFAULT: '#005ACC',
-          hover: '#0047A3',
-          dark: '#003D8F',
+          DEFAULT: '#8c7493',
+          hover: '#7a6481',
+          dark: '#68546f',
+          light: '#b49cbd',
         },
       },
       fontFamily: {
