@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { getServices, getServicesDescription } from "@/services/services";
 import { useTranslation } from "react-i18next";
 import i18n from "i18next";
@@ -27,9 +28,10 @@ interface ServicesDescription {
 
 interface ServicesSectionProps {
   showDescription?: boolean;
+  highlightedServiceId?: string;
 }
 
-const ServicesSection = ({ showDescription = false }: ServicesSectionProps) => {
+const ServicesSection = ({ showDescription = false, highlightedServiceId }: ServicesSectionProps) => {
   const [services, setServices] = useState<Service[]>([]);
   const [servicesDescription, setServicesDescription] = useState<ServicesDescription | null>(null);
   const [loading, setLoading] = useState(true);
@@ -37,6 +39,7 @@ const ServicesSection = ({ showDescription = false }: ServicesSectionProps) => {
   const [svgContents, setSvgContents] = useState<{ [key: string]: string }>({});
   const [isExpanded, setIsExpanded] = useState(false);
   const { t } = useTranslation("serviceSection");
+  const serviceRefs = useRef<{ [key: string]: HTMLDivElement | null }>({});
   
   const MAX_DESCRIPTION_LENGTH = 300;
 
@@ -91,6 +94,37 @@ const ServicesSection = ({ showDescription = false }: ServicesSectionProps) => {
   useEffect(() => {
     fetchServices();
   }, []);
+
+  // Scroll to highlighted service
+  useEffect(() => {
+    if (highlightedServiceId && showDescription) {
+      const timer = setTimeout(() => {
+        const element = serviceRefs.current[highlightedServiceId];
+        
+        if (element) {
+          // Try scrollIntoView first
+          try {
+            element.scrollIntoView({
+              behavior: 'smooth',
+              block: 'center',
+              inline: 'nearest'
+            });
+          } catch (error) {
+            // Fallback to manual scroll
+            const headerHeight = 100;
+            const elementTop = element.offsetTop - headerHeight;
+            
+            window.scrollTo({
+              top: elementTop,
+              behavior: 'smooth'
+            });
+          }
+        }
+      }, 1000);
+      
+      return () => clearTimeout(timer);
+    }
+  }, [highlightedServiceId, services, showDescription]);
 
   const getLocalizedTitle = (service: Service) => {
     const lang = i18n.language || "en";
@@ -187,9 +221,22 @@ const ServicesSection = ({ showDescription = false }: ServicesSectionProps) => {
     }
   };
 
+  const getDetailsButtonText = () => {
+    const lang = i18n.language || "en";
+    switch (lang) {
+      case "az":
+        return "Ətraflı";
+      case "ru":
+        return "Подробнее";
+      default:
+        return "Details";
+    }
+  };
+
   return (
     <>
-      {showDescription && servicesDescription && (
+      {/* Temporarily hidden services description */}
+      {false && showDescription && servicesDescription && (
         <div className="bg-white py-12">
           <div className="container mx-auto px-12">
             <style jsx>{`
@@ -216,7 +263,7 @@ const ServicesSection = ({ showDescription = false }: ServicesSectionProps) => {
         </div>
       )}
 
-      <div className="bg-[#005ACC] py-16">
+      <div className={showDescription ? "bg-gray-50 py-16" : "bg-[#005ACC] py-16"}>
         <div className="container mx-auto px-12">
           {!showDescription && (
             <>
@@ -235,23 +282,69 @@ const ServicesSection = ({ showDescription = false }: ServicesSectionProps) => {
             </>
           )}
           
-          <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6">
+          <div className={showDescription ? "space-y-8" : "grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6"}>
             {services.map((service) => (
               <div
                 key={service.id}
-                className="bg-transparent p-8 rounded-lg border-2 border-white/30 hover:border-gray-400 transition-all duration-300"
+                ref={(el) => {
+                  if (el) {
+                    serviceRefs.current[service.id] = el;
+                  }
+                }}
+                className={showDescription 
+                  ? `bg-white rounded-lg shadow-lg p-8 transition-all duration-300 ${
+                      highlightedServiceId === service.id 
+                        ? 'ring-2 ring-[#005ACC] shadow-xl border-2 border-[#005ACC]' 
+                        : 'hover:shadow-xl'
+                    }`
+                  : `bg-transparent p-8 rounded-lg border-2 transition-all duration-300 min-h-[200px] flex flex-col ${
+                      highlightedServiceId === service.id 
+                        ? 'border-[#003d82] bg-[#003d82]/10' 
+                        : 'border-white/30 hover:border-gray-400'
+                    }`
+                }
               >
-                <div 
-                  className="mb-6 w-[60px] h-[60px]"
-                  dangerouslySetInnerHTML={{ __html: svgContents[service.id] || '' }}
-                />
-                <h3 className="text-white text-[20px] font-bold mb-4 leading-tight">
-                  {getLocalizedTitle(service)}
-                </h3>
-                <div 
-                  className="text-white text-[15px] leading-relaxed opacity-90"
-                  dangerouslySetInnerHTML={{ __html: getLocalizedDescription(service) }}
-                />
+                <div className={showDescription ? "flex items-start gap-6" : "flex flex-col h-full"}>
+                  {showDescription ? (
+                    <>
+                      <div 
+                        className={`flex-shrink-0 w-[60px] h-[60px] ${showDescription ? 'text-[#005ACC]' : ''}`}
+                        dangerouslySetInnerHTML={{ __html: svgContents[service.id] || '' }}
+                      />
+                      <div className="flex-1">
+                        <h3 className={`text-[20px] font-bold mb-4 leading-tight ${
+                          showDescription ? 'text-[#005ACC]' : 'text-white'
+                        }`}>
+                          {getLocalizedTitle(service)}
+                        </h3>
+                        <div 
+                          className="text-gray-700 text-[15px] leading-relaxed"
+                          dangerouslySetInnerHTML={{ __html: getLocalizedDescription(service) }}
+                        />
+                      </div>
+                    </>
+                  ) : (
+                    <>
+                      <div className="flex-1">
+                        <div 
+                          className="mb-6 w-[60px] h-[60px]"
+                          dangerouslySetInnerHTML={{ __html: svgContents[service.id] || '' }}
+                        />
+                        <h3 className="text-white text-[20px] font-bold mb-4 leading-tight">
+                          {getLocalizedTitle(service)}
+                        </h3>
+                      </div>
+                      <div className="flex justify-end mt-auto">
+                        <Link 
+                          href={`/services?service=${service.id}`}
+                          className="bg-[#003d82] hover:bg-[#002a5c] text-white px-4 py-2 rounded-md text-[14px] font-semibold transition-colors duration-200"
+                        >
+                          {getDetailsButtonText()}
+                        </Link>
+                      </div>
+                    </>
+                  )}
+                </div>
               </div>
             ))}
           </div>
