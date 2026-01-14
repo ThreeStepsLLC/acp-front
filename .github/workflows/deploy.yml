@@ -3,10 +3,10 @@ name: Build and Deploy (Elevate Agency Front)
 on:
   push:
     branches:
-      - onayconsulting
+      - elevate-agency
 
 env:
-  APP_NAME: onayconsulting-front  
+  APP_NAME: elevateagency-front
   IMAGE_TAG: ${{ github.sha }}
 
 jobs:
@@ -40,7 +40,7 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: production
-      url: https://onayconsulting.az 
+      url: https://elevateagency.az
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
