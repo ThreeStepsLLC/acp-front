@@ -5,6 +5,7 @@ on:
     branches:
       - elevate-agency
 
+
 env:
   APP_NAME: elevateagency-front
   IMAGE_TAG: ${{ github.sha }}
