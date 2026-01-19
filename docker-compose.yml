@@ -15,7 +15,7 @@
 
 services:
   azko-front:
-    image: $IMAGE_NAME:$IMAGE_TAG
+    image: ghcr.io/threestepsllc/azko-front:${IMAGE_TAG}
     container_name: azko-front
     restart: always
     networks:
