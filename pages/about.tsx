@@ -23,28 +23,28 @@ const About = () => {
 
   return (
     <>
-    <Head>
-      <Seo description={'AFM PRO'} keywords={'AFM PRO'} title={t('about')} />
-    </Head>
-    <Layout title="About us">
-      <PageHeader title={t('aboutCompany')} subTitle={t('about')} />
-      <div className="container mx-auto px-12 py-0">
-        <div className="grid lg:grid-cols-1 md:grid-cols-1 sm:grid-cols-1 my-14 gap-6">
-          <div>
-            <p className="text-[#000000] text-[28px] font-semibold flex gap-4 items-center">
-              <Image
-                src={"yellowLine.svg"}
-                alt={"whatwedo"}
-                height={1}
-                width={40}
-              />
-              {constants.title}
-            </p>
-            <p className="mt-2" dangerouslySetInnerHTML={{__html:constants.description}} />
+      <Head>
+        <Seo description={'AZ-KO'} keywords={'AZ-KO'} title={t('about')} />
+      </Head>
+      <Layout title="About us">
+        <PageHeader title={t('aboutCompany')} subTitle={t('about')} />
+        <div className="container mx-auto px-12 py-0">
+          <div className="grid lg:grid-cols-1 md:grid-cols-1 sm:grid-cols-1 my-14 gap-6">
+            <div>
+              <p className="text-[#000000] text-[28px] font-semibold flex gap-4 items-center">
+                <Image
+                  src={"yellowLine.svg"}
+                  alt={"whatwedo"}
+                  height={1}
+                  width={40}
+                />
+                {constants.title}
+              </p>
+              <p className="mt-2" dangerouslySetInnerHTML={{ __html: constants.description }} />
+            </div>
           </div>
         </div>
-      </div>
-    </Layout>
+      </Layout>
     </>
   );
 };

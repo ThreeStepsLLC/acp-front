@@ -3,10 +3,10 @@ import Image from 'next/image'
 
 const OurTeamSection = () => {
   return (
-    <div className="bg-[#00517b]">
+    <div className="bg-[#2E63A9]">
       <div className="container mx-auto px-12 py-20">
         <p className='text-[#ffffff] text-[18px] font-semibold flex gap-4'><Image src={'yellowLine.svg'} alt={'whatwedo'} height={1} width={40} /> Truth in engineering</p>
-        <p className='text-[#ffffff] text-[45px] font-bold mb-6'><span className='text-[#81a32b] text-[45px] font-bold'>Our Team</span> is Responsible <br /> for The Best Construction</p>
+        <p className='text-[#ffffff] text-[45px] font-bold mb-6'><span className='text-[#2E63A9] text-[45px] font-bold'>Our Team</span> is Responsible <br /> for The Best Construction</p>
         <div className='grid lg:grid-cols-1 md:grid-cols-1 sm:grid-cols-1'>
           <iframe width="100%" height="600" src="https://www.youtube.com/embed/wEj2Etd9_CA" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
         </div>

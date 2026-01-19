@@ -51,12 +51,12 @@ export default function Example() {
       }
     >
       <nav
-        className="mx-auto flex items-center justify-between p-6 px-10 lg:px-16 md:px-16 container mx-auto text-[#00517b] text-[16px] font-semibold"
+        className="mx-auto flex items-center justify-between p-6 px-10 lg:px-16 md:px-16 container mx-auto text-[#2E63A9] text-[16px] font-semibold"
         aria-label="Global"
       >
         <div className="flex lg:flex-1">
           <Link href="/" className="-m-1.5 p-1.5">
-            <Image src={"/afmpro-logo.png"} alt="Logo" width={200} height={41.41} />
+            <Image src={"/azko-logo.jpeg"} alt="Logo" width={200} height={41.41} />
           </Link>
         </div>
         <div className="flex lg:hidden gap-4">
@@ -83,7 +83,7 @@ export default function Example() {
           <Link
             passHref={true}
             href={"/"}
-            className="leading-6 hover:text-[#81a32b]"
+            className="leading-6 hover:text-[#2E63A9]"
           >
             {t("home")}
           </Link>
@@ -92,8 +92,8 @@ export default function Example() {
               <>
                 <Popover.Button
                   className={`${
-                    open ? "text-[#81a32b]" : "text-[#00517b]"
-                  } leading-6 hover:text-[#81a32b]`}
+                    open ? "text-[#2E63A9]" : "text-[#2E63A9]"
+                  } leading-6 hover:text-[#2E63A9]`}
                 >
                   {t("about")}
                 </Popover.Button>
@@ -104,13 +104,13 @@ export default function Example() {
                 >
                   <Link
                     href="/about"
-                    className="block text-gray-800 hover:text-[#81a32b]"
+                    className="block text-gray-800 hover:text-[#2E63A9]"
                   >
                     {t("aboutCompany")}
                   </Link>
                   <Link
                     href="/policies"
-                    className="block text-gray-800 hover:text-[#81a32b]"
+                    className="block text-gray-800 hover:text-[#2E63A9]"
                   >
                     {t("ourPolicies")}
                   </Link>
@@ -119,19 +119,19 @@ export default function Example() {
               </>
             )}
           </Popover>
-          <Link href={"/experience"} className="leading-6 hover:text-[#81a32b]">
+          <Link href={"/experience"} className="leading-6 hover:text-[#2E63A9]">
             {t("experience")}
           </Link>
-          <Link href={"/projects"} className="leading-6 hover:text-[#81a32b]">
+          <Link href={"/projects"} className="leading-6 hover:text-[#2E63A9]">
             {t("projects")}
           </Link>
-          <Link href={"/licences"} className="leading-6 hover:text-[#81a32b]">
+          <Link href={"/licences"} className="leading-6 hover:text-[#2E63A9]">
             {t("licences")}
           </Link>
-          <Link href={"/vacancies"} className="leading-6 hover:text-[#81a32b]">
+          <Link href={"/vacancies"} className="leading-6 hover:text-[#2E63A9]">
             {t("vacancies")}
           </Link>
-          <Link href={"/contact"} className="leading-6 hover:text-[#81a32b]">
+          <Link href={"/contact"} className="leading-6 hover:text-[#2E63A9]">
             {t("contact")}
           </Link>
           <select
@@ -158,7 +158,7 @@ export default function Example() {
           <div className="flex items-center justify-between">
             <Link href="/" className="-m-1.5 p-1.5">
               <Image
-                src={"/afmpro-logo.png"}
+                src={"/azko-logo.jpeg"}
                 alt="Logo"
                 width={200}
                 height={41.41}

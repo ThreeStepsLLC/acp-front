@@ -3,8 +3,8 @@
 # services:
 #   app:
 #     build: .
-#     image: afmpro-front-image
-#     container_name: afmpro-front
+#     image: azko-front-image
+#     container_name: azko-front
 #     restart: always
 #     networks:
 #       - proxynet
@@ -14,9 +14,9 @@
 #     external: true
 
 services:
-  afmpro-front:
+  azko-front:
     image: $IMAGE_NAME:$IMAGE_TAG
-    container_name: afmpro-front
+    container_name: azko-front
     restart: always
     networks:
       proxynet:

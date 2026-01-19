@@ -77,7 +77,7 @@ const WelcomeSection = () => {
         </div>
         <div className="grid grid-cols-4 gap-6 mt-20">
           <div className="grid lg:text-start md:text-start text-center mb-10">
-            <p className="lg:text-[40px] md:text-[40px] text-[20px] font-bold text-[#81a32b]">
+            <p className="lg:text-[40px] md:text-[40px] text-[20px] font-bold text-[#2E63A9]">
               {data.totalProjects}
             </p>
             <p className="lg:text-[19px] md:text-[19px] text-[16px] font-bold text-[#ffffff]">

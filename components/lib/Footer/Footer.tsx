@@ -27,7 +27,7 @@ const Footer = () => {
 
   return (
     <div
-      className="bg-[#F5F5F5] text-[#00517b] px-10 lg:px-40 py-10 2xl:px-60"
+      className="bg-[#F5F5F5] text-[#2E63A9] px-10 lg:px-40 py-10 2xl:px-60"
       style={{
         width: "100%",
         height: "100%",
@@ -35,8 +35,8 @@ const Footer = () => {
     >
       <div className="grid lg:grid-cols-3 sm:grid-cols-2 gap-12">
         <div>
-          <Image src={"/afmpro-logo.png"} alt="Logo" width={200} height={41.41} />
-          <p className="text-[16px] mt-[20px]" dangerouslySetInnerHTML={{__html:values.description}} />
+          <Image src={"/azko-logo.jpeg"} alt="Logo" width={200} height={41.41} />
+          <p className="text-[16px] mt-[20px]" dangerouslySetInnerHTML={{ __html: values.description }} />
         </div>
         <div>
           <p className="text-[26px] font-bold mb-[20px]">Contacts</p>
@@ -49,17 +49,17 @@ const Footer = () => {
                 width={18}
                 height={30}
               />
-              <p className="text-[16px] text-[#00517b]">{data.phone}</p>
+              <p className="text-[16px] text-[#2E63A9]">{data.phone}</p>
             </div>
             <div className="flex gap-3 items-center">
               <IconContext.Provider
-                value={{ color: "rgb(129 163 43/var(--tw-text-opacity))", className: "global-class-name" }}
+                value={{ color: "#2E63A9", className: "global-class-name" }}
               >
                 <div>
-                  <AiOutlineMail style={{fontSize: '20px'}} />
+                  <AiOutlineMail style={{ fontSize: '20px' }} />
                 </div>
               </IconContext.Provider>
-              <p className="text-[16px] text-[#00517b]">{data.mailAddressForContact}</p>
+              <p className="text-[16px] text-[#2E63A9]">{data.mailAddressForContact}</p>
             </div>
             <div className="flex gap-3">
               <Image
@@ -68,7 +68,7 @@ const Footer = () => {
                 width={14}
                 height={18}
               />
-              <p className="text-[16px] text-[#00517b]">
+              <p className="text-[16px] text-[#2E63A9]">
                 {data.officeAddress}
               </p>
             </div>
@@ -77,7 +77,7 @@ const Footer = () => {
         <div>
           <p className="text-[26px] font-bold mb-[20px]">Company</p>
           <ul className="text-[16px]">
-            <li className="mb-[14px] text-[#00517b] hover:text-[#81a32b]">
+            <li className="mb-[14px] text-[#2E63A9] hover:text-[#2E63A9]">
               <Link passHref={true} href={"/"} className="flex gap-2">
                 <Image
                   src={"/rightFooter.svg"}
@@ -88,7 +88,7 @@ const Footer = () => {
                 <p>{t("home")}</p>
               </Link>
             </li>
-            <li className="mb-[14px] text-[#00517b] hover:text-[#81a32b]">
+            <li className="mb-[14px] text-[#2E63A9] hover:text-[#2E63A9]">
               <Link href={"/about"} className="flex gap-2">
                 <Image
                   src={"/rightFooter.svg"}
@@ -99,7 +99,7 @@ const Footer = () => {
                 <p>{t("aboutCompany")}</p>
               </Link>
             </li>
-            <li className="mb-[14px] text-[#00517b] hover:text-[#81a32b]">
+            <li className="mb-[14px] text-[#2E63A9] hover:text-[#2E63A9]">
               <Link href={"/policies"} className="flex gap-2">
                 <Image
                   src={"/rightFooter.svg"}
@@ -110,7 +110,7 @@ const Footer = () => {
                 <p>{t("ourPolicies")}</p>
               </Link>
             </li>
-            <li className="mb-[14px] text-[#00517b] hover:text-[#81a32b]  ">
+            <li className="mb-[14px] text-[#2E63A9] hover:text-[#2E63A9]  ">
               <Link href={"/experience"} className="flex gap-2">
                 <Image
                   src={"/rightFooter.svg"}
@@ -121,7 +121,7 @@ const Footer = () => {
                 <p>{t("experience")}</p>
               </Link>
             </li>
-            <li className="mb-[14px] text-[#00517b] hover:text-[#81a32b] ">
+            <li className="mb-[14px] text-[#2E63A9] hover:text-[#2E63A9] ">
               <Link href={"/projects"} className="flex gap-2">
                 <Image
                   src={"/rightFooter.svg"}
@@ -132,7 +132,7 @@ const Footer = () => {
                 <p>{t("projects")}</p>
               </Link>
             </li>
-            <li className="mb-[14px] text-[#00517b] hover:text-[#81a32b] ">
+            <li className="mb-[14px] text-[#2E63A9] hover:text-[#2E63A9] ">
               <Link href={"/licences"} className="flex gap-2">
                 <Image
                   src={"/rightFooter.svg"}
@@ -143,7 +143,7 @@ const Footer = () => {
                 <p>{t("licences")}</p>
               </Link>
             </li>
-            <li className="mb-[14px] text-[#00517b] hover:text-[#81a32b] ">
+            <li className="mb-[14px] text-[#2E63A9] hover:text-[#2E63A9] ">
               <Link href={"/vacancies"} className="flex gap-2">
                 <Image
                   src={"/rightFooter.svg"}
@@ -154,7 +154,7 @@ const Footer = () => {
                 <p>{t("vacancies")}</p>
               </Link>
             </li>
-            <li className="mb-[14px] text-[#00517b] hover:text-[#81a32b] ">
+            <li className="mb-[14px] text-[#2E63A9] hover:text-[#2E63A9] ">
               <Link href={"/contact"} className="flex gap-2">
                 <Image
                   src={"/rightFooter.svg"}
@@ -169,14 +169,14 @@ const Footer = () => {
         </div>
       </div>
 
-      <hr className="mt-[31px] mb-[49px] text-[#00517b]" />
+      <hr className="mt-[31px] mb-[49px] text-[#2E63A9]" />
 
       <div className="lg:flex sm:grid lg:justify-between sm:justify-center text-center text-[14px] gap-2">
-        <p className="opacity-100">© 2025 AFM PRO. All rights reserved.</p>
+        <p className="opacity-100">© 2025 AZ-KO. All rights reserved.</p>
         <div className="flex justify-between font-bold gap-2">
           <a href={data.instagram} target="blank">
             <Image
-              className="bg-[#81a32b] p-2 rounded-full"
+              className="bg-[#2E63A9] p-2 rounded-full"
               src={"/instaIcon.svg"}
               alt={""}
               width={30}
@@ -185,7 +185,7 @@ const Footer = () => {
           </a>
           <a href={data.twitter} target="blank">
             <Image
-              className="bg-[#81a32b] p-2 rounded-full"
+              className="bg-[#2E63A9] p-2 rounded-full"
               src={"/twitterIcon.svg"}
               alt={""}
               width={30}
@@ -194,7 +194,7 @@ const Footer = () => {
           </a>
           <a href={data.whatsapp} target="blank">
             <Image
-              className="bg-[#81a32b] p-2 rounded-full"
+              className="bg-[#2E63A9] p-2 rounded-full"
               src={"/whatsappIcon.svg"}
               alt={""}
               width={30}

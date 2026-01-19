@@ -6,6 +6,6 @@ module.exports = {
         appDir: true
     },
     images: {
-        domains: ['cdn.afmpro.az'],
+        domains: ['cdn.az-ko.az'],
     },
 }

@@ -41,7 +41,7 @@ const ProjectCard = ({
       <p
         className={
           darkText
-            ? "text-[20px] text-[#00517b] font-bold"
+            ? "text-[20px] text-[#2E63A9] font-bold"
             : "text-[20px] text-[#ffffff] font-bold"
         }
       >
@@ -52,11 +52,11 @@ const ProjectCard = ({
         <div className="grid gap-2">
           <div className="flex justify-between items-center">
             <p className="flex gap-2 items-center">
-              <GiProgression className="text-[27px] text-[#81a32b]" />
+              <GiProgression className="text-[27px] text-[#2E63A9]" />
               <span
                 className={
                   darkText
-                    ? "text-[17px] text-[#00517b] font-normal"
+                    ? "text-[17px] text-[#2E63A9] font-normal"
                     : "text-[17px] text-[#ffffff] font-normal"
                 }
               >
@@ -75,7 +75,7 @@ const ProjectCard = ({
             <span
               className={
                 darkText
-                  ? "text-[15px] text-[#00517b] font-normal"
+                  ? "text-[15px] text-[#2E63A9] font-normal"
                   : "text-[15px] text-[#ffffff] font-normal"
               }
             >

@@ -16,25 +16,25 @@ const WhyChooseUseSection = () => {
         <div>
           <p className="text-[#000000] text-[40px] font-bold">
             Work done in the{" "}
-            <span className="text-[#81a32b] text-[40px] font-bold">
+            <span className="text-[#2E63A9] text-[40px] font-bold">
               last 5 years
             </span>
           </p>
           <div className="grid lg:grid-cols-2 md:grid-cols-2 grid-cols-2 gap-4">
             <div>
-              <p className="text-[70px] text-[#81a32b] font-extrabold">10+</p>
+              <p className="text-[70px] text-[#2E63A9] font-extrabold">10+</p>
               <p className="text-[#000000] text-[20px] font-bold">
               Projects
               </p>
             </div>
             <div>
-              <p className="text-[70px] text-[#81a32b] font-extrabold">120+</p>
+              <p className="text-[70px] text-[#2E63A9] font-extrabold">120+</p>
               <p className="text-[#000000] text-[20px] font-bold">
                 Çəkilən yol uzunluğu
               </p>
             </div>
             <div>
-              <p className="text-[70px] text-[#81a32b] font-extrabold">15+</p>
+              <p className="text-[70px] text-[#2E63A9] font-extrabold">15+</p>
               <p className="text-[#000000] text-[20px] font-bold">
                Bridges built
               </p>

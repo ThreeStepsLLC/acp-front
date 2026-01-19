@@ -24,7 +24,7 @@ const ProjectDetail = () => {
     getDetailProject(id as string);
   }, [id]);
 
-  const backgroundColors = ["#81a32b", "#f0f0f0"];
+  const backgroundColors = ["#2E63A9", "#f0f0f0"];
 
   return (
     <Layout title="Projects">
@@ -34,8 +34,8 @@ const ProjectDetail = () => {
           <div>
             <div className="flex gap-2 mb-4">
               <p className="font-bold text-[18px]">{t("progress")}:</p>
-              <div className="w-full bg-[#00517b]  rounded-full dark:bg-[#00517b]">
-                <div className="bg-[#81a32b] font-bold text-white text-center leading-none rounded-full"
+              <div className="w-full bg-[#2E63A9]  rounded-full dark:bg-[#2E63A9]">
+                <div className="bg-[#2E63A9] font-bold text-white text-center leading-none rounded-full"
                   style={{
                     width: `${project.progress}%`,
                     height: "100%",
@@ -52,7 +52,7 @@ const ProjectDetail = () => {
 
             <div
               className="table h-fit"
-              style={{ border: "1px solid #00517b", width: '100%' }}
+              style={{ border: "1px solid #2E63A9", width: '100%' }}
             >
               {project?.projectDetails?.map((item: any, index: number) => (
                 <div

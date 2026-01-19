@@ -60,7 +60,7 @@ const Vacancies = () => {
   const customStyles = {
     control: (provided: any, state: any) => ({
       ...provided,
-      border: state.isFocused ? "1px solid #739126" : "1px solid #00517b",
+      border: state.isFocused ? "1px solid #739126" : "1px solid #2E63A9",
       borderRadius: "0px",
       backgroundColor: state.isFocused ? "white" : "whitesmoke",
       height: "45px",
@@ -76,8 +76,8 @@ const Vacancies = () => {
     <>
       <Head>
         <Seo
-          description={"AFM PRO"}
-          keywords={"AFM PRO"}
+          description={"AZ-KO"}
+          keywords={"AZ-KO"}
           title={t("vacancies")}
         />
       </Head>
@@ -111,7 +111,7 @@ const Vacancies = () => {
               <ul className="text-[#000000] py-5 text-[18px]">
                 {positions.map((item: any, index: number) => (
                   <li key={index} className="flex gap-2">
-                    <p className="text-[#81a32b]">•</p> {item.title}
+                    <p className="text-[#2E63A9]">•</p> {item.title}
                   </li>
                 ))}
               </ul>
@@ -135,7 +135,7 @@ const Vacancies = () => {
                   marginBottom: "20px",
                   fontWeight: "bold",
                   fontSize: "20px",
-                  color: "#00517b",
+                  color: "#2E63A9",
                 }}
               >
                 send us your cv
@@ -151,7 +151,7 @@ const Vacancies = () => {
                     rules={{ required: true }}
                     render={({ field: { onChange, onBlur, value } }) => (
                       <input
-                        className="appearance-none block w-full bg-[#F5F5F5] text-gray-700 border border-[#00517b] py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-[#739126]"
+                        className="appearance-none block w-full bg-[#F5F5F5] text-gray-700 border border-[#2E63A9] py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-[#739126]"
                         id="grid-last-name"
                         type="text"
                         placeholder="Full name"
@@ -172,7 +172,7 @@ const Vacancies = () => {
                     rules={{ required: true }}
                     render={({ field: { onChange, onBlur, value } }) => (
                       <input
-                        className="appearance-none block w-full bg-[#F5F5F5] text-gray-700 border border-[#00517b] py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-[#739126]"
+                        className="appearance-none block w-full bg-[#F5F5F5] text-gray-700 border border-[#2E63A9] py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-[#739126]"
                         id="grid-last-name"
                         type="mail"
                         placeholder="Email"
@@ -195,7 +195,7 @@ const Vacancies = () => {
                     name="city"
                     render={({ field: { onChange, onBlur, value } }) => (
                       <input
-                        className="appearance-none block w-full bg-[#F5F5F5] text-gray-700 border border-[#00517b] py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-[#739126]"
+                        className="appearance-none block w-full bg-[#F5F5F5] text-gray-700 border border-[#2E63A9] py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-[#739126]"
                         id="grid-last-name"
                         type="text"
                         placeholder="City"
@@ -216,7 +216,7 @@ const Vacancies = () => {
                     rules={{ required: true }}
                     render={({ field: { onChange, onBlur, value } }) => (
                       <input
-                        className="appearance-none block w-full bg-[#F5F5F5] text-gray-700 border border-[#00517b] py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-[#739126]"
+                        className="appearance-none block w-full bg-[#F5F5F5] text-gray-700 border border-[#2E63A9] py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-[#739126]"
                         id="grid-last-name"
                         type="text"
                         placeholder="Phone number"
@@ -261,7 +261,7 @@ const Vacancies = () => {
                     rules={{ required: true }}
                     render={({ field: { onChange, onBlur, value } }) => (
                       <input
-                        className="appearance-none block w-full bg-[#F5F5F5] text-gray-700 border border-[#00517b] px-4 leading-tight focus:outline-none focus:bg-white focus:border-[#739126]"
+                        className="appearance-none block w-full bg-[#F5F5F5] text-gray-700 border border-[#2E63A9] px-4 leading-tight focus:outline-none focus:bg-white focus:border-[#739126]"
                         id="grid-last-name"
                         type="file"
                         placeholder="Phone number"
@@ -280,7 +280,7 @@ const Vacancies = () => {
                   <button
                     type="submit"
                     disabled={!formState.isValid}
-                    className="bg-[#81a32b] hover:bg-[#739126] w-40 text-[15px] text-center py-2 px-2 cursor-pointer font-semibold h-fit"
+                    className="bg-[#2E63A9] hover:bg-[#739126] w-40 text-[15px] text-center py-2 px-2 cursor-pointer font-semibold h-fit"
                   >
                     Submit
                   </button>

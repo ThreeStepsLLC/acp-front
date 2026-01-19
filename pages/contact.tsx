@@ -14,8 +14,8 @@ const Contact = () => {
     <>
       <Head>
         <Seo
-          description={"AFM PRO"}
-          keywords={"AFM PRO"}
+          description={"AZ-KO"}
+          keywords={"AZ-KO"}
           title={t("contact")}
         />
       </Head>

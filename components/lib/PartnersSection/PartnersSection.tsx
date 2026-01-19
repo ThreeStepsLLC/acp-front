@@ -20,7 +20,7 @@ const PartnersSection = () => {
 
   return (
     <>
-      <div className="bg-[#00517b]">
+      <div className="bg-[#2E63A9]">
       <div className="container mx-auto px-12 py-16">
         <div className="grid gap-2">
           <p className="text-[#ffffff] text-[18px] font-semibold flex gap-4 items-center">
