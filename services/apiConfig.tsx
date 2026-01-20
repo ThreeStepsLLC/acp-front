@@ -1,7 +1,7 @@
 import axios, { AxiosResponse } from "axios";
 
 const api = axios.create({
-  baseURL: "http://azko-backend-v7bvvx-f4046b-84-247-132-207.traefik.me/api/v1/",
+  baseURL: "https://api.az-ko.az/api/v1/",
 });
 
 api.interceptors.request.use((config: any) => {
