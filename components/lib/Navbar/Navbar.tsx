@@ -56,7 +56,7 @@ export default function Example() {
       >
         <div className="flex lg:flex-1">
           <Link href="/" className="-m-1.5 p-1.5">
-            <Image src={"/azko-logo.png"} alt="Logo" width={200} height={41.41} />
+            <Image src={"/azko-logo.png"} alt="Logo" width={60} height={55} />
           </Link>
         </div>
         <div className="flex lg:hidden gap-4">
