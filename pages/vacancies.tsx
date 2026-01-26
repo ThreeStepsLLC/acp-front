@@ -14,6 +14,7 @@ import Seo from "@/components/lib/Seo/Seo";
 
 const Vacancies = () => {
   const [positions, setPositions] = useState<any>([]);
+  const [cvFileName, setCvFileName] = useState("");
   const { t } = useTranslation("vacancies");
 
   const getPositionsAll = () => {
@@ -124,17 +125,17 @@ const Vacancies = () => {
             >
               <div className="bg-gradient-to-r from-[#005ACC] to-[#0066E6] px-8 py-6">
                 <h1 className="text-white text-2xl font-bold text-center tracking-wide">
-                  SEND US YOUR CV
+                  {t("sendCvTitle")}
                 </h1>
                 <p className="text-white/80 text-center text-sm mt-2">
-                  Join our team and start your career journey with us
+                  {t("sendCvSubtitle")}
                 </p>
               </div>
               <div className="px-8 py-8">
               <div className="grid md:grid-cols-2 gap-6 mb-6">
                 <div>
                   <label className="block text-[#005ACC] text-sm font-semibold mb-2">
-                    Full Name *
+                    {t("fullName")} *
                   </label>
                   <Controller
                     control={control}
@@ -144,7 +145,7 @@ const Vacancies = () => {
                       <input
                         className="w-full bg-gray-50 text-gray-800 border-2 border-gray-200 rounded-lg py-3 px-4 focus:outline-none focus:border-[#005ACC] focus:bg-white transition-all"
                         type="text"
-                        placeholder="Enter your full name"
+                        placeholder={t("fullNamePlaceholder")}
                         onChange={onChange}
                         onBlur={onBlur}
                         value={value}
@@ -154,7 +155,7 @@ const Vacancies = () => {
                 </div>
                 <div>
                   <label className="block text-[#005ACC] text-sm font-semibold mb-2">
-                    Email Address *
+                    {t("email")} *
                   </label>
                   <Controller
                     control={control}
@@ -164,7 +165,7 @@ const Vacancies = () => {
                       <input
                         className="w-full bg-gray-50 text-gray-800 border-2 border-gray-200 rounded-lg py-3 px-4 focus:outline-none focus:border-[#005ACC] focus:bg-white transition-all"
                         type="email"
-                        placeholder="your.email@example.com"
+                        placeholder={t("emailPlaceholder")}
                         onChange={onChange}
                         onBlur={onBlur}
                         value={value}
@@ -176,7 +177,7 @@ const Vacancies = () => {
               <div className="grid md:grid-cols-2 gap-6 mb-6">
                 <div>
                   <label className="block text-[#005ACC] text-sm font-semibold mb-2">
-                    City *
+                    {t("city")} *
                   </label>
                   <Controller
                     control={control}
@@ -186,7 +187,7 @@ const Vacancies = () => {
                       <input
                         className="w-full bg-gray-50 text-gray-800 border-2 border-gray-200 rounded-lg py-3 px-4 focus:outline-none focus:border-[#005ACC] focus:bg-white transition-all"
                         type="text"
-                        placeholder="Enter your city"
+                        placeholder={t("cityPlaceholder")}
                         onChange={onChange}
                         onBlur={onBlur}
                         value={value}
@@ -196,7 +197,7 @@ const Vacancies = () => {
                 </div>
                 <div>
                   <label className="block text-[#005ACC] text-sm font-semibold mb-2">
-                    Phone Number *
+                    {t("phone")} *
                   </label>
                   <Controller
                     control={control}
@@ -206,7 +207,7 @@ const Vacancies = () => {
                       <input
                         className="w-full bg-gray-50 text-gray-800 border-2 border-gray-200 rounded-lg py-3 px-4 focus:outline-none focus:border-[#005ACC] focus:bg-white transition-all"
                         type="text"
-                        placeholder="+994 XX XXX XX XX"
+                        placeholder={t("phonePlaceholder")}
                         onChange={onChange}
                         onBlur={onBlur}
                         value={value}
@@ -218,7 +219,7 @@ const Vacancies = () => {
               <div className="grid md:grid-cols-2 gap-6 mb-6">
                 <div>
                   <label className="block text-[#005ACC] text-sm font-semibold mb-2">
-                    Position *
+                    {t("position")} *
                   </label>
                   <Controller
                     control={control}
@@ -234,27 +235,45 @@ const Vacancies = () => {
                         onChange={onChange}
                         onBlur={onBlur}
                         value={value}
-                        placeholder="Select a position"
+                        placeholder={t("positionPlaceholder")}
                       />
                     )}
                   />
                 </div>
                 <div>
                   <label className="block text-[#005ACC] text-sm font-semibold mb-2">
-                    Upload CV *
+                    {t("uploadCv")} *
                   </label>
                   <Controller
                     control={control}
                     name="file"
                     rules={{ required: true }}
                     render={({ field: { onChange, onBlur, value } }) => (
-                      <input
-                        className="w-full bg-gray-50 text-gray-800 border-2 border-gray-200 rounded-lg py-3 px-4 focus:outline-none focus:border-[#005ACC] focus:bg-white transition-all file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-[#005ACC] file:text-white hover:file:bg-[#003D8F] file:cursor-pointer"
-                        type="file"
-                        accept=".pdf,.doc,.docx"
-                        onChange={(e) => onChange(e?.target?.files?.[0])}
-                        onBlur={onBlur}
-                      />
+                      <div className="w-full bg-gray-50 text-gray-800 border-2 border-gray-200 rounded-lg py-3 px-4 focus-within:border-[#005ACC] focus-within:bg-white transition-all">
+                        <input
+                          id="cv-file"
+                          className="sr-only"
+                          type="file"
+                          accept=".pdf,.doc,.docx"
+                          onChange={(e) => {
+                            const file = e?.target?.files?.[0];
+                            setCvFileName(file?.name || "");
+                            onChange(file);
+                          }}
+                          onBlur={onBlur}
+                        />
+                        <div className="flex items-center gap-4">
+                          <label
+                            htmlFor="cv-file"
+                            className="inline-flex items-center justify-center bg-[#005ACC] text-white hover:bg-[#003D8F] px-5 py-2 rounded-full text-sm font-semibold cursor-pointer transition-colors"
+                          >
+                            {t("chooseFile")}
+                          </label>
+                          <span className="text-sm text-gray-700">
+                            {cvFileName || t("noFileChosen")}
+                          </span>
+                        </div>
+                      </div>
                     )}
                   />
                 </div>
@@ -266,7 +285,7 @@ const Vacancies = () => {
                   disabled={!formState.isValid}
                   className="bg-[#005ACC] hover:bg-[#003D8F] disabled:bg-gray-400 disabled:cursor-not-allowed text-white px-12 py-3 rounded-lg font-semibold text-base transition-all transform hover:scale-105 shadow-md hover:shadow-lg"
                 >
-                  Submit Application
+                  {t("submitApplication")}
                 </button>
               </div>
               </div>

@@ -10,6 +10,7 @@ import { FaFacebookF, FaLinkedinIn, FaWhatsapp, FaInstagram } from "react-icons/
 const Footer = () => {
   const [data, setData] = useState<any>({});
   const [values, setValues] = useState<any>({})
+  const [isWhatsappOpen, setIsWhatsappOpen] = useState(false);
   const { t } = useTranslation("navigation");
 
   const getFooterValues = () => {
@@ -36,14 +37,14 @@ const Footer = () => {
     >
       <div className="grid lg:grid-cols-3 sm:grid-cols-2 gap-12">
         <div>
-          <Image 
-            src={"/logo.png"} 
-            alt="Logo" 
-            width={150} 
+          <Image
+            src={"/logo.png"}
+            alt="Logo"
+            width={150}
             height={90}
             className="object-contain -mt-20"
           />
-          <p className="text-[16px] mt-[-50px]" dangerouslySetInnerHTML={{__html:values.description}} />
+          <p className="text-[16px] mt-[-50px]" dangerouslySetInnerHTML={{ __html: values.description }} />
         </div>
         <div>
           <p className="text-[26px] font-bold mb-[20px]">{t("contacts")}</p>
@@ -63,7 +64,7 @@ const Footer = () => {
                 value={{ color: "#005ACC", className: "global-class-name" }}
               >
                 <div>
-                  <AiOutlineMail style={{fontSize: '20px'}} />
+                  <AiOutlineMail style={{ fontSize: '20px' }} />
                 </div>
               </IconContext.Provider>
               <p className="text-[16px] text-[#005ACC]">{data.mailAddressForContact}</p>
@@ -167,35 +168,36 @@ const Footer = () => {
 
       <hr className="mt-[31px] mb-[49px] text-[#005ACC]" />
 
+
       <div className="lg:flex sm:grid lg:justify-between sm:justify-center text-center text-[14px] gap-2">
-        <p className="opacity-100">© 2025 ONAY Consulting. All rights reserved.</p>
+        <p className="opacity-100">© {new Date().getFullYear()} ONAY Consulting. {t("footerAllRightsReserved")}</p>
         <div className="flex justify-center items-center font-bold gap-3">
-          <a 
-            href={data.facebook || "https://facebook.com"} 
+          <a
+            href={data.facebook || "https://facebook.com"}
             target="_blank"
             rel="noopener noreferrer"
             className="bg-[#005ACC] p-2 rounded-full hover:bg-[#003D8F] transition-colors"
           >
             <FaFacebookF className="text-white" size={16} />
           </a>
-          <a 
-            href={data.instagram || "https://instagram.com"} 
+          <a
+            href={data.instagram || "https://instagram.com"}
             target="_blank"
             rel="noopener noreferrer"
             className="bg-[#005ACC] p-2 rounded-full hover:bg-[#003D8F] transition-colors"
           >
             <FaInstagram className="text-white" size={16} />
           </a>
-          <a 
-            href="https://wa.me/994102565464" 
+          <a
+            href="https://wa.me/994102565464"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-[#005ACC] p-2 rounded-full hover:bg-[#003D8F] transition-colors"
           >
             <FaWhatsapp className="text-white" size={16} />
           </a>
-          <a 
-            href={data.linkedin || "https://linkedin.com"} 
+          <a
+            href={data.linkedin || "https://linkedin.com"}
             target="_blank"
             rel="noopener noreferrer"
             className="bg-[#005ACC] p-2 rounded-full hover:bg-[#003D8F] transition-colors"
@@ -204,6 +206,86 @@ const Footer = () => {
           </a>
         </div>
       </div>
+      <button
+        type="button"
+        onClick={() => setIsWhatsappOpen(true)}
+        className="fixed bottom-6 right-6 z-50 bg-[#25D366] p-4 rounded-full shadow-lg hover:bg-[#1EBE5D] transition-colors"
+        aria-label="WhatsApp"
+      >
+        <FaWhatsapp className="text-white" size={22} />
+      </button>
+      {isWhatsappOpen && (
+        <div className="fixed inset-0 z-50 flex items-end justify-end p-6">
+          <div
+            className="absolute inset-0 bg-black/30 backdrop-blur-[1px]"
+            onClick={() => setIsWhatsappOpen(false)}
+          />
+          <div
+            className="relative w-full max-w-[380px] overflow-hidden rounded-3xl bg-white shadow-[0_24px_80px_rgba(0,0,0,0.35)]"
+            style={{ animation: "wa-pop 180ms ease-out" }}
+          >
+            <style jsx>{`
+              @keyframes wa-pop {
+                from {
+                  opacity: 0;
+                  transform: translateY(12px) scale(0.98);
+                }
+                to {
+                  opacity: 1;
+                  transform: translateY(0) scale(1);
+                }
+              }
+            `}</style>
+            <div className="bg-gradient-to-r from-[#17B857] to-[#2FE26B] px-6 py-5 text-white">
+              <div className="flex items-center justify-between">
+                <div className="flex items-center gap-3">
+                  <div className="h-10 w-10 rounded-full bg-white/20 flex items-center justify-center">
+                    <FaWhatsapp className="text-white" size={18} />
+                  </div>
+                  <div>
+                    <p className="text-lg font-semibold leading-tight">ONAY Consulting</p>
+                    <div className="mt-1 flex items-center gap-2 text-white/90 text-xs">
+                      <span className="inline-block h-2 w-2 rounded-full bg-white" />
+                      <span>Online</span>
+                    </div>
+                  </div>
+                </div>
+                <button
+                  type="button"
+                  onClick={() => setIsWhatsappOpen(false)}
+                  className="h-10 w-10 rounded-full bg-black/15 hover:bg-black/25 transition-colors flex items-center justify-center"
+                  aria-label="Close"
+                >
+                  <span className="text-white text-lg leading-none">×</span>
+                </button>
+              </div>
+            </div>
+            <div className="px-6 py-5 bg-[#F6FBF8]">
+              <div className="rounded-2xl bg-white p-4 shadow-sm border border-black/5">
+                <p className="text-[15px] leading-relaxed text-gray-700">
+                  Salam dəyərli izləyici, ONAY Consulting ilə əlaqə yaratdığınız üçün təşəkkür edirik!
+                </p>
+              </div>
+              <div className="mt-5">
+                <a
+                  href="https://wa.me/994102565464"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full inline-flex items-center justify-center gap-3 rounded-full bg-[#17B857] hover:bg-[#129B49] text-white font-semibold px-6 py-3 transition-colors shadow-md"
+                >
+                  <span>Söhbətə başla</span>
+                  <span className="inline-flex items-center justify-center h-9 w-9 rounded-full bg-white/15">
+                    <span className="text-white text-lg">→</span>
+                  </span>
+                </a>
+                <p className="mt-3 text-xs text-gray-500">
+                  WhatsApp açılacaq və söhbətə yönləndiriləcəksiniz.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
